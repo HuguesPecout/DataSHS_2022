@@ -6,10 +6,11 @@
 <script src="DataSHS_2022_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="DataSHS_2022_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="DataSHS_2022_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="DataSHS_2022_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="DataSHS_2022_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.247">
 
-  <title>DataSHS_2022</title>
+  <meta name="author" content="Hugues Pecout - UMR Géographie-Cités, CNRS">
+  <title>Ecrire son code dans un environnement de programmation lettrée : le notebook</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -29,9 +30,12 @@
     }
   </style>
   <link rel="stylesheet" href="DataSHS_2022_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="style.css">
   <link href="DataSHS_2022_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="DataSHS_2022_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="DataSHS_2022_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="DataSHS_2022_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="DataSHS_2022_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="DataSHS_2022_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -318,39 +322,287 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">DataSHS_2022</h1>
+  <h1 class="title"><p><span class="title">Ecrire son code dans un environnement de programmation lettrée : le notebook</span></p></h1>
+  <p class="subtitle"></p><p><span class="subtitle"><img src="img/logo_notebook_o.png" width="600"></span></p><p></p>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Hugues Pecout - UMR Géographie-Cités, CNRS 
+</div>
+</div>
 </div>
 
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
-</section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
-<ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
-</ul>
-</section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="bonjour-à-toutes" class="slide level2">
+<h2>Bonjour à tou·te·s</h2>
+<p class="medpcenter" style="margin-top:60px;margin-bottom:0px;">
+Ingénieurs CNRS en sciences de l’information géographique
+</p>
+<p><img src="img/users.png" style="float:left;margin-top:40px;" width="380"></p>
+<!-- <div id="rightls"> -->
+<!-- <ul class="pucsmall22" style="margin-top:40px;"> -->
+<!-- > - Le langage R comme outil principal -->
+<!-- > - Production régulière de notebook R -->
+<!-- > - Responsables du projet Rzine -->
+<!-- </ul> -->
+<!-- <div class="fragment"> -->
+<!-- <img src="img/users2.png" style="float:left;margin-top:10px;margin-left:60px;" width="186"/> -->
+<!-- <div id="rightseb"> -->
+<!-- <ul class="xpucsmall" style="margin-top:50px;"> -->
+<!-- > - <span style="color:#f7a41f;">Ingénieur de recherche</span> -->
+<!-- > - <span style="color:#f7a41f;">Geomatique/Informatique</span> -->
+<!-- > - <span style="color:#f7a41f;">Coord. du GT Notebook</span> -->
+<!-- > - <span style="color:#f7a41f;">Membre du projet Rzine</span> -->
+<!-- </ul> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- <aside class="notes"> -->
+<!-- Un groupe de travail inter-disciplinaire travaillant à un portail de ressources, ouvert, dédié à l'observation théorique et pratique des notebooks -->
+<!-- </aside> -->
+<!-- # {data-background="img/logo_notebook2.png" data-background-size="1000px"} -->
+<!-- <h2>**Le notebook**</h2> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- ## Définition -->
+<!-- <p class="medpcenter" style="margin-top:40px;font-size:75%;">**Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique**</p> -->
+<!-- <p class="smallpcenter" style="margin-top:30px;font-size:55%;"><span style="color:grey;"><b>De nombreuses dénominations existent :</span></b></p> -->
+<!-- <ul class="pucsmall2" style="margin-top:0px;font-size:50%;"> -->
+
+<!-- > - <span style="color:grey;">*Article exécutable*</span> -->
+<!-- > - <span style="color:grey;">*Document computationnel*</span> -->
+<!-- > - <span style="color:grey;">*Document électronique interactif*</span> -->
+<!-- > - <span style="color:grey;">*Bloc-note*</span> -->
+<!-- > - <span style="color:grey;">*Cahiers de programmation*</span> -->
+<!-- > - <span style="color:grey;">*Cahier électronique d'analyse*</span> -->
+<!-- > - <span style="color:grey;">*Calepin électronique*</span> -->
+<!-- > - <span style="color:grey;">*Carnet de code*</span> -->
+<!-- > - <span style="color:grey;">*Manifeste algorithmique*</span> -->
+<!-- > - <span style="color:grey;">**Notebook !**</span> -->
+<!-- > - <span style="color:grey;">*...*</span> -->
+<!-- </ul> -->
+<!-- <p class="medpcenter" style="margin-top:30px;font-size:75%;">**Un notebook permet d'appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité**</p> -->
+<!-- ## Une logique... des pratiques -->
+<!-- <img src="img/notebook_1.png" style="margin-top:40px;" width="1000"/> -->
+<!-- <p style="font-size:60%;">La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...)</p> -->
+<!-- ## Anatomie d'un notebook -->
+<!-- <p class="smallpcenter" style="margin-top:70px;">Simple fichier texte<P> -->
+<!-- <img src="img/notebook_2.png" style="margin-top:80px;" width="1000"/> -->
+<!-- ## Notebook sans code ? -->
+<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
+<!-- ## Stylo d'Human-Num -->
+<!-- <p class="smallpcenter" style="margin-top:40px;" >Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/)</p> -->
+<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
+<!-- <p class="smallpcenter" style="margin-top:30px;">Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...)</p> -->
+<!-- ## Le Markdown (Gruber, 2004) -->
+<!-- <div id="codermd"> -->
+<!-- <p class="smallpcenter">Fichier Markdown (.md)</p> -->
+<!-- ```{r, file = 'img/hackmd.md', eval=FALSE} -->
+<!-- ``` -->
+<!-- <p class="smallpcenter">-> Visualiser sur [HackMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)</p> -->
+<!-- </div> -->
+<!-- <div id="codehtml"> -->
+<!-- <p class="smallpcenter">Texte mis en forme (sortie html)</p> -->
+<!-- ![](img/hackmd.png) -->
+<!-- </div> -->
+<!-- ## Exemple de Notebook -->
+<!-- ## Le Notebook Rmarkdown -->
+<!-- <div id="codermd"> -->
+<!-- <p class="smallpcenter">Fichier source (.rmd)</p> -->
+<!-- ```{r, file = 'img/exemple.rmd', eval=FALSE} -->
+<!-- ``` -->
+<!-- </div> -->
+<!-- <div id="codehtml"> -->
+<!-- <p class="smallpcenter">Fichier en sortie (.html)</p> -->
+<!-- ![](img/markdown.png) -->
+<!-- </div> -->
+<!-- ##  « Kniter » <img src="img/knito.png" width="85" style="margin-top:0px;margin-bottom:-15px;"/> un .rmd  -->
+<!-- <img src="img/knitr_process.png" style="margin-top:30px;" width="800"/> -->
+<!-- ##  {data-background="img/markdown2.png" data-background-size="1400px"} -->
+<!-- ##  {data-background="img/markdown3.png" data-background-size="1400px"} -->
+<!-- # {data-background="img/history.jpeg" data-background-size="750px"} -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- ## Les prémices -->
+<!-- <div id="codermd2"> -->
+<!-- <p class="medpcenter" style="margin-top:30px;"><span style="color:#f7a41f;">**Ancêtres du notebook :**</span></p> -->
+<!-- <ul class="pucsmall22" style="margin-top:20px;"> -->
+<!-- > - 1970 : Scratchpad (Axiom) -->
+<!-- > - 1987 : MathCad  -->
+<!-- > - 1988 : Mathematica  -->
+<!-- > - 1989 : Maple  -->
+<!-- > - 2011 : IPython -->
+<!-- </ul> -->
+<!-- <img src="img/Wolfram-Language-on-early-Mac.png" style="margin-top:40px;" width="300"/> -->
+<!-- </div> -->
+<!-- <div id="codehtml2"> -->
+<!-- <p class="medpcenter" style="margin-top:30px;"><span style="color:#f7a41f;">**Émergence de la recherche reproductible**</span></p> -->
+<!-- <p style="font-size:60%;margin-top:30px;">En 1976, **Jon Claerbout** publie l'ouvrage : <br> -->
+<!-- [*Fundamentals of Geophysical Data Processing*](http://sepwww.stanford.edu/sep/prof/fgdp5.pdf)</p> -->
+<!-- <p style="font-size:56%;">Cette 1ère version, non-reproductible, sera le début d'un long travail de recherche sur la reproductibilité de ses travaux... Via des notebooks.</p> -->
+<!-- <p class="medpcenter" style="margin-top:90px;"><span style="color:#f7a41f;">**Émergence du Literate Programming**</span></p> -->
+<!-- <p style="margin-top:20px;font-size:60%;">Le concept de **programmation lettrée** pensé et mis en oeuvre (1977-78) par **Donald Knuth** est lié à l'histoire des notebooks.</span></p>  -->
+<!-- </div> -->
+<!-- ## Programmation lettrée -->
+<!-- <p class="smallpcenter" style="margin-top:40px;">La **programmation lettrée** est une approche de la programmation qui se veut différente du paradigme de programmation structurée.</p> -->
+<!-- > <p style="font-size:50%;">Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. <br> Donald Knuth, [LP Website citations page](http://www.literateprogramming.com/)</p> -->
+<!-- > <p style="font-size:50%;">The practitioner of literate programming (...) strives for **a program that is comprehensible because its concepts have been introduced in an order that is best for human understanding** (...). <br> Donald Knuth, [LP Website citations page](http://www.literateprogramming.com/)</p> -->
+<!-- <p class="smallpcenter">**Le paradigme de la programmation lettrée**, tel qu'il a été conçu par **Knuth**, s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place **autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.</p> -->
+<!-- ## Multiplication des NB et des plateformes -->
+<!-- <img src="img/typonotebook.png" style="margin-top:10px;margin-bottom:0px;" width="670"/> -->
+<!-- <p style="font-size:40%;color:grey;margin-top:5px;">S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020<p> -->
+<!-- ## Dernière génération -->
+<!-- <img src="img/nouveau_notebook.png" style="margin-bottom:0px;" width="800"/> -->
+<!-- ## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>  -->
+<!-- <img src="img/quarto2.png" style="margin-top:20px;" width="800"/> -->
+<!-- <p class="smallpcenter">[**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...</p> -->
+<!-- ## Programmation lettrée & Notebook  -->
+<!-- <br> -->
+<!-- <img src="img/LP1.png" style="margin-top:60px;" width="800"/> -->
+<!-- ## LP, Notebook & Reproductibilité -->
+<!-- <img src="img/LP2.png" style="margin-top:60px;" width="800"/>  -->
+<!-- # {data-background="img/partie4.png" data-background-size="500px"} -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- ## Git, GitHub, GitLab -->
+<!-- <p class=smallpcenter" style="margin-top:80px;font-size:85%;">[**Git**](https://git-scm.com/) est un système de gestion de version distribué pour :</p>   -->
+<!-- <ul class="pucsmall22"style="margin-top:10px;font-size:77%;"> -->
+<!-- > - tracker les changement dans les fichiers texte          -->
+<!-- > - gérer l’historique du code source        -->
+<!-- > - partager le code dans des dépots distants        -->
+<!-- </ul> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <p class=smallpcenter" style="margin-top:40px;font-size:83%;">[**GitHub**](https://github.com/) et [**GitLab**](https://about.gitlab.com/) hébèrgent des dépots distants et des services pour gérer des projets (issue tracker, collaboration, hébergement web, CI/CD).</p>   -->
+<!-- ## Notebook + Git  -->
+<!-- <ul class="pucsmall22"style="margin-top:60px;font-size:85%;"> -->
+<!-- <li>Les sources des notebooks sont des fichiers texte</li>  -->
+<!--   <ul class="pucsmall22"style="margin-top:15px;font-size:95%;"> -->
+<!-- ➡️ Suivi des modifications (*commit*, branches, etc.) -->
+<!--    </ul>   -->
+<!-- <li style="margin-top:70px;">Certains ont besoin d'être compilé</li>    -->
+<!--   <ul class="pucsmall22"style="font-size:95%;margin-top:15px;"> -->
+<!-- ➡️ *Continuous Integration*   -->
+<!--   </ul>       -->
+<!-- <li  style="margin-top:70px;">Certains peuvent être déployés sur le web</li>    -->
+<!--   <ul class="pucsmall22"style="font-size:95%;margin-top:15px;"> -->
+<!-- ➡️ *Continuous Deployment*  -->
+<!--   </ul>   -->
+<!-- </ul>   -->
+<!-- ## Exemple notebook Quarto -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>  -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <p style="font-size:115%;">[Cliquez-ici !](https://rcarto.github.io/Quarto/)</p> -->
+<!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- <br> -->
+<!-- ## Conclusion -->
+<!-- <div id="leftt"> -->
+<!-- <p style="margin-top:70px;font-size:90%;">Un **format de publication**<br> scientifique légitime</p>  -->
+<!-- <ul class="pucsmall22" style="margin-top:60px;font-size:81%;"> -->
+<!-- > - [Rzine](rzine.fr), pour la pratique de R en SHS       -->
+<!-- > - [Computo](https://computo.sfds.asso.fr/) de la SFdS     -->
+<!-- > - [Programming Historian](https://programminghistorian.org)  -->
+<!-- > - ... -->
+<!-- </ul>   -->
+<!-- </div>   -->
+<!-- <div id="rightt">  -->
+<!-- <p style="margin-top:70px;font-size:90%;">Nombreux templates,<br>**multiples usages**</p>  -->
+<!-- <ul class="xpucsmall" style="margin-top:23px;font-size:62%;"> -->
+<!--       > - <span style="color:grey;">*Article*</span>   -->
+<!--       > - <span style="color:grey;">*Manuel*</span>     -->
+<!--       > - <span style="color:grey;">*Rapports*</span>    -->
+<!--       > - <span style="color:grey;">*Livre*</span>   -->
+<!--       > - <span style="color:grey;">*Tutoriel*</span> -->
+<!--       > - <span style="color:grey;">*Cours - Exercice*</span> -->
+<!--       > - <span style="color:grey;">*Blog - Site web*</span>    -->
+<!--       > - <span style="color:grey;">*curriculum vitae*</span>    -->
+<!--       > - <span style="color:grey;">*Diaporama*</span>  -->
+<!--       > - <span style="color:grey;">*...*</span>  -->
+<!-- </ul>   -->
+<!-- </div>  -->
+<!-- ## Ceci est un notebook... -->
+<!-- ```{r, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE} -->
+<!-- # Chargement des librairies -->
+<!-- library(sf) -->
+<!-- library(leaflet) -->
+<!-- # Création d'un point (localisation centre des colloques) -->
+<!-- ptsfg <- st_point(c(2.36652, 48.9071886)) -->
+<!-- ptsfc <- st_sfc(ptsfg, crs = (4326)) -->
+<!-- ptdf <- data.frame(id= 1, name = "Vous êtes ici !") -->
+<!-- Here <- st_sf(ptdf,geometry = ptsfc) -->
+<!-- # Affichage du point - carte interactive -->
+<!-- mamap <- leaflet(Here, width = 950, height = 550) %>% -->
+<!--   addTiles() %>% -->
+<!--   addMarkers(data = Here, popup = "❤️mate-shs❤️") -->
+<!-- ``` -->
+<!-- ## Vous êtes ici ! -->
+<!-- ```{r, echo=FALSE} -->
+<!-- mamap -->
+<!-- ``` -->
+<!-- ## Merci de votre attention -->
+<!-- <br> -->
+<!-- <p style="margin-top:0px;margin-bottom:0px;font-size:100%;">**Diapositives libres** (CC BY-SA 4.0)</p> -->
+<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:65%;">Slides : https://huguespecout.github.io/notebook_mateshs/#/</p> -->
+<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:65%;">Code source : https://github.com/HuguesPecout/notebook_mateshs</p> -->
+<!-- <br> -->
+<!-- <p style="margin-top:30px;margin-bottom:10px;font-size:100%;">**Contact**</p> -->
+<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:70%;">hugues.pecout@cnrs.fr</p> -->
+<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">timothee.giraud@cnrs.fr</p> -->
+<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">sebastien.rey-coyrehourcq@univ-rouen.fr (GT Notebook)</p> -->
+<!-- <br> -->
+<!-- [<img src="img/twitter.png" width="45"/ style="margin-top:15px;margin-bottom:-10px;margin-right:10px;">](https://gitlab.huma-num.fr/rzine/site)@rzine_shs -->
+<!-- ## Info session -->
+<!-- <br> -->
+<!-- ```{r, echo=FALSE, eval=TRUE} -->
+<!-- sessionInfo() -->
+<!-- ```   -->
+<p><img src="img/cnrs.png" class="slide-logo"></p>
 <div class="footer footer-default">
-
+<p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>
 </div>
 </section>
     </div>
@@ -363,6 +615,7 @@
   <script src="DataSHS_2022_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="DataSHS_2022_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="DataSHS_2022_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="DataSHS_2022_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="DataSHS_2022_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -377,18 +630,19 @@
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': true,
+'controlsAuto': false,
 'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true,"theme":"chalkboard"},
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: false,
+        controls: true,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -405,7 +659,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -555,7 +809,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -564,44 +818,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
