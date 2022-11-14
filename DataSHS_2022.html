@@ -9,8 +9,8 @@
 <link href="DataSHS_2022_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.247">
 
-  <meta name="author" content="Hugues Pecout - UMR Géographie-Cités, CNRS">
-  <title>Ecrire son code dans un environnement de programmation lettrée : le notebook</title>
+  <meta name="author" content="Hugues Pecout (UMR Géographie-Cités - CNRS)">
+  <title>Ecrire son code dans un environnement de programmation lettrée</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -327,13 +327,13 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title"><p><span class="title">Ecrire son code dans un environnement de programmation lettrée : le notebook</span></p></h1>
+  <h1 class="title"><p><span class="title">Ecrire son code dans un environnement de programmation lettrée</span></p></h1>
   <p class="subtitle"></p><p><span class="subtitle"><img src="img/logo_notebook_o.png" width="600"></span></p><p></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Hugues Pecout - UMR Géographie-Cités, CNRS 
+Hugues Pecout (UMR Géographie-Cités - CNRS) 
 </div>
 </div>
 </div>
@@ -342,72 +342,146 @@ Hugues Pecout - UMR Géographie-Cités, CNRS
 <section id="bonjour-à-toutes" class="slide level2">
 <h2>Bonjour à tou·te·s</h2>
 <p class="medpcenter" style="margin-top:60px;margin-bottom:0px;">
-Ingénieurs CNRS en sciences de l’information géographique
-</p>
+</p><p>Ingénieurs CNRS en sciences de l’information géographique</p>
+<p></p>
 <p><img src="img/users.png" style="float:left;margin-top:40px;" width="380"></p>
-<!-- <div id="rightls"> -->
-<!-- <ul class="pucsmall22" style="margin-top:40px;"> -->
-<!-- > - Le langage R comme outil principal -->
-<!-- > - Production régulière de notebook R -->
-<!-- > - Responsables du projet Rzine -->
-<!-- </ul> -->
-<!-- <div class="fragment"> -->
-<!-- <img src="img/users2.png" style="float:left;margin-top:10px;margin-left:60px;" width="186"/> -->
-<!-- <div id="rightseb"> -->
-<!-- <ul class="xpucsmall" style="margin-top:50px;"> -->
-<!-- > - <span style="color:#f7a41f;">Ingénieur de recherche</span> -->
-<!-- > - <span style="color:#f7a41f;">Geomatique/Informatique</span> -->
-<!-- > - <span style="color:#f7a41f;">Coord. du GT Notebook</span> -->
-<!-- > - <span style="color:#f7a41f;">Membre du projet Rzine</span> -->
-<!-- </ul> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- </div> -->
-<!-- <aside class="notes"> -->
-<!-- Un groupe de travail inter-disciplinaire travaillant à un portail de ressources, ouvert, dédié à l'observation théorique et pratique des notebooks -->
-<!-- </aside> -->
-<!-- # {data-background="img/logo_notebook2.png" data-background-size="1000px"} -->
-<!-- <h2>**Le notebook**</h2> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- ## Définition -->
-<!-- <p class="medpcenter" style="margin-top:40px;font-size:75%;">**Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique**</p> -->
-<!-- <p class="smallpcenter" style="margin-top:30px;font-size:55%;"><span style="color:grey;"><b>De nombreuses dénominations existent :</span></b></p> -->
-<!-- <ul class="pucsmall2" style="margin-top:0px;font-size:50%;"> -->
+<div id="rightls">
+<ul class="pucsmall22" style="margin-top:40px;">
+<ul>
+<li>Le langage R comme outil principal</li>
+</ul>
+<ul>
+<li>Production régulière de notebook R</li>
+</ul>
+<ul>
+<li>Responsables du projet Rzine</li>
+</ul>
+</ul>
+<div class="fragment">
+<p><img src="img/users2.png" style="float:left;margin-top:10px;margin-left:60px;" width="186"></p>
+<div id="rightseb">
+<ul class="xpucsmall" style="margin-top:50px;">
+<ul>
+<li><span style="color:#f7a41f;">Ingénieur de recherche</span></li>
+</ul>
+<ul>
+<li><span style="color:#f7a41f;">Geomatique/Informatique</span></li>
+</ul>
+<ul>
+<li><span style="color:#f7a41f;">Coord. du GT Notebook</span></li>
+</ul>
+<ul>
+<li><span style="color:#f7a41f;">Membre du projet Rzine</span></li>
+</ul>
+</ul>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Un groupe de travail inter-disciplinaire travaillant à un portail de ressources, ouvert, dédié à l’observation théorique et pratique des notebooks</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="section" class="title-slide slide level1 center" data-background="img/logo_notebook2.png" data-background-size="1000px">
+<h1></h1>
+<h2>
+<strong>Le notebook</strong>
+</h2>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="définition" class="slide level2">
+<h2>Définition</h2>
+<p class="medpcenter" style="margin-top:40px;font-size:75%;">
+<strong>Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique</strong>
+</p>
+<p class="smallpcenter" style="margin-top:30px;font-size:55%;">
+<span style="color:grey;"><b>De nombreuses dénominations existent :</b></span>
+</p>
+<ul class="pucsmall2" style="margin-top:0px;font-size:50%;">
+<ul>
+<li><span style="color:grey;"><em>Article exécutable</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Document computationnel</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Document électronique interactif</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Bloc-note</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Cahiers de programmation</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Cahier électronique d’analyse</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Calepin électronique</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Carnet de code</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>Manifeste algorithmique</em></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><strong>Notebook !</strong></span></li>
+</ul>
+<ul>
+<li><span style="color:grey;"><em>…</em></span></li>
+</ul>
+</ul>
+<p class="medpcenter" style="margin-top:30px;font-size:75%;">
+<strong>Un notebook permet d’appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité</strong>
+</p>
+</section>
+<section id="une-logique-des-pratiques" class="slide level2">
+<h2>Une logique… des pratiques</h2>
 
-<!-- > - <span style="color:grey;">*Article exécutable*</span> -->
-<!-- > - <span style="color:grey;">*Document computationnel*</span> -->
-<!-- > - <span style="color:grey;">*Document électronique interactif*</span> -->
-<!-- > - <span style="color:grey;">*Bloc-note*</span> -->
-<!-- > - <span style="color:grey;">*Cahiers de programmation*</span> -->
-<!-- > - <span style="color:grey;">*Cahier électronique d'analyse*</span> -->
-<!-- > - <span style="color:grey;">*Calepin électronique*</span> -->
-<!-- > - <span style="color:grey;">*Carnet de code*</span> -->
-<!-- > - <span style="color:grey;">*Manifeste algorithmique*</span> -->
-<!-- > - <span style="color:grey;">**Notebook !**</span> -->
-<!-- > - <span style="color:grey;">*...*</span> -->
-<!-- </ul> -->
-<!-- <p class="medpcenter" style="margin-top:30px;font-size:75%;">**Un notebook permet d'appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité**</p> -->
-<!-- ## Une logique... des pratiques -->
-<!-- <img src="img/notebook_1.png" style="margin-top:40px;" width="1000"/> -->
-<!-- <p style="font-size:60%;">La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...)</p> -->
-<!-- ## Anatomie d'un notebook -->
-<!-- <p class="smallpcenter" style="margin-top:70px;">Simple fichier texte<P> -->
-<!-- <img src="img/notebook_2.png" style="margin-top:80px;" width="1000"/> -->
-<!-- ## Notebook sans code ? -->
-<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
-<!-- ## Stylo d'Human-Num -->
-<!-- <p class="smallpcenter" style="margin-top:40px;" >Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/)</p> -->
-<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
-<!-- <p class="smallpcenter" style="margin-top:30px;">Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...)</p> -->
+<img src="img/notebook_1.png" style="margin-top:40px;" width="1000" class="r-stretch"><p style="font-size:60%;">
+La mise en forme du texte se fait à l’aide d’un langage de balisage (Markdown, html…)
+</p>
+</section>
+<section id="anatomie-dun-notebook" class="slide level2">
+<h2>Anatomie d’un notebook</h2>
+<p class="smallpcenter" style="margin-top:70px;">
+Simple fichier texte
+</p><p>
+</p>
+<img src="img/notebook_2.png" style="margin-top:80px;" width="1000" class="r-stretch"></section>
+<section id="notebook-sans-code" class="slide level2">
+<h2>Notebook sans code ?</h2>
+
+<img src="img/notebook_3.png" style="margin-top:120px;" width="1000" class="r-stretch"></section>
+<section id="stylo-dhuman-num" class="slide level2">
+<h2>Stylo d’Human-Num</h2>
+<p class="smallpcenter" style="margin-top:40px;">
+Développé par le <a href="https://ecrituresnumeriques.ca/fr/">CRC-EN</a> avec le support <a href="https://www.erudit.org/fr/">Érudit</a> et de la <a href="https://www.huma-num.fr/">TGIR Huma-Num</a>
+</p>
+<p><img src="img/stylo.png" style="margin-top:5px;" width="550"></p>
+<p class="smallpcenter" style="margin-top:30px;">
+Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both">CodiMD</a>…)
+</p>
 <!-- ## Le Markdown (Gruber, 2004) -->
 <!-- <div id="codermd"> -->
 <!-- <p class="smallpcenter">Fichier Markdown (.md)</p> -->
@@ -604,7 +678,7 @@ Ingénieurs CNRS en sciences de l’information géographique
 <div class="footer footer-default">
 <p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
