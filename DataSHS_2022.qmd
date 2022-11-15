@@ -2,8 +2,8 @@
 title: |
   [Ecrire son code dans un environnement de programmation lettrée]{.title}
 subtitle: |
-  [<img src="img/logo_notebook_o.png" width="600"/>]{.subtitle}
-author: Hugues Pecout (UMR Géographie-Cités - CNRS)
+   [<img src="img/logo_notebook_orange.png" width="500"/>]{.subtitle}
+author: Hugues Pecout </br> [UMR Géographie-Cités - CNRS]{.affiliation}
 footer: |
   Semaine Data SHS -Décembre 2022 - Université Paris-Cité
 format:
@@ -21,139 +21,183 @@ chalkboard:
 slide-number: true
 ---
 
-## Bonjour à tou·te·s
+## Qui suis-je ?
 
-<p class="medpcenter" style="margin-top:60px;margin-bottom:0px;">
+::: big
+Ingénieur d'études CNRS en sciences de l'information géographique dans le domaine de la géographie quantitative (UMR Géographie-Cités).
+:::
 
-Ingénieurs CNRS en sciences de l'information géographique
+::: moy1
+Depuis 2016 :
+:::
 
-</p>
+::: {#list .nonincremental style="font-size:25px;line-height:25px;"}
+-   Évite l'utilisation de logiciels clic-bouton (QGIS, EXCEL, Philcarto...)
+-   Analyse de données réalisée exclusivement avec le langage R
+-   Création quasi hebdomadaire de script R.
+-   Gain de productivité et de polyvalence important, mais...\
+:::
 
-<img src="img/users.png" style="float:left;margin-top:40px;" width="380"/>
+::: moy1
+**→ Implique de nouvelles méthodes de travail :**
+:::
 
-<div id="rightls">
+::: {.nonincremental style="font-size:25px;line-height:25px;"}
+-   **Comment rendre mon travail intelligible pour mes collègues (et pour moi) ?**
+-   **Comment mettre à disposition du code ?**
+-   **Comment archiver et assurer une certaine reproductibilité de mes scripts ?**
+:::
 
-<ul class="pucsmall22" style="margin-top:40px;">
+#  {data-background="img/Literate_Programming_book_cover.jpg  " data-background-size="600px"}
 
-> - Le langage R comme outil principal
+## Literate programming
 
-> - Production régulière de notebook R
+::: big
+La **programmation lettrée** est une approche de la programmation qui se veut différente du paradigme de programmation structurée.
+:::
 
-> - Responsables du projet Rzine
 
-</ul>
 
-<div class="fragment">
+::: {style="font-size:20px;margin-top:30px;margin-bottom:30px;"}
+> « *Nous devons changer notre attitude traditionnelle envers la construction des programmes : au lieu de considérer que notre tâche principale est de dire à un ordinateur ce qu'il doit faire, appliquons-nous plutôt à expliquer à des êtres humains ce que nous voulons que l'ordinateur fasse* 
+>
+> *Celui qui pratique la programmation lettrée peut être vu comme un essayiste, qui s'attache principalement à exposer son sujet dans un style visant à l'excellence. Tel un auteur, il choisit, avec soin, le dictionnaire à la main, les noms de ses variables et en explique la signification pour chacune d'elles. Il cherche donc à obtenir un programme compréhensible parce que ses concepts sont présentés dans le meilleur ordre possible. Pour cela, il utilise un mélange de méthodes formelles et informelles qui se complètent.* »
+>
+> **D. Knuth**, [« Literate Programming », The Computer Journal, British Computer Society, vol. 27, no 2,‎ 1984, p. 97–111 ](https://academic.oup.com/comjnl/article/27/2/97/343244?login=true)
+:::
 
-<img src="img/users2.png" style="float:left;margin-top:10px;margin-left:60px;" width="186"/>
 
-<div id="rightseb">
+::: big
+Le paradigme de la programmation lettrée, conçu par **Donald Knuth**, s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place **autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.
+:::
 
-<ul class="xpucsmall" style="margin-top:50px;">
+## Exemple
 
-> - <span style="color:#f7a41f;">Ingénieur de recherche</span>
+:::: {.columns}
 
-> - <span style="color:#f7a41f;">Geomatique/Informatique</span>
+::: {.column width="50%" style="font-size:30px;text-align:center;"}
+Programmation structurée :
+```{r}
+#| eval: FALSE
+#| include: TRUE
+#| echo : TRUE
 
-> - <span style="color:#f7a41f;">Coord. du GT Notebook</span>
+iris$Sepal.Length
 
-> - <span style="color:#f7a41f;">Membre du projet Rzine</span>
+iris$DISTCLASS <- cut(iris$Sepal.Length,
+                      breaks = c(min(iris$Sepal.Length), 
+                                 5, 6, 7, 
+                                 max(iris$Sepal.Length)),
+                      include.lowest = TRUE)
 
-</ul>
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_bar(iris$DISTCLASS)
 
-</div>
+```
 
-</div>
+:::
 
-</div>
+::: {.column width="50%" style="font-size:30px;text-align:center;"}
+Programation lettrée :
+```{r}
+#| eval: FALSE
+#| include: TRUE
+#| echo : TRUE
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess", se = FALSE)
+```
+:::
 
-<aside class="notes">
+::::
 
-Un groupe de travail inter-disciplinaire travaillant à un portail de ressources, ouvert, dédié à l'observation théorique et pratique des notebooks
+<!-- ## Définition -->
 
-</aside>
+<!-- <p class="medpcenter" style="margin-top:40px;font-size:75%;"> -->
 
-# {data-background="img/logo_notebook2.png" data-background-size="1000px"}
+<!-- **Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique** -->
 
-<h2>**Le notebook**</h2>
+<!-- </p> -->
 
-<br>
+<!-- <p class="smallpcenter" style="margin-top:30px;font-size:55%;"> -->
 
-<br>
+<!-- [<b>De nombreuses dénominations existent :]{style="color:grey;"}</b> -->
 
-<br>
+<!-- </p> -->
 
-<br>
+<!-- <ul class="pucsmall2" style="margin-top:0px;font-size:50%;"> -->
 
-<br>
+<!-- > -   [*Article exécutable*]{style="color:grey;"} -->
 
-<br>
+<!-- > -   [*Document computationnel*]{style="color:grey;"} -->
 
-<br>
+<!-- > -   [*Document électronique interactif*]{style="color:grey;"} -->
 
-<br>
+<!-- > -   [*Bloc-note*]{style="color:grey;"} -->
 
-<br>
+<!-- > -   [*Cahiers de programmation*]{style="color:grey;"} -->
 
-<br>
+<!-- > -   [*Cahier électronique d'analyse*]{style="color:grey;"} -->
 
-## Définition
+<!-- > -   [*Calepin électronique*]{style="color:grey;"} -->
 
-<p class="medpcenter" style="margin-top:40px;font-size:75%;">**Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique**</p>
+<!-- > -   [*Carnet de code*]{style="color:grey;"} -->
 
-<p class="smallpcenter" style="margin-top:30px;font-size:55%;"><span style="color:grey;"><b>De nombreuses dénominations existent :</span></b></p>
+<!-- > -   [*Manifeste algorithmique*]{style="color:grey;"} -->
 
-<ul class="pucsmall2" style="margin-top:0px;font-size:50%;">
+<!-- > -   [**Notebook !**]{style="color:grey;"} -->
 
-> - <span style="color:grey;">*Article exécutable*</span>
+<!-- > -   [*...*]{style="color:grey;"} -->
 
-> - <span style="color:grey;">*Document computationnel*</span>
+<!-- </ul> -->
 
-> - <span style="color:grey;">*Document électronique interactif*</span>
+<!-- <p class="medpcenter" style="margin-top:30px;font-size:75%;"> -->
 
-> - <span style="color:grey;">*Bloc-note*</span>
+<!-- **Un notebook permet d'appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité** -->
 
-> - <span style="color:grey;">*Cahiers de programmation*</span>
+<!-- </p> -->
 
-> - <span style="color:grey;">*Cahier électronique d'analyse*</span>
+<!-- ## Une logique... des pratiques -->
 
-> - <span style="color:grey;">*Calepin électronique*</span>
+<!-- <img src="img/notebook_1.png" style="margin-top:40px;" width="1000"/> -->
 
-> - <span style="color:grey;">*Carnet de code*</span>
+<!-- <p style="font-size:60%;"> -->
 
-> - <span style="color:grey;">*Manifeste algorithmique*</span>
+<!-- La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...) -->
 
-> - <span style="color:grey;">**Notebook !**</span>
+<!-- </p> -->
 
-> - <span style="color:grey;">*...*</span>
+<!-- ## Anatomie d'un notebook -->
 
-</ul>
+<!-- <p class="smallpcenter" style="margin-top:70px;"> -->
 
-<p class="medpcenter" style="margin-top:30px;font-size:75%;">**Un notebook permet d'appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité**</p>
+<!-- Simple fichier texte -->
 
-## Une logique... des pratiques
+<!-- <P> -->
 
-<img src="img/notebook_1.png" style="margin-top:40px;" width="1000"/>
+<!-- <img src="img/notebook_2.png" style="margin-top:80px;" width="1000"/> -->
 
-<p style="font-size:60%;">La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...)</p>
+<!-- ## Notebook sans code ? -->
 
-## Anatomie d'un notebook
+<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
 
-<p class="smallpcenter" style="margin-top:70px;">Simple fichier texte<P>
+<!-- ## Stylo d'Human-Num -->
 
-<img src="img/notebook_2.png" style="margin-top:80px;" width="1000"/>
+<!-- <p class="smallpcenter" style="margin-top:40px;"> -->
 
-## Notebook sans code ?
+<!-- Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/) -->
 
-<img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/>
+<!-- </p> -->
 
-## Stylo d'Human-Num
+<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
 
-<p class="smallpcenter" style="margin-top:40px;" >Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/)</p>
+<!-- <p class="smallpcenter" style="margin-top:30px;"> -->
 
-<img src="img/stylo.png" style="margin-top:5px;" width="550"/>
+<!-- Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...) -->
 
-<p class="smallpcenter" style="margin-top:30px;">Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...)</p>
+<!-- </p> -->
 
 <!-- ## Le Markdown (Gruber, 2004) -->
 

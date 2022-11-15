@@ -7,9 +7,9 @@
 <link href="DataSHS_2022_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="DataSHS_2022_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="DataSHS_2022_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.247">
+  <meta name="generator" content="quarto-1.1.189">
 
-  <meta name="author" content="Hugues Pecout (UMR Géographie-Cités - CNRS)">
+  <meta name="author" content="Hugues Pecout  UMR Géographie-Cités - CNRS">
   <title>Ecrire son code dans un environnement de programmation lettrée</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -28,6 +28,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="DataSHS_2022_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="style.css">
@@ -326,162 +390,133 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" class="center">
   <h1 class="title"><p><span class="title">Ecrire son code dans un environnement de programmation lettrée</span></p></h1>
-  <p class="subtitle"></p><p><span class="subtitle"><img src="img/logo_notebook_o.png" width="600"></span></p><p></p>
-
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Hugues Pecout (UMR Géographie-Cités - CNRS) 
-</div>
-</div>
-</div>
-
+  <p class="subtitle"></p><p><span class="subtitle"><img src="img/logo_notebook_orange.png" width="500"></span></p><p></p>
+  <p class="author">Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span></p>
 </section>
-<section id="bonjour-à-toutes" class="slide level2">
-<h2>Bonjour à tou·te·s</h2>
-<p class="medpcenter" style="margin-top:60px;margin-bottom:0px;">
-</p><p>Ingénieurs CNRS en sciences de l’information géographique</p>
-<p></p>
-<p><img src="img/users.png" style="float:left;margin-top:40px;" width="380"></p>
-<div id="rightls">
-<ul class="pucsmall22" style="margin-top:40px;">
+
+<section id="qui-suis-je" class="slide level2">
+<h2>Qui suis-je ?</h2>
+<div class="big">
+<p>Ingénieur d’études CNRS en sciences de l’information géographique dans le domaine de la géographie quantitative (UMR Géographie-Cités).</p>
+</div>
+<div class="moy1">
+<p>Depuis 2016 :</p>
+</div>
+<div id="list" style="font-size:25px;line-height:25px;">
 <ul>
-<li>Le langage R comme outil principal</li>
-</ul>
-<ul>
-<li>Production régulière de notebook R</li>
-</ul>
-<ul>
-<li>Responsables du projet Rzine</li>
-</ul>
-</ul>
-<div class="fragment">
-<p><img src="img/users2.png" style="float:left;margin-top:10px;margin-left:60px;" width="186"></p>
-<div id="rightseb">
-<ul class="xpucsmall" style="margin-top:50px;">
-<ul>
-<li><span style="color:#f7a41f;">Ingénieur de recherche</span></li>
-</ul>
-<ul>
-<li><span style="color:#f7a41f;">Geomatique/Informatique</span></li>
-</ul>
-<ul>
-<li><span style="color:#f7a41f;">Coord. du GT Notebook</span></li>
-</ul>
-<ul>
-<li><span style="color:#f7a41f;">Membre du projet Rzine</span></li>
-</ul>
+<li>Évite l’utilisation de logiciels clic-bouton (QGIS, EXCEL, Philcarto…)</li>
+<li>Analyse de données réalisée exclusivement avec le langage R</li>
+<li>Création quasi hebdomadaire de script R.</li>
+<li>Gain de productivité et de polyvalence important, mais…<br>
+</li>
 </ul>
 </div>
+<div class="moy1">
+<p><strong>→ Implique de nouvelles méthodes de travail :</strong></p>
 </div>
+<div style="font-size:25px;line-height:25px;">
+<ul>
+<li><strong>Comment rendre mon travail intelligible pour mes collègues (et pour moi) ?</strong></li>
+<li><strong>Comment mettre à disposition du code ?</strong></li>
+<li><strong>Comment archiver et assurer une certaine reproductibilité de mes scripts ?</strong></li>
+</ul>
 </div>
-<aside class="notes">
-<p>Un groupe de travail inter-disciplinaire travaillant à un portail de ressources, ouvert, dédié à l’observation théorique et pratique des notebooks</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section>
-<section id="section" class="title-slide slide level1 center" data-background="img/logo_notebook2.png" data-background-size="1000px">
+<section id="section" class="title-slide slide level1 center" data-background="img/Literate_Programming_book_cover.jpg  " data-background-size="600px">
 <h1></h1>
-<h2>
-<strong>Le notebook</strong>
-</h2>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-</section>
-<section id="définition" class="slide level2">
-<h2>Définition</h2>
-<p class="medpcenter" style="margin-top:40px;font-size:75%;">
-<strong>Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique</strong>
-</p>
-<p class="smallpcenter" style="margin-top:30px;font-size:55%;">
-<span style="color:grey;"><b>De nombreuses dénominations existent :</b></span>
-</p>
-<ul class="pucsmall2" style="margin-top:0px;font-size:50%;">
-<ul>
-<li><span style="color:grey;"><em>Article exécutable</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Document computationnel</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Document électronique interactif</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Bloc-note</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Cahiers de programmation</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Cahier électronique d’analyse</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Calepin électronique</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Carnet de code</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>Manifeste algorithmique</em></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><strong>Notebook !</strong></span></li>
-</ul>
-<ul>
-<li><span style="color:grey;"><em>…</em></span></li>
-</ul>
-</ul>
-<p class="medpcenter" style="margin-top:30px;font-size:75%;">
-<strong>Un notebook permet d’appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité</strong>
-</p>
-</section>
-<section id="une-logique-des-pratiques" class="slide level2">
-<h2>Une logique… des pratiques</h2>
 
-<img src="img/notebook_1.png" style="margin-top:40px;" width="1000" class="r-stretch"><p style="font-size:60%;">
-La mise en forme du texte se fait à l’aide d’un langage de balisage (Markdown, html…)
-</p>
 </section>
-<section id="anatomie-dun-notebook" class="slide level2">
-<h2>Anatomie d’un notebook</h2>
-<p class="smallpcenter" style="margin-top:70px;">
-Simple fichier texte
-</p><p>
-</p>
-<img src="img/notebook_2.png" style="margin-top:80px;" width="1000" class="r-stretch"></section>
-<section id="notebook-sans-code" class="slide level2">
-<h2>Notebook sans code ?</h2>
+<section id="literate-programming" class="slide level2">
+<h2>Literate programming</h2>
+<div class="big">
+<p>La <strong>programmation lettrée</strong> est une approche de la programmation qui se veut différente du paradigme de programmation structurée.</p>
+</div>
+<div style="font-size:20px;margin-top:30px;margin-bottom:30px;">
+<blockquote>
+<p>« <em>Nous devons changer notre attitude traditionnelle envers la construction des programmes : au lieu de considérer que notre tâche principale est de dire à un ordinateur ce qu’il doit faire, appliquons-nous plutôt à expliquer à des êtres humains ce que nous voulons que l’ordinateur fasse</em></p>
+<p><em>Celui qui pratique la programmation lettrée peut être vu comme un essayiste, qui s’attache principalement à exposer son sujet dans un style visant à l’excellence. Tel un auteur, il choisit, avec soin, le dictionnaire à la main, les noms de ses variables et en explique la signification pour chacune d’elles. Il cherche donc à obtenir un programme compréhensible parce que ses concepts sont présentés dans le meilleur ordre possible. Pour cela, il utilise un mélange de méthodes formelles et informelles qui se complètent.</em> »</p>
+<p><strong>D. Knuth</strong>, <a href="https://academic.oup.com/comjnl/article/27/2/97/343244?login=true">« Literate Programming », The Computer Journal, British Computer Society, vol.&nbsp;27, no 2,‎ 1984, p.&nbsp;97–111</a></p>
+</blockquote>
+</div>
+<div class="big">
+<p>Le paradigme de la programmation lettrée, conçu par <strong>Donald Knuth</strong>, s’éloigne dans son écriture de l’ordonnancement imposé par l’ordinateur, et à la place <strong>autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée</strong>.</p>
+</div>
+</section>
+<section id="exemple" class="slide level2">
+<h2>Exemple</h2>
+<div class="columns">
+<div class="column" style="font-size:30px;text-align:center;">
+<p>Programmation structurée :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>iris<span class="sc">$</span>Sepal.Length</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>iris<span class="sc">$</span>DISTCLASS <span class="ot">&lt;-</span> <span class="fu">cut</span>(iris<span class="sc">$</span>Sepal.Length,</span>
+<span id="cb1-4"><a href="#cb1-4"></a>                      <span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">min</span>(iris<span class="sc">$</span>Sepal.Length), </span>
+<span id="cb1-5"><a href="#cb1-5"></a>                                 <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, </span>
+<span id="cb1-6"><a href="#cb1-6"></a>                                 <span class="fu">max</span>(iris<span class="sc">$</span>Sepal.Length)),</span>
+<span id="cb1-7"><a href="#cb1-7"></a>                      <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
+<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">geom_bar</span>(iris<span class="sc">$</span>DISTCLASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="font-size:30px;text-align:center;">
+<p>Programation lettrée :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<!-- ## Définition -->
+<!-- <p class="medpcenter" style="margin-top:40px;font-size:75%;"> -->
+<!-- **Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique** -->
+<!-- </p> -->
+<!-- <p class="smallpcenter" style="margin-top:30px;font-size:55%;"> -->
+<!-- [<b>De nombreuses dénominations existent :]{style="color:grey;"}</b> -->
+<!-- </p> -->
+<!-- <ul class="pucsmall2" style="margin-top:0px;font-size:50%;"> -->
 
-<img src="img/notebook_3.png" style="margin-top:120px;" width="1000" class="r-stretch"></section>
-<section id="stylo-dhuman-num" class="slide level2">
-<h2>Stylo d’Human-Num</h2>
-<p class="smallpcenter" style="margin-top:40px;">
-Développé par le <a href="https://ecrituresnumeriques.ca/fr/">CRC-EN</a> avec le support <a href="https://www.erudit.org/fr/">Érudit</a> et de la <a href="https://www.huma-num.fr/">TGIR Huma-Num</a>
-</p>
-<p><img src="img/stylo.png" style="margin-top:5px;" width="550"></p>
-<p class="smallpcenter" style="margin-top:30px;">
-Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both">CodiMD</a>…)
-</p>
+<!-- > -   [*Article exécutable*]{style="color:grey;"} -->
+<!-- > -   [*Document computationnel*]{style="color:grey;"} -->
+<!-- > -   [*Document électronique interactif*]{style="color:grey;"} -->
+<!-- > -   [*Bloc-note*]{style="color:grey;"} -->
+<!-- > -   [*Cahiers de programmation*]{style="color:grey;"} -->
+<!-- > -   [*Cahier électronique d'analyse*]{style="color:grey;"} -->
+<!-- > -   [*Calepin électronique*]{style="color:grey;"} -->
+<!-- > -   [*Carnet de code*]{style="color:grey;"} -->
+<!-- > -   [*Manifeste algorithmique*]{style="color:grey;"} -->
+<!-- > -   [**Notebook !**]{style="color:grey;"} -->
+<!-- > -   [*...*]{style="color:grey;"} -->
+<!-- </ul> -->
+<!-- <p class="medpcenter" style="margin-top:30px;font-size:75%;"> -->
+<!-- **Un notebook permet d'appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité** -->
+<!-- </p> -->
+<!-- ## Une logique... des pratiques -->
+<!-- <img src="img/notebook_1.png" style="margin-top:40px;" width="1000"/> -->
+<!-- <p style="font-size:60%;"> -->
+<!-- La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...) -->
+<!-- </p> -->
+<!-- ## Anatomie d'un notebook -->
+<!-- <p class="smallpcenter" style="margin-top:70px;"> -->
+<!-- Simple fichier texte -->
+<!-- <P> -->
+<!-- <img src="img/notebook_2.png" style="margin-top:80px;" width="1000"/> -->
+<!-- ## Notebook sans code ? -->
+<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
+<!-- ## Stylo d'Human-Num -->
+<!-- <p class="smallpcenter" style="margin-top:40px;"> -->
+<!-- Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/) -->
+<!-- </p> -->
+<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
+<!-- <p class="smallpcenter" style="margin-top:30px;"> -->
+<!-- Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...) -->
+<!-- </p> -->
 <!-- ## Le Markdown (Gruber, 2004) -->
 <!-- <div id="codermd"> -->
 <!-- <p class="smallpcenter">Fichier Markdown (.md)</p> -->
@@ -674,8 +709,8 @@ Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMD
 <!-- ```{r, echo=FALSE, eval=TRUE} -->
 <!-- sessionInfo() -->
 <!-- ```   -->
-<p><img src="img/cnrs.png" class="slide-logo"></p>
-<div class="footer footer-default">
+
+<img src="img/cnrs.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>
 </div>
 </section></section>
@@ -892,6 +927,48 @@ Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMD
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -930,24 +1007,7 @@ Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMD
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
         setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -985,42 +1045,24 @@ Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMD
           return note.innerHTML;
         });
       }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+        tippyHover(ref, function() {
+          var popup = window.document.createElement('div');
+          cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
           });
-        }
+          return popup.innerHTML;
+        });
       }
     });
     </script>
