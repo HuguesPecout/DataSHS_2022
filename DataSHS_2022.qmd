@@ -3,13 +3,13 @@ title: |
   [Ecrire son code dans un environnement de programmation lettrée]{.title}
 subtitle: |
    [<img src="img/logo_notebook_orange.png" width="500"/>]{.subtitle}
-author: Hugues Pecout </br> [UMR Géographie-Cités - CNRS]{.affiliation}
-footer: |
-  Semaine Data SHS -Décembre 2022 - Université Paris-Cité
+authors: Hugues Pecout </br> [UMR Géographie-Cités - CNRS]{.affiliation}
+footer: Semaine Data SHS -Décembre 2022 - Université Paris-Cité
 format:
   revealjs:
     incremental: true
     theme: [black, styles.scss]
+    highlight-style: zenburn
     css: style.css
     logo: img/cnrs.png
 editor: visual
@@ -20,6 +20,7 @@ chalkboard:
   theme: chalkboard
 slide-number: true
 ---
+
 
 ## Qui suis-je ?
 
@@ -48,15 +49,15 @@ Depuis 2016 :
 -   **Comment archiver et assurer une certaine reproductibilité de mes scripts ?**
 :::
 
-#  {data-background="img/Literate_Programming_book_cover.jpg  " data-background-size="600px"}
+
+
+#  {data-background="img/Literate_Programming_book_cover.jpg  " data-background-size="500px"}
 
 ## Literate programming
 
 ::: big
 La **programmation lettrée** est une approche de la programmation qui se veut différente du paradigme de programmation structurée.
 :::
-
-
 
 ::: {style="font-size:20px;margin-top:30px;margin-bottom:30px;"}
 > « *Nous devons changer notre attitude traditionnelle envers la construction des programmes : au lieu de considérer que notre tâche principale est de dire à un ordinateur ce qu'il doit faire, appliquons-nous plutôt à expliquer à des êtres humains ce que nous voulons que l'ordinateur fasse* 
@@ -66,33 +67,33 @@ La **programmation lettrée** est une approche de la programmation qui se veut d
 > **D. Knuth**, [« Literate Programming », The Computer Journal, British Computer Society, vol. 27, no 2,‎ 1984, p. 97–111 ](https://academic.oup.com/comjnl/article/27/2/97/343244?login=true)
 :::
 
-
 ::: big
 Le paradigme de la programmation lettrée, conçu par **Donald Knuth**, s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place **autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.
 :::
 
-## Exemple
+
+## 
 
 :::: {.columns}
 
 ::: {.column width="50%" style="font-size:30px;text-align:center;"}
 Programmation structurée :
 ```{r}
-#| eval: FALSE
+#| eval: TRUE
 #| include: TRUE
 #| echo : TRUE
+#| fig-height: 7
 
-iris$Sepal.Length
 
-iris$DISTCLASS <- cut(iris$Sepal.Length,
-                      breaks = c(min(iris$Sepal.Length), 
-                                 5, 6, 7, 
-                                 max(iris$Sepal.Length)),
-                      include.lowest = TRUE)
 
 library(ggplot2)
-ggplot(airquality, aes(Temp, Ozone)) + 
-  geom_bar(iris$DISTCLASS)
+ggplot(data = iris, 
+       aes(x = cut(Sepal.Length, breaks = c(min(Sepal.Length), 5, 6, 7, max(Sepal.Length)), 
+                   include.lowest = TRUE, labels = c("Bas","Bas+","Haut","Haut+")))) +
+  geom_bar() + xlab("") + ylab("") + ggtitle("Répartition par classe") +
+  theme(plot.title = element_text(size=27), axis.text=element_text(size=19))
+
+
 
 ```
 
@@ -101,17 +102,51 @@ ggplot(airquality, aes(Temp, Ozone)) +
 ::: {.column width="50%" style="font-size:30px;text-align:center;"}
 Programation lettrée :
 ```{r}
-#| eval: FALSE
+#| eval: TRUE
 #| include: TRUE
 #| echo : TRUE
+
+
+
+# Choix des bornes de classes
+discretisation <- c(min(iris$Sepal.Length), 5, 6, 7, 
+                    max(iris$Sepal.Length))
+
+# Choix des noms de classes
+nom_des_classes <- c("Bas","Bas+","Haut","Haut+")
+
+# Application de la discrétisation
+iris$class <- cut(iris$Sepal.Length,
+                  breaks = discretisation ,
+                  labels = nom_des_classes,
+                  include.lowest = TRUE)
+
+# Bibliothèque pour la représentation graphique
 library(ggplot2)
-ggplot(airquality, aes(Temp, Ozone)) + 
-  geom_point() + 
-  geom_smooth(method = "loess", se = FALSE)
+
+# Construction du graphique 
+# Choix des données et de la variable à représenter
+ggplot(data = iris, aes(x = class)) +
+  geom_bar() + 
+  
+  # Suppression des noms d'axes
+  xlab("") + 
+  ylab("") +
+  
+  # Titre du graphique
+  ggtitle("Répartition par classe") +
+  
+  # Taille de la police (titre et modalité)
+  theme(plot.title = element_text(size=27),
+        axis.text=element_text(size=19))
+
+
 ```
 :::
 
 ::::
+
+
 
 <!-- ## Définition -->
 

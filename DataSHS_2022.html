@@ -7,9 +7,8 @@
 <link href="DataSHS_2022_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="DataSHS_2022_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="DataSHS_2022_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.1.189">
+  <meta name="generator" content="quarto-1.2.247">
 
-  <meta name="author" content="Hugues Pecout  UMR Géographie-Cités - CNRS">
   <title>Ecrire son code dans un environnement de programmation lettrée</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -57,41 +56,39 @@
       }
     pre.numberSource { margin-left: 3em;  padding-left: 4px; }
     div.sourceCode
-      { color: #f8f8f2;  }
+      { color: #cccccc; background-color: #303030; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
+    code span.al { color: #ffcfaf; } /* Alert */
+    code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+    code span.at { } /* Attribute */
+    code span.bn { color: #dca3a3; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #f0dfaf; } /* ControlFlow */
+    code span.ch { color: #dca3a3; } /* Char */
+    code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+    code span.co { color: #7f9f7f; } /* Comment */
+    code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+    code span.do { color: #7f9f7f; } /* Documentation */
+    code span.dt { color: #dfdfbf; } /* DataType */
+    code span.dv { color: #dcdccc; } /* DecVal */
+    code span.er { color: #c3bf9f; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #c0bed1; } /* Float */
+    code span.fu { color: #efef8f; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+    code span.kw { color: #f0dfaf; } /* Keyword */
+    code span.op { color: #f0efd0; } /* Operator */
+    code span.ot { color: #efef8f; } /* Other */
+    code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+    code span.sc { color: #dca3a3; } /* SpecialChar */
+    code span.ss { color: #cc9393; } /* SpecialString */
+    code span.st { color: #cc9393; } /* String */
+    code span.va { } /* Variable */
+    code span.vs { color: #cc9393; } /* VerbatimString */
+    code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
   </style>
   <link rel="stylesheet" href="DataSHS_2022_files/libs/revealjs/dist/theme/quarto.css" id="theme">
   <link rel="stylesheet" href="style.css">
@@ -390,12 +387,19 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="center">
+<section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="title">Ecrire son code dans un environnement de programmation lettrée</span></p></h1>
   <p class="subtitle"></p><p><span class="subtitle"><img src="img/logo_notebook_orange.png" width="500"></span></p><p></p>
-  <p class="author">Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span></p>
-</section>
 
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span> 
+</div>
+</div>
+</div>
+
+</section>
 <section id="qui-suis-je" class="slide level2">
 <h2>Qui suis-je ?</h2>
 <div class="big">
@@ -425,7 +429,7 @@
 </div>
 </section>
 <section>
-<section id="section" class="title-slide slide level1 center" data-background="img/Literate_Programming_book_cover.jpg  " data-background-size="600px">
+<section id="section" class="title-slide slide level1 center" data-background="img/Literate_Programming_book_cover.jpg  " data-background-size="500px">
 <h1></h1>
 
 </section>
@@ -445,31 +449,59 @@
 <p>Le paradigme de la programmation lettrée, conçu par <strong>Donald Knuth</strong>, s’éloigne dans son écriture de l’ordonnancement imposé par l’ordinateur, et à la place <strong>autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée</strong>.</p>
 </div>
 </section>
-<section id="exemple" class="slide level2">
-<h2>Exemple</h2>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <div class="columns">
 <div class="column" style="font-size:30px;text-align:center;">
 <p>Programmation structurée :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>iris<span class="sc">$</span>Sepal.Length</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a>iris<span class="sc">$</span>DISTCLASS <span class="ot">&lt;-</span> <span class="fu">cut</span>(iris<span class="sc">$</span>Sepal.Length,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>                      <span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">min</span>(iris<span class="sc">$</span>Sepal.Length), </span>
-<span id="cb1-5"><a href="#cb1-5"></a>                                 <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, </span>
-<span id="cb1-6"><a href="#cb1-6"></a>                                 <span class="fu">max</span>(iris<span class="sc">$</span>Sepal.Length)),</span>
-<span id="cb1-7"><a href="#cb1-7"></a>                      <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-8"><a href="#cb1-8"></a></span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-10"><a href="#cb1-10"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb1-11"><a href="#cb1-11"></a>  <span class="fu">geom_bar</span>(iris<span class="sc">$</span>DISTCLASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, </span>
+<span id="cb1-3"><a href="#cb1-3"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">cut</span>(Sepal.Length, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">min</span>(Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="fu">max</span>(Sepal.Length)), </span>
+<span id="cb1-4"><a href="#cb1-4"></a>                   <span class="at">include.lowest =</span> <span class="cn">TRUE</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Bas"</span>,<span class="st">"Bas+"</span>,<span class="st">"Haut"</span>,<span class="st">"Haut+"</span>)))) <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>), <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="DataSHS_2022_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</div>
 </div>
 </div><div class="column" style="font-size:30px;text-align:center;">
 <p>Programation lettrée :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">ggplot</span>(airquality, <span class="fu">aes</span>(Temp, Ozone)) <span class="sc">+</span> </span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Choix des bornes de classes</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>discretisation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(iris<span class="sc">$</span>Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, </span>
+<span id="cb2-3"><a href="#cb2-3"></a>                    <span class="fu">max</span>(iris<span class="sc">$</span>Sepal.Length))</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># Choix des noms de classes</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>nom_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Bas"</span>,<span class="st">"Bas+"</span>,<span class="st">"Haut"</span>,<span class="st">"Haut+"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Application de la discrétisation</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>iris<span class="sc">$</span>class <span class="ot">&lt;-</span> <span class="fu">cut</span>(iris<span class="sc">$</span>Sepal.Length,</span>
+<span id="cb2-10"><a href="#cb2-10"></a>                  <span class="at">breaks =</span> discretisation ,</span>
+<span id="cb2-11"><a href="#cb2-11"></a>                  <span class="at">labels =</span> nom_des_classes,</span>
+<span id="cb2-12"><a href="#cb2-12"></a>                  <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># Bibliothèque pour la représentation graphique</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># Construction du graphique </span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="co"># Choix des données et de la variable à représenter</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> class)) <span class="sc">+</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb2-21"><a href="#cb2-21"></a>  </span>
+<span id="cb2-22"><a href="#cb2-22"></a>  <span class="co"># Suppression des noms d'axes</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb2-24"><a href="#cb2-24"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a>  </span>
+<span id="cb2-26"><a href="#cb2-26"></a>  <span class="co"># Titre du graphique</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a>  </span>
+<span id="cb2-29"><a href="#cb2-29"></a>  <span class="co"># Taille de la police (titre et modalité)</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>),</span>
+<span id="cb2-31"><a href="#cb2-31"></a>        <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="DataSHS_2022_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</div>
 </div>
 </div>
 </div>
@@ -709,8 +741,8 @@
 <!-- ```{r, echo=FALSE, eval=TRUE} -->
 <!-- sessionInfo() -->
 <!-- ```   -->
-
-<img src="img/cnrs.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><img src="img/cnrs.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>
 </div>
 </section></section>
@@ -933,12 +965,15 @@
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -949,13 +984,6 @@
               window.jQuery(currentSlide).trigger("shown");
             }
           }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
         }
 
         // hookup for slidy
@@ -1007,7 +1035,24 @@
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
         setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -1045,24 +1090,42 @@
           return note.innerHTML;
         });
       }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-        tippyHover(ref, function() {
-          var popup = window.document.createElement('div');
-          cites.forEach(function(cite) {
-            var citeDiv = window.document.createElement('div');
-            citeDiv.classList.add('hanging-indent');
-            citeDiv.classList.add('csl-entry');
-            var biblioDiv = window.document.getElementById('ref-' + cite);
-            if (biblioDiv) {
-              citeDiv.innerHTML = biblioDiv.innerHTML;
-            }
-            popup.appendChild(citeDiv);
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
           });
-          return popup.innerHTML;
-        });
+        }
       }
     });
     </script>
