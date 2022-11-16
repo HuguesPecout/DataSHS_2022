@@ -400,9 +400,9 @@ Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span
 </div>
 
 </section>
-<section id="qui-suis-je" class="slide level2">
-<h2>Qui suis-je ?</h2>
-<div class="big">
+<section id="bonjour-à-touttes" class="slide level2">
+<h2><span class="smaller">Bonjour à tout·te·s</span></h2>
+<div class="bigspace">
 <p>Ingénieur d’études CNRS en sciences de l’information géographique dans le domaine de la géographie quantitative (UMR Géographie-Cités).</p>
 </div>
 <div class="moy1">
@@ -429,38 +429,38 @@ Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span
 </div>
 </section>
 <section>
-<section id="section" class="title-slide slide level1 center" data-background="img/Literate_Programming_book_cover.jpg  " data-background-size="500px">
+<section id="section" class="title-slide slide level1 center" data-background="img/Literate_Programming_book_cover.jpg" data-background-size="600px">
 <h1></h1>
 
 </section>
 <section id="literate-programming" class="slide level2">
-<h2>Literate programming</h2>
+<h2><span class="smaller">Literate programming</span></h2>
 <div class="big">
 <p>La <strong>programmation lettrée</strong> est une approche de la programmation qui se veut différente du paradigme de programmation structurée.</p>
 </div>
 <div style="font-size:20px;margin-top:30px;margin-bottom:30px;">
 <blockquote>
-<p>« <em>Nous devons changer notre attitude traditionnelle envers la construction des programmes : au lieu de considérer que notre tâche principale est de dire à un ordinateur ce qu’il doit faire, appliquons-nous plutôt à expliquer à des êtres humains ce que nous voulons que l’ordinateur fasse</em></p>
+<p>« <em>Nous devons changer notre attitude traditionnelle envers la construction des programmes : au lieu de considérer que notre tâche principale est de dire à un ordinateur ce qu’il doit faire, appliquons-nous plutôt à expliquer à des êtres humains ce que nous voulons que l’ordinateur fasse.</em> (…)</p>
 <p><em>Celui qui pratique la programmation lettrée peut être vu comme un essayiste, qui s’attache principalement à exposer son sujet dans un style visant à l’excellence. Tel un auteur, il choisit, avec soin, le dictionnaire à la main, les noms de ses variables et en explique la signification pour chacune d’elles. Il cherche donc à obtenir un programme compréhensible parce que ses concepts sont présentés dans le meilleur ordre possible. Pour cela, il utilise un mélange de méthodes formelles et informelles qui se complètent.</em> »</p>
 <p><strong>D. Knuth</strong>, <a href="https://academic.oup.com/comjnl/article/27/2/97/343244?login=true">« Literate Programming », The Computer Journal, British Computer Society, vol.&nbsp;27, no 2,‎ 1984, p.&nbsp;97–111</a></p>
 </blockquote>
 </div>
 <div class="big">
-<p>Le paradigme de la programmation lettrée, conçu par <strong>Donald Knuth</strong>, s’éloigne dans son écriture de l’ordonnancement imposé par l’ordinateur, et à la place <strong>autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée</strong>.</p>
+<p>Le paradigme de la programmation lettrée, pensé et mis en oeuvre par <strong>Donald Knuth</strong> (1977-78), s’éloigne dans son écriture de l’ordonnancement imposé par l’ordinateur, et à la place <strong>autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée</strong>.</p>
 </div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section class="slide level2">
+
 <div class="columns">
 <div class="column" style="font-size:30px;text-align:center;">
-<p>Programmation structurée :</p>
+<p>Code optimisé :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, </span>
-<span id="cb1-3"><a href="#cb1-3"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">cut</span>(Sepal.Length, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">min</span>(Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="fu">max</span>(Sepal.Length)), </span>
-<span id="cb1-4"><a href="#cb1-4"></a>                   <span class="at">include.lowest =</span> <span class="cn">TRUE</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Bas"</span>,<span class="st">"Bas+"</span>,<span class="st">"Haut"</span>,<span class="st">"Haut+"</span>)))) <span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>), <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">cut</span>(Sepal.Length, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">min</span>(Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="fu">max</span>(Sepal.Length)), </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">include.lowest =</span> <span class="cn">TRUE</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Bas"</span>,<span class="st">"Bas+"</span>,<span class="st">"Haut"</span>,<span class="st">"Haut+"</span>)))) <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>), <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img data-src="DataSHS_2022_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
 </div>
@@ -468,207 +468,336 @@ Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span
 </div><div class="column" style="font-size:30px;text-align:center;">
 <p>Programation lettrée :</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># Choix des bornes de classes</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>discretisation <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(iris<span class="sc">$</span>Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, </span>
-<span id="cb2-3"><a href="#cb2-3"></a>                    <span class="fu">max</span>(iris<span class="sc">$</span>Sepal.Length))</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># Choix des noms de classes</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a>nom_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Bas"</span>,<span class="st">"Bas+"</span>,<span class="st">"Haut"</span>,<span class="st">"Haut+"</span>)</span>
-<span id="cb2-7"><a href="#cb2-7"></a></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="co"># Application de la discrétisation</span></span>
-<span id="cb2-9"><a href="#cb2-9"></a>iris<span class="sc">$</span>class <span class="ot">&lt;-</span> <span class="fu">cut</span>(iris<span class="sc">$</span>Sepal.Length,</span>
-<span id="cb2-10"><a href="#cb2-10"></a>                  <span class="at">breaks =</span> discretisation ,</span>
-<span id="cb2-11"><a href="#cb2-11"></a>                  <span class="at">labels =</span> nom_des_classes,</span>
-<span id="cb2-12"><a href="#cb2-12"></a>                  <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># Bibliothèque pour la représentation graphique</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-16"><a href="#cb2-16"></a></span>
-<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># Construction du graphique </span></span>
-<span id="cb2-18"><a href="#cb2-18"></a><span class="co"># Choix des données et de la variable à représenter</span></span>
-<span id="cb2-19"><a href="#cb2-19"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> class)) <span class="sc">+</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb2-21"><a href="#cb2-21"></a>  </span>
-<span id="cb2-22"><a href="#cb2-22"></a>  <span class="co"># Suppression des noms d'axes</span></span>
-<span id="cb2-23"><a href="#cb2-23"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
-<span id="cb2-24"><a href="#cb2-24"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span></span>
-<span id="cb2-25"><a href="#cb2-25"></a>  </span>
-<span id="cb2-26"><a href="#cb2-26"></a>  <span class="co"># Titre du graphique</span></span>
-<span id="cb2-27"><a href="#cb2-27"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
-<span id="cb2-28"><a href="#cb2-28"></a>  </span>
-<span id="cb2-29"><a href="#cb2-29"></a>  <span class="co"># Taille de la police (titre et modalité)</span></span>
-<span id="cb2-30"><a href="#cb2-30"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>),</span>
-<span id="cb2-31"><a href="#cb2-31"></a>        <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="DataSHS_2022_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#            Représentation graphique </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#         de la répartition d'individus</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#          discrétisé en quatre classes </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">#                  H. Pecout</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co">#               5 décembre 2022</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Discrétisation la variable Sepal.Length (données iris)</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Choix des bornes de classes (amplitude égale)</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>bornes_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(iris<span class="sc">$</span>Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">max</span>(iris<span class="sc">$</span>Sepal.Length))</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Choix des noms de classes</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>nom_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Trés petites"</span>,<span class="st">"petites"</span>,<span class="st">"grandes"</span>,<span class="st">"Très grandes"</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Discrétisation de la variable 'Sepal.length'</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>iris<span class="sc">$</span>classe  <span class="ot">&lt;-</span> <span class="fu">cut</span>(iris<span class="sc">$</span>Sepal.Length,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                    <span class="at">breaks =</span> bornes_des_classes,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> nom_des_classes,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                    <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#---------------------------------------------------------------------</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="do">## Représentation des la distribution selon la discrétisation</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Bibliothèque pour la représentation graphique</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentation graphique de la distribution</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> classe)) <span class="sc">+</span>  <span class="co"># Choix des données et de la variable à représenter</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span>  <span class="co"># Choix du type de représentation</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span>    <span class="co"># Suppression du nom de l'axe x</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span>    <span class="co"># Suppression du nom de l'axe y</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span>  <span class="co"># Titre du graphique</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>),  <span class="co"># Taille de la police titre </span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))     <span class="co"># Taille des labels d'axe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="quel-outil-pour-la-pl" class="slide level2">
+<h2><span class="smaller">Quel outil pour la PL ?</span></h2>
+<div class="moy">
+<p>Il est possible de faire de la programmation lettrée dans n’importe quel type de document… Ce paradigme n’est pas lié à format ou à un outil. Mais il en existe tout de même un parfait pour mettre en oeuvre ce concept.</p>
+</div>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="img/logo_gt_notebook_orange.png" height="400"></p>
+</div><div class="column" style="width:70%;">
+<div class="big">
+<p><strong>Le notebook permet de combiner du langage naturel et du langage de programmation</strong>, et d’interpréter les deux :</p>
+<div>
+<ul>
+<li>Mise en forme du texte<br>
+</li>
+<li>Exécution et/ou affichage du code<br>
+</li>
+</ul>
+<p><br>
+</p>
+<div class="big">
+<p><strong>Les notebooks et la programmation lettrée ont été crées à la même période, en parallèle de l’emergence du concept de recherche reproductible.</strong></p>
 </div>
 </div>
 </div>
 </div>
-<!-- ## Définition -->
-<!-- <p class="medpcenter" style="margin-top:40px;font-size:75%;"> -->
-<!-- **Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique** -->
-<!-- </p> -->
-<!-- <p class="smallpcenter" style="margin-top:30px;font-size:55%;"> -->
-<!-- [<b>De nombreuses dénominations existent :]{style="color:grey;"}</b> -->
-<!-- </p> -->
-<!-- <ul class="pucsmall2" style="margin-top:0px;font-size:50%;"> -->
+</div>
+</section>
+<section id="un-peu-dhistoire" class="slide level2">
+<h2><span class="smaller">Un peu d’histoire</span></h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="bigorange">
+<p><strong>Les premiers notebooks</strong></p>
+</div>
+<div style="font-size:25px;line-height:25px;margin-top:20px;">
+<ul>
+<li>1970 : Scratchpad (Axiom)</li>
+<li>1987 : MathCad</li>
+<li>1988 : Mathematica</li>
+<li>1989 : Maple</li>
+<li>2011 : IPython</li>
+</ul>
+</div>
+<p><img data-src="img/Wolfram-Language-on-early-Mac.png" height="250"></p>
+</div><div class="column" style="width:60%;">
+<div class="bigorange">
+<p><strong>Émergence de la recherche reproductible</strong></p>
+</div>
+<div class="small">
+<p><strong>Jon Claerbout</strong>, géophysicien, est l’un des premiers chercheur a exprimer le fait que <strong>les méthodes de calcul menacent la reproductibilité de la recherche</strong> si l’on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.</p>
+<p>En 1976, Jon Claerbout publie un ouvrage référence dans le domùaine du traitement de signal : « <strong><em>Fundamentals of Geophysical Data Processing</em></strong> »</p>
+<p>Cette 1ère version, non-reproductible, sera le début d’un long travail de recherche sur la reproductibilité de ses propres travaux… Via des notebooks !</p>
+</div>
+<p><br>
+</p>
+<div class="bigorange">
+<p><strong>Émergence du Literate Programming</strong></p>
+</div>
+<div class="small">
+<p>Le concept de <strong>programmation lettrée</strong> est pensé et mis en oeuvre (1977-78) par <strong>Donald Knuth</strong>. Le notebook se présente comme un outil idéal pour appliquer ce paradigme.</p>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="section-1" class="title-slide slide level1 center" data-background="img/logo_notebook_orange.png" data-background-size="900px">
+<h1></h1>
 
-<!-- > -   [*Article exécutable*]{style="color:grey;"} -->
-<!-- > -   [*Document computationnel*]{style="color:grey;"} -->
-<!-- > -   [*Document électronique interactif*]{style="color:grey;"} -->
-<!-- > -   [*Bloc-note*]{style="color:grey;"} -->
-<!-- > -   [*Cahiers de programmation*]{style="color:grey;"} -->
-<!-- > -   [*Cahier électronique d'analyse*]{style="color:grey;"} -->
-<!-- > -   [*Calepin électronique*]{style="color:grey;"} -->
-<!-- > -   [*Carnet de code*]{style="color:grey;"} -->
-<!-- > -   [*Manifeste algorithmique*]{style="color:grey;"} -->
-<!-- > -   [**Notebook !**]{style="color:grey;"} -->
-<!-- > -   [*...*]{style="color:grey;"} -->
-<!-- </ul> -->
-<!-- <p class="medpcenter" style="margin-top:30px;font-size:75%;"> -->
-<!-- **Un notebook permet d'appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité** -->
-<!-- </p> -->
-<!-- ## Une logique... des pratiques -->
-<!-- <img src="img/notebook_1.png" style="margin-top:40px;" width="1000"/> -->
-<!-- <p style="font-size:60%;"> -->
-<!-- La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...) -->
-<!-- </p> -->
-<!-- ## Anatomie d'un notebook -->
-<!-- <p class="smallpcenter" style="margin-top:70px;"> -->
-<!-- Simple fichier texte -->
-<!-- <P> -->
-<!-- <img src="img/notebook_2.png" style="margin-top:80px;" width="1000"/> -->
-<!-- ## Notebook sans code ? -->
-<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
-<!-- ## Stylo d'Human-Num -->
-<!-- <p class="smallpcenter" style="margin-top:40px;"> -->
-<!-- Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/) -->
-<!-- </p> -->
-<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
-<!-- <p class="smallpcenter" style="margin-top:30px;"> -->
-<!-- Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...) -->
-<!-- </p> -->
-<!-- ## Le Markdown (Gruber, 2004) -->
-<!-- <div id="codermd"> -->
-<!-- <p class="smallpcenter">Fichier Markdown (.md)</p> -->
-<!-- ```{r, file = 'img/hackmd.md', eval=FALSE} -->
-<!-- ``` -->
-<!-- <p class="smallpcenter">-> Visualiser sur [HackMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)</p> -->
-<!-- </div> -->
-<!-- <div id="codehtml"> -->
-<!-- <p class="smallpcenter">Texte mis en forme (sortie html)</p> -->
-<!-- ![](img/hackmd.png) -->
-<!-- </div> -->
-<!-- ## Exemple de Notebook -->
-<!-- ## Le Notebook Rmarkdown -->
-<!-- <div id="codermd"> -->
-<!-- <p class="smallpcenter">Fichier source (.rmd)</p> -->
-<!-- ```{r, file = 'img/exemple.rmd', eval=FALSE} -->
-<!-- ``` -->
-<!-- </div> -->
-<!-- <div id="codehtml"> -->
-<!-- <p class="smallpcenter">Fichier en sortie (.html)</p> -->
-<!-- ![](img/markdown.png) -->
-<!-- </div> -->
-<!-- ##  « Kniter » <img src="img/knito.png" width="85" style="margin-top:0px;margin-bottom:-15px;"/> un .rmd  -->
-<!-- <img src="img/knitr_process.png" style="margin-top:30px;" width="800"/> -->
-<!-- ##  {data-background="img/markdown2.png" data-background-size="1400px"} -->
-<!-- ##  {data-background="img/markdown3.png" data-background-size="1400px"} -->
-<!-- # {data-background="img/history.jpeg" data-background-size="750px"} -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- ## Les prémices -->
-<!-- <div id="codermd2"> -->
-<!-- <p class="medpcenter" style="margin-top:30px;"><span style="color:#f7a41f;">**Ancêtres du notebook :**</span></p> -->
-<!-- <ul class="pucsmall22" style="margin-top:20px;"> -->
-<!-- > - 1970 : Scratchpad (Axiom) -->
-<!-- > - 1987 : MathCad  -->
-<!-- > - 1988 : Mathematica  -->
-<!-- > - 1989 : Maple  -->
-<!-- > - 2011 : IPython -->
-<!-- </ul> -->
-<!-- <img src="img/Wolfram-Language-on-early-Mac.png" style="margin-top:40px;" width="300"/> -->
-<!-- </div> -->
-<!-- <div id="codehtml2"> -->
-<!-- <p class="medpcenter" style="margin-top:30px;"><span style="color:#f7a41f;">**Émergence de la recherche reproductible**</span></p> -->
-<!-- <p style="font-size:60%;margin-top:30px;">En 1976, **Jon Claerbout** publie l'ouvrage : <br> -->
-<!-- [*Fundamentals of Geophysical Data Processing*](http://sepwww.stanford.edu/sep/prof/fgdp5.pdf)</p> -->
-<!-- <p style="font-size:56%;">Cette 1ère version, non-reproductible, sera le début d'un long travail de recherche sur la reproductibilité de ses travaux... Via des notebooks.</p> -->
-<!-- <p class="medpcenter" style="margin-top:90px;"><span style="color:#f7a41f;">**Émergence du Literate Programming**</span></p> -->
-<!-- <p style="margin-top:20px;font-size:60%;">Le concept de **programmation lettrée** pensé et mis en oeuvre (1977-78) par **Donald Knuth** est lié à l'histoire des notebooks.</span></p>  -->
-<!-- </div> -->
-<!-- ## Programmation lettrée -->
-<!-- <p class="smallpcenter" style="margin-top:40px;">La **programmation lettrée** est une approche de la programmation qui se veut différente du paradigme de programmation structurée.</p> -->
-<!-- > <p style="font-size:50%;">Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. <br> Donald Knuth, [LP Website citations page](http://www.literateprogramming.com/)</p> -->
-<!-- > <p style="font-size:50%;">The practitioner of literate programming (...) strives for **a program that is comprehensible because its concepts have been introduced in an order that is best for human understanding** (...). <br> Donald Knuth, [LP Website citations page](http://www.literateprogramming.com/)</p> -->
-<!-- <p class="smallpcenter">**Le paradigme de la programmation lettrée**, tel qu'il a été conçu par **Knuth**, s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place **autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.</p> -->
-<!-- ## Multiplication des NB et des plateformes -->
-<!-- <img src="img/typonotebook.png" style="margin-top:10px;margin-bottom:0px;" width="670"/> -->
-<!-- <p style="font-size:40%;color:grey;margin-top:5px;">S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020<p> -->
-<!-- ## Dernière génération -->
-<!-- <img src="img/nouveau_notebook.png" style="margin-bottom:0px;" width="800"/> -->
-<!-- ## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>  -->
-<!-- <img src="img/quarto2.png" style="margin-top:20px;" width="800"/> -->
-<!-- <p class="smallpcenter">[**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...</p> -->
-<!-- ## Programmation lettrée & Notebook  -->
-<!-- <br> -->
-<!-- <img src="img/LP1.png" style="margin-top:60px;" width="800"/> -->
-<!-- ## LP, Notebook & Reproductibilité -->
-<!-- <img src="img/LP2.png" style="margin-top:60px;" width="800"/>  -->
-<!-- # {data-background="img/partie4.png" data-background-size="500px"} -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- ## Git, GitHub, GitLab -->
-<!-- <p class=smallpcenter" style="margin-top:80px;font-size:85%;">[**Git**](https://git-scm.com/) est un système de gestion de version distribué pour :</p>   -->
-<!-- <ul class="pucsmall22"style="margin-top:10px;font-size:77%;"> -->
-<!-- > - tracker les changement dans les fichiers texte          -->
-<!-- > - gérer l’historique du code source        -->
-<!-- > - partager le code dans des dépots distants        -->
-<!-- </ul> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <p class=smallpcenter" style="margin-top:40px;font-size:83%;">[**GitHub**](https://github.com/) et [**GitLab**](https://about.gitlab.com/) hébèrgent des dépots distants et des services pour gérer des projets (issue tracker, collaboration, hébergement web, CI/CD).</p>   -->
-<!-- ## Notebook + Git  -->
-<!-- <ul class="pucsmall22"style="margin-top:60px;font-size:85%;"> -->
-<!-- <li>Les sources des notebooks sont des fichiers texte</li>  -->
-<!--   <ul class="pucsmall22"style="margin-top:15px;font-size:95%;"> -->
-<!-- ➡️ Suivi des modifications (*commit*, branches, etc.) -->
-<!--    </ul>   -->
-<!-- <li style="margin-top:70px;">Certains ont besoin d'être compilé</li>    -->
-<!--   <ul class="pucsmall22"style="font-size:95%;margin-top:15px;"> -->
-<!-- ➡️ *Continuous Integration*   -->
-<!--   </ul>       -->
-<!-- <li  style="margin-top:70px;">Certains peuvent être déployés sur le web</li>    -->
-<!--   <ul class="pucsmall22"style="font-size:95%;margin-top:15px;"> -->
-<!-- ➡️ *Continuous Deployment*  -->
-<!--   </ul>   -->
-<!-- </ul>   -->
-<!-- ## Exemple notebook Quarto -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>  -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <p style="font-size:115%;">[Cliquez-ici !](https://rcarto.github.io/Quarto/)</p> -->
+</section>
+<section id="définition" class="slide level2">
+<h2><span class="smaller">Définition</span></h2>
+<div class="big">
+<p><strong>Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique</strong></p>
+</div>
+<div class="bigrey">
+<p>De nombreuses dénominations existent :</p>
+</div>
+<div style="color:grey;font-size:18px;text-align:center;">
+<ul>
+<li><p><em>Article exécutable</em></p></li>
+<li><p><em>Document computationnel</em></p></li>
+<li><p><em>Document électronique interactif</em></p></li>
+<li><p><em>Bloc-note</em></p></li>
+<li><p><em>Cahiers de programmation</em></p></li>
+<li><p><em>Cahier électronique d’analyse</em></p></li>
+<li><p><em>Calepin électronique</em></p></li>
+<li><p><em>Carnet de code</em></p></li>
+<li><p><em>Manifeste algorithmique</em></p></li>
+<li><p><strong>Notebook !</strong></p></li>
+<li><p><em>…</em></p></li>
+</ul>
+</div>
+<div class="moy">
+<p><strong>Un notebook permet d’appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité</strong></p>
+</div>
+</section>
+<section id="une-logique-des-pratiques" class="slide level2">
+<h2><span class="smaller">Une logique… des pratiques</span></h2>
+
+<img src="img/notebook_1.png" style="margin-top:40px;" width="1000" class="r-stretch"><p style="font-size:60%;">
+</p><p>La mise en forme du texte se fait à l’aide d’un langage de balisage (Markdown, html…)</p>
+<p></p>
+</section>
+<section id="anatomie-dun-notebook" class="slide level2">
+<h2>Anatomie d’un notebook</h2>
+<p class="smallpcenter" style="margin-top:70px;">
+</p><p>Simple fichier texte</p>
+<p>
+</p>
+<img src="img/notebook_2.png" style="margin-top:80px;" width="1000" class="r-stretch"></section>
+<section id="notebook-sans-code" class="slide level2">
+<h2>Notebook sans code ?</h2>
+
+<img src="img/notebook_3.png" style="margin-top:120px;" width="1000" class="r-stretch"></section>
+<section id="stylo-dhuman-num" class="slide level2">
+<h2>Stylo d’Human-Num</h2>
+<p class="smallpcenter" style="margin-top:40px;">
+</p><p>Développé par le <a href="https://ecrituresnumeriques.ca/fr/">CRC-EN</a> avec le support <a href="https://www.erudit.org/fr/">Érudit</a> et de la <a href="https://www.huma-num.fr/">TGIR Huma-Num</a></p>
+<p></p>
+
+<img src="img/stylo.png" style="margin-top:5px;" width="550" class="r-stretch"><p class="smallpcenter" style="margin-top:30px;">
+</p><p>Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both">CodiMD</a>…)</p>
+<p></p>
+</section>
+<section id="le-markdown-gruber-2004" class="slide level2">
+<h2>Le Markdown (Gruber, 2004)</h2>
+<div id="codermd">
+<p class="smallpcenter">
+</p><p>Fichier Markdown (.md)</p>
+<p></p>
+<div class="cell" data-file="img/hackmd.md">
+
+</div>
+<p class="smallpcenter">
+</p><p>-&gt; Visualiser sur <a href="https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both">HackMD</a></p>
+<p></p>
+</div>
+<div id="codehtml">
+<p class="smallpcenter">
+</p><p>Texte mis en forme (sortie html)</p>
+<p></p>
+<p><img data-src="img/hackmd.png"></p>
+</div>
+</section>
+<section id="exemple-de-notebook" class="slide level2">
+<h2>Exemple de Notebook</h2>
+</section>
+<section id="le-notebook-rmarkdown" class="slide level2">
+<h2>Le Notebook Rmarkdown</h2>
+<div>
+<p class="smallpcenter">
+</p><p>Fichier source (.rmd)</p>
+<p></p>
+<div class="cell" data-file="img/exemple.rmd">
+
+</div>
+</div>
+<div>
+<p class="smallpcenter">
+</p><p>Fichier en sortie (.html)</p>
+<p></p>
+<p><img data-src="img/markdown.png"></p>
+</div>
+</section>
+<section id="kniter-un-.rmd" class="slide level2">
+<h2>« Kniter » <img src="img/knito.png" width="85" style="margin-top:0px;margin-bottom:-15px;"> un .rmd</h2>
+<p><img src="img/knitr_process.png" style="margin-top:30px;" width="800"></p>
+</section>
+<section id="section-2" class="slide level2" data-background="img/markdown2.png" data-background-size="1400px">
+<h2></h2>
+</section>
+<section id="section-3" class="slide level2" data-background="img/markdown3.png" data-background-size="1400px">
+<h2></h2>
+</section></section>
+<section>
+<section id="section-4" class="title-slide slide level1 center" data-background="img/history.jpeg" data-background-size="750px">
+<h1></h1>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="multiplication-des-nb-et-des-plateformes" class="slide level2">
+<h2>Multiplication des NB et des plateformes</h2>
+
+<img src="img/typonotebook.png" style="margin-top:10px;margin-bottom:0px;" width="670" class="r-stretch"><p style="font-size:40%;color:grey;margin-top:5px;">
+</p><p>S. Lau, I. Drosos, J. M. Markel and P. J. Guo, “The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry,” 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020</p>
+<p>
+</p></section>
+<section id="dernière-génération" class="slide level2">
+<h2>Dernière génération</h2>
+
+<img src="img/nouveau_notebook.png" style="margin-bottom:0px;" width="800" class="r-stretch"></section>
+<section id="lannée" class="slide level2">
+<h2>2022, l’année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"></h2>
+<p><img src="img/quarto2.png" style="margin-top:20px;" width="800"></p>
+<p class="smallpcenter">
+</p><p><a href="https://quarto.org/"><strong>Quarto</strong></a> permet l’utilisation de <strong>R</strong>, <strong>Python</strong>, <strong>Julia</strong>, <strong>Javascript</strong> (<strong>OJS</strong>)…</p>
+<p></p>
+</section>
+<section id="programmation-lettrée-notebook" class="slide level2">
+<h2>Programmation lettrée &amp; Notebook</h2>
+<p><br></p>
+
+<img src="img/LP1.png" style="margin-top:60px;" width="800" class="r-stretch"></section>
+<section id="lp-notebook-reproductibilité" class="slide level2">
+<h2>LP, Notebook &amp; Reproductibilité</h2>
+
+<img src="img/LP2.png" style="margin-top:60px;" width="800" class="r-stretch"></section></section>
+<section>
+<section id="section-5" class="title-slide slide level1 center" data-background="img/partie4.png" data-background-size="500px">
+<h1></h1>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="git-github-gitlab" class="slide level2">
+<h2>Git, GitHub, GitLab</h2>
+<p class="smallpcenter&quot;" style="margin-top:80px;font-size:85%;">
+</p><p><a href="https://git-scm.com/"><strong>Git</strong></a> est un système de gestion de version distribué pour :</p>
+<p></p>
+<ul class="pucsmall22" style="margin-top:10px;font-size:77%;">
+<ul>
+<li>tracker les changement dans les fichiers texte</li>
+</ul>
+<ul>
+<li>gérer l’historique du code source</li>
+</ul>
+<ul>
+<li>partager le code dans des dépots distants</li>
+</ul>
+</ul>
+<p><br></p>
+<p><br></p>
+<p class="smallpcenter&quot;" style="margin-top:40px;font-size:83%;">
+</p><p><a href="https://github.com/"><strong>GitHub</strong></a> et <a href="https://about.gitlab.com/"><strong>GitLab</strong></a> hébèrgent des dépots distants et des services pour gérer des projets (issue tracker, collaboration, hébergement web, CI/CD).</p>
+<p></p>
+</section>
+<section id="notebook-git" class="slide level2">
+<h2>Notebook + Git</h2>
+<ul class="pucsmall22" style="margin-top:60px;font-size:85%;">
+<li>
+Les sources des notebooks sont des fichiers texte
+</li>
+<ul class="pucsmall22" style="margin-top:15px;font-size:95%;">
+<p>➡️ Suivi des modifications (<em>commit</em>, branches, etc.)</p>
+</ul>
+<li style="margin-top:70px;">
+<p>Certains ont besoin d’être compilé</p>
+</li>
+<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
+<p>➡️ <em>Continuous Integration</em></p>
+</ul>
+<li style="margin-top:70px;">
+<p>Certains peuvent être déployés sur le web</p>
+</li>
+<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
+<p>➡️ <em>Continuous Deployment</em></p>
+</ul>
+</ul>
+</section>
+<section id="exemple-notebook-quarto" class="slide level2">
+<h2>Exemple notebook Quarto</h2>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"> <strong>+</strong> <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"> <strong>+</strong> <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p style="font-size:115%;">
+</p><p><a href="https://rcarto.github.io/Quarto/">Cliquez-ici !</a></p>
+<p></p>
 <!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
 <!-- <br> -->
 <!-- <br> -->
@@ -741,7 +870,7 @@ Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span
 <!-- ```{r, echo=FALSE, eval=TRUE} -->
 <!-- sessionInfo() -->
 <!-- ```   -->
-<p><img src="img/cnrs.png" class="slide-logo"></p>
+<p><img src="img/logo_hp.png" class="slide-logo"></p>
 <div class="footer footer-default">
 <p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>
 </div>

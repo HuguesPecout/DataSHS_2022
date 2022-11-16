@@ -5,26 +5,45 @@
   margin: 0;
 }
 
+
 .subtitle{
-  margin: 0;
+  font-size: 25px;
+    margin: 0;
 }
 
 .author{
   font-size: 25px;
-  line-height: 1.1em;
-  display: inline-block; 
-  margin-top: 0;
 }
+
 
 .affiliation{
   font-size: 23px;
-  line-height: 0.9em;
-  display: inline-block; 
-  margin-top: 0;
+}
+
+.smaller{
+  font-size:50px;
 }
 
 .big{
   font-size: 30px;
+}
+
+.bigspace{
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+
+.bigrey{
+  font-size: 27px;
+  color:grey;
+  text-align:center;
+  margin-top:20px;
+}
+
+.bigorange{
+  font-size: 30px;
+  color: #f7a41f;
 }
 
 .moy1{
@@ -33,10 +52,14 @@
   font-weight: bold;
 }
 
+
 .moy{
   font-size: 25px;
 }
 
+.small{
+  font-size: 20px;
+}
 
 
 
