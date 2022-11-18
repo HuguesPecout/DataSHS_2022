@@ -1,14 +1,12 @@
 .title{
-  font-size: 50px;
+  font-size: 55px;
   line-height: 1.1em;
   display: inline-block; 
-  margin: 0;
-}
 
+}
 
 .subtitle{
   font-size: 25px;
-    margin: 0;
 }
 
 .author{
@@ -16,7 +14,7 @@
 }
 
 
-.affiliation{
+.affiliations{
   font-size: 23px;
 }
 
@@ -28,11 +26,21 @@
   font-size: 30px;
 }
 
+.big1{
+  font-size: 27px;
+}
+
 .bigspace{
   font-size: 30px;
   margin-top: 25px;
 }
 
+.bigspacecenter{
+  font-size: 30px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align:center;
+}
 
 .bigrey{
   font-size: 27px;

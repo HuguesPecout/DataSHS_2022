@@ -9,6 +9,7 @@
 <link href="DataSHS_2022_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.247">
 
+  <meta name="author" content="Hugues Pecout">
   <title>Ecrire son code dans un environnement de programmation lettrée</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -389,14 +390,17 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title"><p><span class="title">Ecrire son code dans un environnement de programmation lettrée</span></p></h1>
-  <p class="subtitle"></p><p><span class="subtitle"><img src="img/logo_notebook_orange.png" width="500"></span></p><p></p>
+  <p class="subtitle"></p><p><span class="subtitle"><img src="img/logo_notebook_orange.png" width="60%"></span></p><p></p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span> 
+Hugues Pecout 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            UMR Géographie-Cités - CNRS
+          </p>
+    </div>
 </div>
 
 </section>
@@ -429,7 +433,7 @@ Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span
 </div>
 </section>
 <section>
-<section id="section" class="title-slide slide level1 center" data-background="img/Literate_Programming_book_cover.jpg" data-background-size="600px">
+<section id="section" class="title-slide slide level1 center" data-background="img/Literate_Programming_book_cover.jpg" data-background-size="25%">
 <h1></h1>
 
 </section>
@@ -518,7 +522,7 @@ Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span
 </div>
 <div class="columns">
 <div class="column" style="width:30%;">
-<p><img data-src="img/logo_gt_notebook_orange.png" height="400"></p>
+<p><img data-src="img/logo_gt_notebook_orange.png" style="width:79.0%"></p>
 </div><div class="column" style="width:70%;">
 <div class="big">
 <p><strong>Le notebook permet de combiner du langage naturel et du langage de programmation</strong>, et d’interpréter les deux :</p>
@@ -555,109 +559,109 @@ Hugues Pecout <br> <span class="affiliation">UMR Géographie-Cités - CNRS</span
 <li>2011 : IPython</li>
 </ul>
 </div>
-<p><img data-src="img/Wolfram-Language-on-early-Mac.png" height="250"></p>
+<p><img data-src="img/Wolfram-Language-on-early-Mac.png" style="width:80.0%"></p>
 </div><div class="column" style="width:60%;">
 <div class="bigorange">
 <p><strong>Émergence de la recherche reproductible</strong></p>
 </div>
 <div class="small">
-<p><strong>Jon Claerbout</strong>, géophysicien, est l’un des premiers chercheur a exprimer le fait que <strong>les méthodes de calcul menacent la reproductibilité de la recherche</strong> si l’on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.</p>
-<p>En 1976, Jon Claerbout publie un ouvrage référence dans le domùaine du traitement de signal : « <strong><em>Fundamentals of Geophysical Data Processing</em></strong> »</p>
-<p>Cette 1ère version, non-reproductible, sera le début d’un long travail de recherche sur la reproductibilité de ses propres travaux… Via des notebooks !</p>
+<p><a href="https://en.wikipedia.org/wiki/Jon_Claerbout"><strong>Jon Claerbout</strong></a> est l’un des premiers chercheur a exprimer le fait que <strong>les méthodes de calcul menacent la reproductibilité de la recherche</strong> si l’on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.</p>
+<p>En 1976, il publie un ouvrage référence en traitement de signal :<br>
+« <strong><em>Fundamentals of Geophysical Data Processing</em></strong> »</p>
+<p>Cette 1ère version - non-reproductible - sera le début d’un long travail de recherche sur la reproductibilité… Via des notebooks !</p>
 </div>
 <p><br>
 </p>
 <div class="bigorange">
 <p><strong>Émergence du Literate Programming</strong></p>
 </div>
-<div class="small">
-<p>Le concept de <strong>programmation lettrée</strong> est pensé et mis en oeuvre (1977-78) par <strong>Donald Knuth</strong>. Le notebook se présente comme un outil idéal pour appliquer ce paradigme.</p>
+<div class="moy">
+<p>Le concept de <strong>programmation lettrée</strong> est pensé et conçu par <strong>Donald Knuth</strong> (1977-78). Le notebook se présente comme un outil idéal pour mettre en œuvre ce paradigme.</p>
 </div>
 </div>
 </div>
 </section></section>
 <section>
-<section id="section-1" class="title-slide slide level1 center" data-background="img/logo_notebook_orange.png" data-background-size="900px">
+<section id="section-1" class="title-slide slide level1 center" data-background="img/logo_notebook_orange.png" data-background-size="45%">
 <h1></h1>
 
 </section>
 <section id="définition" class="slide level2">
 <h2><span class="smaller">Définition</span></h2>
 <div class="big">
-<p><strong>Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique</strong></p>
+<p><strong>Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique.</strong></p>
 </div>
 <div class="bigrey">
 <p>De nombreuses dénominations existent :</p>
 </div>
-<div style="color:grey;font-size:18px;text-align:center;">
+<div style="color:grey;font-size:22px;text-align:center;">
 <ul>
-<li><p><em>Article exécutable</em></p></li>
-<li><p><em>Document computationnel</em></p></li>
-<li><p><em>Document électronique interactif</em></p></li>
-<li><p><em>Bloc-note</em></p></li>
-<li><p><em>Cahiers de programmation</em></p></li>
-<li><p><em>Cahier électronique d’analyse</em></p></li>
-<li><p><em>Calepin électronique</em></p></li>
-<li><p><em>Carnet de code</em></p></li>
-<li><p><em>Manifeste algorithmique</em></p></li>
-<li><p><strong>Notebook !</strong></p></li>
-<li><p><em>…</em></p></li>
+<li><em>Article exécutable</em></li>
+<li><em>Document computationnel</em></li>
+<li><em>Document électronique interactif</em></li>
+<li><em>Cahiers de programmation</em></li>
+<li><em>Cahier électronique d’analyse</em></li>
+<li><em>Calepin électronique</em></li>
+<li><em>Carnet de code</em></li>
+<li><em>Manifeste algorithmique</em></li>
+<li><strong>Notebook !</strong></li>
+<li><em>…</em></li>
 </ul>
 </div>
-<div class="moy">
-<p><strong>Un notebook permet d’appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité</strong></p>
-</div>
 </section>
-<section id="une-logique-des-pratiques" class="slide level2">
-<h2><span class="smaller">Une logique… des pratiques</span></h2>
+<section id="une-logique-plusieurs-pratiques" class="slide level2">
+<h2><span class="smaller">Une logique… plusieurs pratiques !</span></h2>
 
-<img src="img/notebook_1.png" style="margin-top:40px;" width="1000" class="r-stretch"><p style="font-size:60%;">
-</p><p>La mise en forme du texte se fait à l’aide d’un langage de balisage (Markdown, html…)</p>
-<p></p>
+<img data-src="img/notebook_1.png" style="width:80.0%" class="r-stretch"><div class="bigrey">
+<p>La mise en forme du texte se fait à l’aide d’un langage de balisage (Markdown, html…)</p>
+</div>
 </section>
 <section id="anatomie-dun-notebook" class="slide level2">
-<h2>Anatomie d’un notebook</h2>
-<p class="smallpcenter" style="margin-top:70px;">
-</p><p>Simple fichier texte</p>
-<p>
-</p>
-<img src="img/notebook_2.png" style="margin-top:80px;" width="1000" class="r-stretch"></section>
-<section id="notebook-sans-code" class="slide level2">
-<h2>Notebook sans code ?</h2>
+<h2><span class="smaller">Anatomie d’un notebook</span></h2>
+<div class="bigspacecenter">
+<p>Un simple fichier texte (.rmd, .qmd, .ipynb…)</p>
+</div>
 
-<img src="img/notebook_3.png" style="margin-top:120px;" width="1000" class="r-stretch"></section>
-<section id="stylo-dhuman-num" class="slide level2">
-<h2>Stylo d’Human-Num</h2>
-<p class="smallpcenter" style="margin-top:40px;">
-</p><p>Développé par le <a href="https://ecrituresnumeriques.ca/fr/">CRC-EN</a> avec le support <a href="https://www.erudit.org/fr/">Érudit</a> et de la <a href="https://www.huma-num.fr/">TGIR Huma-Num</a></p>
-<p></p>
+<!-- ## Notebook sans code ? -->
+<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
+<!-- ## Stylo d'Human-Num -->
+<!-- <p class="smallpcenter" style="margin-top:40px;"> -->
+<!-- Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/) -->
+<!-- </p> -->
+<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
+<!-- <p class="smallpcenter" style="margin-top:30px;"> -->
+<!-- Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...) -->
+<!-- </p> -->
+<img data-src="img/notebook_2.png" style="width:100.0%" class="r-stretch"></section>
+<section id="le-markdown-gruber-2004" class="slide level2 scrollable">
+<h2><span class="smaller">Le Markdown (Gruber, 2004)</span></h2>
+<div class="columns">
+<div class="column" style="width:95%;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown eval number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu"># Features</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">## Introduction</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>**CodiMD** is a real-time, multi-platform collaborative markdown note editor.</span>
+<span id="cb3-6"><a href="#cb3-6"></a>This means that you can write notes with other people on your **desktop**, **tablet** or even on the **phone**.</span>
+<span id="cb3-7"><a href="#cb3-7"></a>You can sign-in via multiple auth providers like **Facebook**, **Twitter**, **GitHub** and many more on the <span class="co">[</span><span class="ot">_homepage_</span><span class="co">](/)</span>.</span>
+<span id="cb3-8"><a href="#cb3-8"></a></span>
+<span id="cb3-9"><a href="#cb3-9"></a>If you experience any _issues_, feel free to report it on <span class="co">[</span><span class="ot">**GitHub**</span><span class="co">](https://github.com/codimd/server/issues)</span>.</span>
+<span id="cb3-10"><a href="#cb3-10"></a>Or meet us on <span class="co">[</span><span class="ot">**Matrix.org**</span><span class="co">](https://riot.im/app/#/room/#codimd:matrix.org)</span> for dev-talk and interactive help.</span>
+<span id="cb3-11"><a href="#cb3-11"></a>**Thank you very much!**</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="features" class="title-slide slide level1 center">
+<h1>Features</h1>
 
-<img src="img/stylo.png" style="margin-top:5px;" width="550" class="r-stretch"><p class="smallpcenter" style="margin-top:30px;">
-</p><p>Sinon, il existe beaucoup d’éditeurs libres (<a href="https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both">CodiMD</a>…)</p>
-<p></p>
 </section>
-<section id="le-markdown-gruber-2004" class="slide level2">
-<h2>Le Markdown (Gruber, 2004)</h2>
-<div id="codermd">
-<p class="smallpcenter">
-</p><p>Fichier Markdown (.md)</p>
-<p></p>
-<div class="cell" data-file="img/hackmd.md">
+<section id="introduction" class="slide level2">
+<h2>Introduction</h2>
+<p><strong>CodiMD</strong> is a real-time, multi-platform collaborative markdown note editor. This means that you can write notes with other people on your <strong>desktop</strong>, <strong>tablet</strong> or even on the <strong>phone</strong>. You can sign-in via multiple auth providers like <strong>Facebook</strong>, <strong>Twitter</strong>, <strong>GitHub</strong> and many more on the <a href="/"><em>homepage</em></a>.</p>
+<p>If you experience any <em>issues</em>, feel free to report it on <a href="https://github.com/codimd/server/issues"><strong>GitHub</strong></a>. Or meet us on <a href="https://riot.im/app/#/room/#codimd:matrix.org"><strong>Matrix.org</strong></a> for dev-talk and interactive help. <strong>Thank you very much!</strong></p>
+</section>
+
+</div><div class="column" style="font-size:30px;text-align:center;">
 
 </div>
-<p class="smallpcenter">
-</p><p>-&gt; Visualiser sur <a href="https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both">HackMD</a></p>
-<p></p>
 </div>
-<div id="codehtml">
-<p class="smallpcenter">
-</p><p>Texte mis en forme (sortie html)</p>
-<p></p>
-<p><img data-src="img/hackmd.png"></p>
-</div>
-</section>
-<section id="exemple-de-notebook" class="slide level2">
-<h2>Exemple de Notebook</h2>
 </section>
 <section id="le-notebook-rmarkdown" class="slide level2">
 <h2>Le Notebook Rmarkdown</h2>

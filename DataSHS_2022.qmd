@@ -2,10 +2,12 @@
 title: |
   [Ecrire son code dans un environnement de programmation lettrée]{.title}
 subtitle: |
-   [<img src="img/logo_notebook_orange.png" width="500"/>]{.subtitle} 
-authors: Hugues Pecout <br> [UMR Géographie-Cités - CNRS]{.affiliation}
+   [<img src="img/logo_notebook_orange.png" width="60%"/>]{.subtitle} 
+author:
+  - name: Hugues Pecout 
+    affiliations:
+      - name: UMR Géographie-Cités - CNRS
 footer: Semaine Data SHS -Décembre 2022 - Université Paris-Cité
-
 format:
   revealjs:
     incremental: true
@@ -21,6 +23,8 @@ chalkboard:
   theme: chalkboard
 slide-number: true
 engine: knitr
+filters:
+  - markdown-examples.lua
 ---
 
 ## [Bonjour à tout·te·s]{.smaller}
@@ -50,7 +54,7 @@ Depuis 2016 :
 -   **Comment archiver et assurer une certaine reproductibilité de mes scripts ?**
 :::
 
-#  {data-background="img/Literate_Programming_book_cover.jpg" data-background-size="600px"}
+#  {data-background="img/Literate_Programming_book_cover.jpg" data-background-size="25%"}
 
 ## [Literate programming]{.smaller}
 
@@ -160,7 +164,7 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 
 ::: columns
 ::: {.column width="30%"}
-![](img/logo_gt_notebook_orange.png){height="400"}
+![](img/logo_gt_notebook_orange.png){width="79%"}
 :::
 
 ::: {.column width="70%"}
@@ -197,7 +201,7 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 -   2011 : IPython
 :::
 
-![](img/Wolfram-Language-on-early-Mac.png){height="250"}
+![](img/Wolfram-Language-on-early-Mac.png){width="80%"}
 :::
 
 ::: {.column width="60%"}
@@ -206,11 +210,12 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 :::
 
 ::: small
-**Jon Claerbout**, géophysicien, est l'un des premiers chercheur a exprimer le fait que **les méthodes de calcul menacent la reproductibilité de la recherche** si l'on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.
+[**Jon Claerbout**](https://en.wikipedia.org/wiki/Jon_Claerbout) est l'un des premiers chercheur a exprimer le fait que **les méthodes de calcul menacent la reproductibilité de la recherche** si l'on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.
 
-En 1976, Jon Claerbout publie un ouvrage référence dans le domùaine du traitement de signal : « ***Fundamentals of Geophysical Data Processing*** »
+En 1976, il publie un ouvrage référence en traitement de signal :   
+« ***Fundamentals of Geophysical Data Processing*** »
 
-Cette 1ère version, non-reproductible, sera le début d'un long travail de recherche sur la reproductibilité de ses propres travaux... Via des notebooks !
+Cette 1ère version - non-reproductible - sera le début d'un long travail de recherche sur la reproductibilité... Via des notebooks !
 :::
 
 \
@@ -219,124 +224,111 @@ Cette 1ère version, non-reproductible, sera le début d'un long travail de rech
 **Émergence du Literate Programming**
 :::
 
-::: small
-Le concept de **programmation lettrée** est pensé et mis en oeuvre (1977-78) par **Donald Knuth**. Le notebook se présente comme un outil idéal pour appliquer ce paradigme.
+::: moy
+Le concept de **programmation lettrée** est pensé et conçu par **Donald Knuth** (1977-78). Le notebook se présente comme un outil idéal pour mettre en œuvre ce paradigme.
 :::
 :::
 :::
 
-#  {data-background="img/logo_notebook_orange.png" data-background-size="900px"}
+#  {data-background="img/logo_notebook_orange.png" data-background-size="45%"}
 
 ## [Définition]{.smaller}
 
 ::: big
-**Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique**
+**Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique.**
 :::
 
 ::: bigrey
 De nombreuses dénominations existent :
 :::
 
-::: {.nonincremental style="color:grey;font-size:18px;text-align:center;"}
+::: {.nonincremental style="color:grey;font-size:22px;text-align:center;"}
 -   *Article exécutable*
-
 -   *Document computationnel*
-
 -   *Document électronique interactif*
-
--   *Bloc-note*
-
 -   *Cahiers de programmation*
-
 -   *Cahier électronique d'analyse*
-
 -   *Calepin électronique*
-
 -   *Carnet de code*
-
 -   *Manifeste algorithmique*
-
 -   **Notebook !**
-
 -   *...*
 :::
 
-::: moy
-**Un notebook permet d'appliquer le paradigme de programmation lettrée, qui facilite le partage, le travail collaboratif et la reproductibilité**
+
+
+
+## [Une logique... plusieurs pratiques !]{.smaller}
+
+
+![](img/notebook_1.png){width="80%"}
+
+::: bigrey
+La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...)
 :::
 
 
-## [Une logique... des pratiques]{.smaller}
+## [Anatomie d'un notebook]{.smaller}
 
-<img src="img/notebook_1.png" style="margin-top:40px;" width="1000"/>
 
-<p style="font-size:60%;">
 
-La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...)
+::: bigspacecenter
+Un simple fichier texte (.rmd, .qmd, .ipynb...)
+:::
 
-</p>
 
-## Anatomie d'un notebook
 
-<p class="smallpcenter" style="margin-top:70px;">
+![](img/notebook_2.png){width="100%"}
 
-Simple fichier texte
 
-<P>
+<!-- ## Notebook sans code ? -->
 
-<img src="img/notebook_2.png" style="margin-top:80px;" width="1000"/>
+<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
 
-## Notebook sans code ?
+<!-- ## Stylo d'Human-Num -->
 
-<img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/>
+<!-- <p class="smallpcenter" style="margin-top:40px;"> -->
 
-## Stylo d'Human-Num
+<!-- Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/) -->
 
-<p class="smallpcenter" style="margin-top:40px;">
+<!-- </p> -->
 
-Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/)
+<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
 
-</p>
+<!-- <p class="smallpcenter" style="margin-top:30px;"> -->
 
-<img src="img/stylo.png" style="margin-top:5px;" width="550"/>
+<!-- Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...) -->
 
-<p class="smallpcenter" style="margin-top:30px;">
+<!-- </p> -->
 
-Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...)
+## [Le Markdown (Gruber, 2004)]{.smaller}{.scrollable}
 
-</p>
 
-## Le Markdown (Gruber, 2004)
 
-::: {#codermd}
-<p class="smallpcenter">
+::: columns
+::: {.column width="95%"}
+```{.markdown .eval}
+# Features
 
-Fichier Markdown (.md)
+## Introduction
 
-</p>
+**CodiMD** is a real-time, multi-platform collaborative markdown note editor.
+This means that you can write notes with other people on your **desktop**, **tablet** or even on the **phone**.
+You can sign-in via multiple auth providers like **Facebook**, **Twitter**, **GitHub** and many more on the [_homepage_](/).
 
-```{r, file = 'img/hackmd.md', eval=FALSE}
+If you experience any _issues_, feel free to report it on [**GitHub**](https://github.com/codimd/server/issues).
+Or meet us on [**Matrix.org**](https://riot.im/app/#/room/#codimd:matrix.org) for dev-talk and interactive help.
+**Thank you very much!**
 
 ```
-
-<p class="smallpcenter">
-
--\> Visualiser sur [HackMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)
-
-</p>
 :::
 
-::: {#codehtml}
-<p class="smallpcenter">
+::: {.column width="5%" style="font-size:30px;text-align:center;"}
 
-Texte mis en forme (sortie html)
-
-</p>
-
-![](img/hackmd.png)
 :::
 
-## Exemple de Notebook
+:::
+
 
 ## Le Notebook Rmarkdown
 
