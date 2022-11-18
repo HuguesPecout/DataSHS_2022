@@ -22,6 +22,11 @@
   font-size:50px;
 }
 
+.xsmallgrey{
+  font-size: 13px;
+  color:grey;
+}
+
 .big{
   font-size: 30px;
 }
@@ -47,6 +52,13 @@
   color:grey;
   text-align:center;
   margin-top:20px;
+}
+
+.bigrey2{
+  font-size: 27px;
+  color:grey;
+  text-align:center;
+  margin-top:40px;
 }
 
 .bigorange{

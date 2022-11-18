@@ -238,7 +238,7 @@ Le concept de **programmation lettrée** est pensé et conçu par **Donald Knuth
 **Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique.**
 :::
 
-::: bigrey
+::: bigrey2
 De nombreuses dénominations existent :
 :::
 
@@ -301,16 +301,13 @@ Un simple fichier texte (.rmd, .qmd, .ipynb...)
 
 <!-- </p> -->
 
+
+
 ## [Le Markdown (Gruber, 2004)]{.smaller}{.scrollable}
-
-
 
 ::: columns
 ::: {.column width="95%"}
 ```{.markdown .eval}
-# Features
-
-## Introduction
 
 **CodiMD** is a real-time, multi-platform collaborative markdown note editor.
 This means that you can write notes with other people on your **desktop**, **tablet** or even on the **phone**.
@@ -330,37 +327,31 @@ Or meet us on [**Matrix.org**](https://riot.im/app/#/room/#codimd:matrix.org) fo
 :::
 
 
-## Le Notebook Rmarkdown
+## Multiplication des NB et des plateformes{.smaller}
 
-<div>
+
+![](img/typonotebook.png){width="670"}
+
+::: xsmallgrey
+S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020
+:::
+
+
+## Dernière génération
+
+<img src="img/nouveau_notebook.png" style="margin-bottom:0px;" width="800"/>
+
+## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
+
+<img src="img/quarto2.png" style="margin-top:20px;" width="800"/>
 
 <p class="smallpcenter">
 
-Fichier source (.rmd)
+[**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...
 
 </p>
 
-```{r, file = 'img/exemple.rmd', eval=FALSE}
 
-```
-
-</div>
-
-<div>
-
-<p class="smallpcenter">
-
-Fichier en sortie (.html)
-
-</p>
-
-![](img/markdown.png)
-
-</div>
-
-## « Kniter » <img src="img/knito.png" width="85" style="margin-top:0px;margin-bottom:-15px;"/> un .rmd
-
-<img src="img/knitr_process.png" style="margin-top:30px;" width="800"/>
 
 ##  {data-background="img/markdown2.png" data-background-size="1400px"}
 
@@ -388,29 +379,7 @@ Fichier en sortie (.html)
 
 <br>
 
-## Multiplication des NB et des plateformes
 
-<img src="img/typonotebook.png" style="margin-top:10px;margin-bottom:0px;" width="670"/>
-
-<p style="font-size:40%;color:grey;margin-top:5px;">
-
-S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020
-
-<p>
-
-## Dernière génération
-
-<img src="img/nouveau_notebook.png" style="margin-bottom:0px;" width="800"/>
-
-## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
-
-<img src="img/quarto2.png" style="margin-top:20px;" width="800"/>
-
-<p class="smallpcenter">
-
-[**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...
-
-</p>
 
 ## Programmation lettrée & Notebook
 
