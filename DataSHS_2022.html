@@ -415,7 +415,7 @@ Hugues Pecout
 <div id="list" style="font-size:25px;line-height:25px;">
 <ul>
 <li>Évite l’utilisation de logiciels clic-bouton (QGIS, EXCEL, Philcarto…)</li>
-<li>Analyse de données réalisée exclusivement avec le langage R</li>
+<li><strong>Analyse de données réalisée exclusivement avec le langage R</strong></li>
 <li>Création quasi hebdomadaire de script R.</li>
 <li>Gain de productivité et de polyvalence important, mais…<br>
 </li>
@@ -633,51 +633,132 @@ Hugues Pecout
 <!-- Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...) -->
 <!-- </p> -->
 <img data-src="img/notebook_2.png" style="width:100.0%" class="r-stretch"></section>
-<section id="le-markdown-gruber-2004" class="slide level2 scrollable">
-<h2><span class="smaller">Le Markdown (Gruber, 2004)</span></h2>
+<section id="section-2" class="slide level2 scrollable">
+<h2></h2>
 <div class="columns">
 <div class="column" style="width:95%;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown eval number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2"></a>**CodiMD** is a real-time, multi-platform collaborative markdown note editor.</span>
-<span id="cb3-3"><a href="#cb3-3"></a>This means that you can write notes with other people on your **desktop**, **tablet** or even on the **phone**.</span>
-<span id="cb3-4"><a href="#cb3-4"></a>You can sign-in via multiple auth providers like **Facebook**, **Twitter**, **GitHub** and many more on the <span class="co">[</span><span class="ot">_homepage_</span><span class="co">](/)</span>.</span>
-<span id="cb3-5"><a href="#cb3-5"></a></span>
-<span id="cb3-6"><a href="#cb3-6"></a>If you experience any _issues_, feel free to report it on <span class="co">[</span><span class="ot">**GitHub**</span><span class="co">](https://github.com/codimd/server/issues)</span>.</span>
-<span id="cb3-7"><a href="#cb3-7"></a>Or meet us on <span class="co">[</span><span class="ot">**Matrix.org**</span><span class="co">](https://riot.im/app/#/room/#codimd:matrix.org)</span> for dev-talk and interactive help.</span>
-<span id="cb3-8"><a href="#cb3-8"></a>**Thank you very much!**</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>CodiMD</strong> is a real-time, multi-platform collaborative markdown note editor. This means that you can write notes with other people on your <strong>desktop</strong>, <strong>tablet</strong> or even on the <strong>phone</strong>. You can sign-in via multiple auth providers like <strong>Facebook</strong>, <strong>Twitter</strong>, <strong>GitHub</strong> and many more on the <a href="/"><em>homepage</em></a>.</p>
-<p>If you experience any <em>issues</em>, feel free to report it on <a href="https://github.com/codimd/server/issues"><strong>GitHub</strong></a>. Or meet us on <a href="https://riot.im/app/#/room/#codimd:matrix.org"><strong>Matrix.org</strong></a> for dev-talk and interactive help. <strong>Thank you very much!</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown eval number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a>\</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="fu">### Le Markdown</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>Markdown est un **langage de balisage léger** créé en 2004 par </span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co">[</span><span class="ot">John Gruber</span><span class="co">](https://fr.wikipedia.org/wiki/John_Gruber)</span>, </span>
+<span id="cb3-7"><a href="#cb3-7"></a>avec l'aide d'<span class="co">[</span><span class="ot">Aaron Swartz</span><span class="co">](https://fr.wikipedia.org/wiki/Aaron_Swartz)</span>, </span>
+<span id="cb3-8"><a href="#cb3-8"></a>dans le but d'offrir une **syntaxe facile à lire et à écrire**. </span>
+<span id="cb3-9"><a href="#cb3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="al">![](https://upload.wikimedia.org/wikipedia/commons/6/64/John_Gruber%2C_2009_%28cropped%29.jpg)</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a>**John Gruber, 2004 : **</span>
+<span id="cb3-12"><a href="#cb3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="at">&gt; « *Un document balisé par Markdown peut être lu en l'état sans donner </span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="at">l’impression d'avoir été balisé ou formaté par des instructions particulières.* »</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a></span>
+<span id="cb3-16"><a href="#cb3-16"></a>Un document balisé par Markdown peut être converti en :   </span>
+<span id="cb3-17"><a href="#cb3-17"></a></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="at">&gt;- HTML</span>  </span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="at">&gt;- PDF</span>  </span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="at">&gt;- plein d'autres formats</span><span class="ot">[^1]</span><span class="at">   </span></span>
+<span id="cb3-21"><a href="#cb3-21"></a></span>
+<span id="cb3-22"><a href="#cb3-22"></a><span class="ot">[^1]: </span>Un markdown peut également être converti en format word, LaTeX, ePub, odt...</span>
+<span id="cb3-23"><a href="#cb3-23"></a></span>
+<span id="cb3-24"><a href="#cb3-24"></a>\</span>
+<span id="cb3-25"><a href="#cb3-25"></a></span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="fu">#### Insérer du code ?</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a></span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="in">~~~R</span></span>
+<span id="cb3-29"><a href="#cb3-29"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-30"><a href="#cb3-30"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, </span>
+<span id="cb3-31"><a href="#cb3-31"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">cut</span>(Sepal.Length, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">min</span>(Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="fu">max</span>(Sepal.Length)), </span>
+<span id="cb3-32"><a href="#cb3-32"></a>                   <span class="at">include.lowest =</span> <span class="cn">TRUE</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Bas"</span>,<span class="st">"Bas+"</span>,<span class="st">"Haut"</span>,<span class="st">"Haut+"</span>)))) <span class="sc">+</span></span>
+<span id="cb3-33"><a href="#cb3-33"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb3-34"><a href="#cb3-34"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb3-35"><a href="#cb3-35"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb3-36"><a href="#cb3-36"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
+<span id="cb3-37"><a href="#cb3-37"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>), <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span>
+<span id="cb3-38"><a href="#cb3-38"></a><span class="in">~~~</span></span>
+<span id="cb3-39"><a href="#cb3-39"></a></span>
+<span id="cb3-40"><a href="#cb3-40"></a></span>
+<span id="cb3-41"><a href="#cb3-41"></a></span>
+<span id="cb3-42"><a href="#cb3-42"></a></span>
+<span id="cb3-43"><a href="#cb3-43"></a></span>
+<span id="cb3-44"><a href="#cb3-44"></a></span>
+<span id="cb3-45"><a href="#cb3-45"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<h3 id="le-markdown">Le Markdown</h3>
+<p>Markdown est un <strong>langage de balisage léger</strong> créé en 2004 par <a href="https://fr.wikipedia.org/wiki/John_Gruber">John Gruber</a>, avec l’aide d’<a href="https://fr.wikipedia.org/wiki/Aaron_Swartz">Aaron Swartz</a>, dans le but d’offrir une <strong>syntaxe facile à lire et à écrire</strong>.</p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/6/64/John_Gruber%2C_2009_%28cropped%29.jpg"> <strong>John Gruber, 2004 : </strong></p>
+<blockquote>
+<p>« <em>Un document balisé par Markdown peut être lu en l’état sans donner l’impression d’avoir été balisé ou formaté par des instructions particulières.</em> »</p>
+</blockquote>
+<p>Un document balisé par Markdown peut être converti en :</p>
+<ul>
+<li>HTML<br>
+</li>
+<li>PDF<br>
+</li>
+<li>plein d’autres formats<sup>1</sup></li>
+</ul>
+<p><br>
+</p>
+<h4 id="insérer-du-code">Insérer du code ?</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, </span>
+<span id="cb4-3"><a href="#cb4-3"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">cut</span>(Sepal.Length, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="fu">min</span>(Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="fu">max</span>(Sepal.Length)), </span>
+<span id="cb4-4"><a href="#cb4-4"></a>                   <span class="at">include.lowest =</span> <span class="cn">TRUE</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Bas"</span>,<span class="st">"Bas+"</span>,<span class="st">"Haut"</span>,<span class="st">"Haut+"</span>)))) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span> </span>
+<span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>), <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="font-size:30px;text-align:center;">
 
 </div>
 </div>
-</section>
-<section id="multiplication-des-nb-et-des-plateformes" class="slide level2 smaller">
-<h2>Multiplication des NB et des plateformes</h2>
-
-<img data-src="img/typonotebook.png" width="670" class="r-stretch"><div class="xsmallgrey">
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Un markdown peut également être converti en format word, LaTeX, ePub, odt…</p></li></ol></aside></section>
+<section id="multiplication-des-notebooks" class="slide level2">
+<h2><span class="smaller">Multiplication des notebooks</span></h2>
+<div class="center">
+<p><img data-src="img/typonotebook.png" style="width:65.0%"></p>
+</div>
+<div class="xsmallgrey">
 <p>S. Lau, I. Drosos, J. M. Markel and P. J. Guo, “The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry,” 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020</p>
 </div>
 </section>
-<section id="dernière-génération" class="slide level2">
-<h2>Dernière génération</h2>
-
-<img src="img/nouveau_notebook.png" style="margin-bottom:0px;" width="800" class="r-stretch"></section>
+<section id="les-plus-répandus-en-shs" class="slide level2">
+<h2><span class="smaller">Les plus répandus en SHS</span></h2>
+<div class="center">
+<p><img data-src="img/nouveau_notebook.png" style="width:80.0%"></p>
+</div>
+</section>
 <section id="lannée" class="slide level2">
 <h2>2022, l’année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"></h2>
-<p><img src="img/quarto2.png" style="margin-top:20px;" width="800"></p>
-<p class="smallpcenter">
-</p><p><a href="https://quarto.org/"><strong>Quarto</strong></a> permet l’utilisation de <strong>R</strong>, <strong>Python</strong>, <strong>Julia</strong>, <strong>Javascript</strong> (<strong>OJS</strong>)…</p>
-<p></p>
+<div class="center">
+<p><img data-src="img/quarto2.png" style="width:80.0%"></p>
+</div>
+<div class="moycenter">
+<p><a href="https://quarto.org/"><strong>Quarto</strong></a> permet l’utilisation de <strong>R</strong>, <strong>Python</strong>, <strong>Julia</strong>, <strong>Javascript</strong> (<strong>OJS</strong>)…</p>
+</div>
 </section>
-<section id="section-2" class="slide level2" data-background="img/markdown2.png" data-background-size="1400px">
+<section id="nombreuses-fonctionnalités" class="slide level2">
+<h2>Nombreuses fonctionnalités</h2>
+</section>
+<section id="nombreux-format" class="slide level2">
+<h2>Nombreux format</h2>
+</section>
+<section id="reproductibilité" class="slide level2">
+<h2>Reproductibilité ?</h2>
+</section>
+<section id="rzine" class="slide level2">
+<h2>Rzine</h2>
+</section>
+<section id="section-3" class="slide level2" data-background="img/markdown2.png" data-background-size="1400px">
 <h2></h2>
 </section>
-<section id="section-3" class="slide level2" data-background="img/markdown3.png" data-background-size="1400px">
+<section id="section-4" class="slide level2" data-background="img/markdown3.png" data-background-size="1400px">
 <h2></h2>
 </section></section>
 <section>
-<section id="section-4" class="title-slide slide level1 center" data-background="img/history.jpeg" data-background-size="750px">
+<section id="section-5" class="title-slide slide level1 center" data-background="img/history.jpeg" data-background-size="750px">
 <h1></h1>
 <p><br></p>
 <p><br></p>
@@ -700,7 +781,7 @@ Hugues Pecout
 
 <img src="img/LP2.png" style="margin-top:60px;" width="800" class="r-stretch"></section></section>
 <section>
-<section id="section-5" class="title-slide slide level1 center" data-background="img/partie4.png" data-background-size="500px">
+<section id="section-6" class="title-slide slide level1 center" data-background="img/partie4.png" data-background-size="500px">
 <h1></h1>
 <p><br></p>
 <p><br></p>
@@ -847,6 +928,7 @@ Les sources des notebooks sont des fichiers texte
 <p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>
 </div>
 </section></section>
+
     </div>
   </div>
 

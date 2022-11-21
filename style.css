@@ -81,5 +81,12 @@
   font-size: 20px;
 }
 
+.center{
+  text-align:center;
+}
 
 
+.moycenter{
+  font-size: 25px;
+  text-align:center;
+}

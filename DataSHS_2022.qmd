@@ -39,7 +39,7 @@ Depuis 2016 :
 
 ::: {#list .nonincremental style="font-size:25px;line-height:25px;"}
 -   Évite l'utilisation de logiciels clic-bouton (QGIS, EXCEL, Philcarto...)
--   Analyse de données réalisée exclusivement avec le langage R
+-   **Analyse de données réalisée exclusivement avec le langage R**
 -   Création quasi hebdomadaire de script R.
 -   Gain de productivité et de polyvalence important, mais...\
 :::
@@ -303,19 +303,56 @@ Un simple fichier texte (.rmd, .qmd, .ipynb...)
 
 
 
-## [Le Markdown (Gruber, 2004)]{.smaller}{.scrollable}
+## {.scrollable}
 
 ::: columns
 ::: {.column width="95%"}
-```{.markdown .eval}
+```{.markdown .eval }
+\
 
-**CodiMD** is a real-time, multi-platform collaborative markdown note editor.
-This means that you can write notes with other people on your **desktop**, **tablet** or even on the **phone**.
-You can sign-in via multiple auth providers like **Facebook**, **Twitter**, **GitHub** and many more on the [_homepage_](/).
+### Le Markdown
 
-If you experience any _issues_, feel free to report it on [**GitHub**](https://github.com/codimd/server/issues).
-Or meet us on [**Matrix.org**](https://riot.im/app/#/room/#codimd:matrix.org) for dev-talk and interactive help.
-**Thank you very much!**
+Markdown est un **langage de balisage léger** créé en 2004 par 
+[John Gruber](https://fr.wikipedia.org/wiki/John_Gruber), 
+avec l'aide d'[Aaron Swartz](https://fr.wikipedia.org/wiki/Aaron_Swartz), 
+dans le but d'offrir une **syntaxe facile à lire et à écrire**. 
+
+![](https://upload.wikimedia.org/wikipedia/commons/6/64/John_Gruber%2C_2009_%28cropped%29.jpg)
+**John Gruber, 2004 : **
+
+> « *Un document balisé par Markdown peut être lu en l'état sans donner 
+l’impression d'avoir été balisé ou formaté par des instructions particulières.* »
+
+Un document balisé par Markdown peut être converti en :   
+
+>- HTML  
+>- PDF  
+>- plein d'autres formats[^1]   
+
+[^1]: Un markdown peut également être converti en format word, LaTeX, ePub, odt...
+
+\
+
+#### Insérer du code ?
+
+~~~R
+library(ggplot2)
+ggplot(data = iris, 
+       aes(x = cut(Sepal.Length, breaks = c(min(Sepal.Length), 5, 6, 7, max(Sepal.Length)), 
+                   include.lowest = TRUE, labels = c("Bas","Bas+","Haut","Haut+")))) +
+  geom_bar() + 
+  xlab("") + 
+  ylab("") + 
+  ggtitle("Répartition par classe") +
+  theme(plot.title = element_text(size=27), axis.text=element_text(size=19))
+~~~
+
+
+
+
+
+
+
 
 ```
 :::
@@ -327,29 +364,45 @@ Or meet us on [**Matrix.org**](https://riot.im/app/#/room/#codimd:matrix.org) fo
 :::
 
 
-## Multiplication des NB et des plateformes{.smaller}
+## [Multiplication des notebooks]{.smaller}
 
-
-![](img/typonotebook.png){width="670"}
+::: {.center}
+![](img/typonotebook.png){width="65%"}
+:::
 
 ::: xsmallgrey
 S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020
 :::
 
 
-## Dernière génération
+## [Les plus répandus en SHS]{.smaller}
 
-<img src="img/nouveau_notebook.png" style="margin-bottom:0px;" width="800"/>
+::: {.center}
+![](img/nouveau_notebook.png){width="80%"}
+:::
+
 
 ## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
 
-<img src="img/quarto2.png" style="margin-top:20px;" width="800"/>
 
-<p class="smallpcenter">
+::: {.center}
+![](img/quarto2.png){width="80%"}
+:::
 
+
+:::moycenter
 [**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...
+:::
 
-</p>
+## Nombreuses fonctionnalités
+
+## Nombreux format
+
+## Reproductibilité ?
+
+
+
+## Rzine 
 
 
 
