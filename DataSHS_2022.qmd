@@ -74,7 +74,7 @@ La **programmation lettrée** est une approche de la programmation qui se veut d
 Le paradigme de la programmation lettrée, pensé et mis en oeuvre par **Donald Knuth** (1977-78), s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place **autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.
 :::
 
----
+------------------------------------------------------------------------
 
 ::: columns
 ::: {.column width="50%" style="font-size:30px;text-align:center;"}
@@ -212,7 +212,7 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 ::: small
 [**Jon Claerbout**](https://en.wikipedia.org/wiki/Jon_Claerbout) est l'un des premiers chercheur a exprimer le fait que **les méthodes de calcul menacent la reproductibilité de la recherche** si l'on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.
 
-En 1976, il publie un ouvrage référence en traitement de signal :   
+En 1976, il publie un ouvrage référence en traitement de signal :\
 « ***Fundamentals of Geophysical Data Processing*** »
 
 Cette 1ère version - non-reproductible - sera le début d'un long travail de recherche sur la reproductibilité... Via des notebooks !
@@ -255,31 +255,25 @@ De nombreuses dénominations existent :
 -   *...*
 :::
 
-
-
-
 ## [Une logique... plusieurs pratiques !]{.smaller}
 
+:::div0
 
-![](img/notebook_1.png){width="80%"}
+![](img/notebook_1.png){width="100%"}
+
+:::
 
 ::: bigrey
 La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...)
 :::
 
-
 ## [Anatomie d'un notebook]{.smaller}
-
-
 
 ::: bigspacecenter
 Un simple fichier texte (.rmd, .qmd, .ipynb...)
 :::
 
-
-
 ![](img/notebook_2.png){width="100%"}
-
 
 <!-- ## Notebook sans code ? -->
 
@@ -301,13 +295,11 @@ Un simple fichier texte (.rmd, .qmd, .ipynb...)
 
 <!-- </p> -->
 
-
-
-## {.scrollable}
+##  {.scrollable}
 
 ::: columns
 ::: {.column width="95%"}
-```{.markdown .eval }
+``` {.markdown .eval}
 \
 
 ### Le Markdown
@@ -353,20 +345,16 @@ ggplot(data = iris,
 
 
 
-
 ```
 :::
 
 ::: {.column width="5%" style="font-size:30px;text-align:center;"}
-
 :::
-
 :::
-
 
 ## [Multiplication des notebooks]{.smaller}
 
-::: {.center}
+::: center
 ![](img/typonotebook.png){width="65%"}
 :::
 
@@ -374,23 +362,19 @@ ggplot(data = iris,
 S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020
 :::
 
-
 ## [Les plus répandus en SHS]{.smaller}
 
-::: {.center}
+::: center
 ![](img/nouveau_notebook.png){width="80%"}
 :::
 
-
 ## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
 
-
-::: {.center}
+::: center
 ![](img/quarto2.png){width="80%"}
 :::
 
-
-:::moycenter
+::: moycenter
 [**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...
 :::
 
@@ -400,11 +384,7 @@ S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computationa
 
 ## Reproductibilité ?
 
-
-
-## Rzine 
-
-
+## Rzine
 
 ##  {data-background="img/markdown2.png" data-background-size="1400px"}
 
@@ -431,8 +411,6 @@ S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computationa
 <br>
 
 <br>
-
-
 
 ## Programmation lettrée & Notebook
 
