@@ -27,6 +27,9 @@ filters:
   - markdown-examples.lua
 ---
 
+
+
+
 ## [Bonjour à tout·te·s]{.smaller}
 
 ::: bigspace
@@ -39,13 +42,13 @@ Depuis 2016 :
 
 ::: {#list .nonincremental style="font-size:25px;line-height:25px;"}
 -   Évite l'utilisation de logiciels clic-bouton (QGIS, EXCEL, Philcarto...)
--   **Analyse de données réalisée exclusivement avec le langage R**
+-   [**Analyse de données réalisée exclusivement avec le langage R**]{.orange}
 -   Création quasi hebdomadaire de script R.
 -   Gain de productivité et de polyvalence important, mais...\
 :::
 
 ::: moy1
-**→ Implique de nouvelles méthodes de travail :**
+**→ Implique de [nouvelles méthodes de travail]{.orange} :**
 :::
 
 ::: {.nonincremental style="font-size:25px;line-height:25px;"}
@@ -59,7 +62,7 @@ Depuis 2016 :
 ## [Literate programming]{.smaller}
 
 ::: big
-La **programmation lettrée** est une approche de la programmation qui se veut différente du paradigme de programmation structurée.
+La [**programmation lettrée**]{.orange} est une approche de la programmation qui se veut différente du paradigme de programmation structurée.
 :::
 
 ::: {style="font-size:20px;margin-top:30px;margin-bottom:30px;"}
@@ -71,14 +74,14 @@ La **programmation lettrée** est une approche de la programmation qui se veut d
 :::
 
 ::: big
-Le paradigme de la programmation lettrée, pensé et mis en oeuvre par **Donald Knuth** (1977-78), s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place **autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.
+[Le paradigme de la programmation lettrée, [pensé et mis en oeuvre par **Donald Knuth** (1977-78)]{.orange}, s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place [**autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.]{.orange}
 :::
 
 ------------------------------------------------------------------------
 
 ::: columns
 ::: {.column width="50%" style="font-size:30px;text-align:center;"}
-Code optimisé :
+[Code « optimisé »]{.orange}
 
 ```{r}
 #| eval: TRUE
@@ -103,7 +106,7 @@ ggplot(data = iris,
 :::
 
 ::: {.column width="50%" style="font-size:30px;text-align:center;"}
-Programation lettrée :
+[Programmation lettrée]{.orange}
 
 ```{r}
 #| eval: FALSE
@@ -177,15 +180,15 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 
 \
 
-::: big
-**Les notebooks et la programmation lettrée ont été crées à la même période, en parallèle de l'emergence du concept de recherche reproductible.**
+::: bigbis
+**Les notebooks et la programmation lettrée ont émergés à la même période, celle de l'émergence du concept de recherche reproductible...**
 :::
 :::
 :::
 :::
 :::
 
-## [Un peu d'histoire]{.smaller}
+## [💻 Seventies show]{.smaller}
 
 ::: columns
 ::: {.column width="40%"}
@@ -255,7 +258,7 @@ De nombreuses dénominations existent :
 -   *...*
 :::
 
-## [Une logique... plusieurs pratiques !]{.smaller}
+## [Un outils... des pratiques !]{.smaller}
 
 ::: div0
 ![](img/notebook_1.png){width="100%"}
@@ -349,17 +352,8 @@ ggplot(data = iris,
 :::
 :::
 
-## [Multiplication des notebooks]{.smaller}
 
-::: center
-![](img/typonotebook.png){width="65%"}
-:::
-
-::: xsmallgrey
-S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020
-:::
-
-## [Les plus répandus en SHS]{.smaller}
+## [Les notebooks en SHS]{.smaller}
 
 ::: center
 ![](img/nouveau_notebook.png){width="80%"}
@@ -368,78 +362,140 @@ S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computationa
 ## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
 
 ::: center
-![](img/quarto2.png){width="80%"}
+![](img/quarto2.png){width="75%"}
 :::
 
 ::: moycenter
 [**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...
 :::
 
-## Nombreuses fonctionnalités
+# PL, NB et reproductibilité...
 
-## Nombreux format
+## [Programmation lettrée + Notebook = 🔥]{.smaller}{ auto-animate=true auto-animate-easing="ease-in-out"}
 
-## Reproductibilité ?
+::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #3fb61840; width: 200px; height: 150px; margin-top: 200px; margin-right: 150px;"}
+:::
+::: {data-id="box2" auto-animate-delay="0.1" style="background: #f2a42340; width: 200px; height: 150px; margin-top: 200px; margin-left: 150px;"}
+:::
+:::
 
-## Rzine
+::: div1
+:::left
+<span style="color:#3fb61840;" >Programmation lettrée</span>
+:::
+:::right
+<span style="color:#f2a42340;">Notebook</span>
+:::
+:::
 
-##  {data-background="img/markdown2.png" data-background-size="1400px"}
+## [Programmation lettrée + Notebook = 🔥]{.smaller} {auto-animate=true auto-animate-easing="ease-in-out"}
 
-##  {data-background="img/markdown3.png" data-background-size="1400px"}
+::: {.r-hstack}
+::: {data-id="box1" style="background: #3fb61840; width: 400px; height: 250px; margin-top: 125px; margin-right: -80px;"}
+:::
+::: {data-id="box2"  style="background: #f2a42340;  width: 400px; height: 250px; margin-top: 125px; margin-left: -80px;"}
+:::
+:::
 
-#  {data-background="img/history.jpeg" data-background-size="750px"}
+\
 
-<br>
+::: {.center2 auto-animate-delay="2"}
+<span style="color:#555919;" >Reproductibilité ?</span>
+::: 
 
-<br>
+## [PL + NB + ... ? = reproductibilité]{.smaller} {auto-animate=true auto-animate-easing="ease-in-out"}
 
-<br>
+::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0" style="background: #3fb61840; width: 200px; height: 150px; margin-top: 30px; margin-right: 150px;"}
+:::
+::: {data-id="box2" auto-animate-delay="0.2" style="background: #f2a42340; width: 200px; height: 150px; margin-top: 30px; margin-left: 150px;"}
+:::
+::: {.absolute data-id="box3" auto-animate-delay="3" style="background: #f2262340; width: 200px; height: 150px; margin-top: 600px; margin-right: 505px;"}
+:::
+::: {.absolute data-id="box4" auto-animate-delay="7" style="background: #2336f240; width: 200px; height: 150px; margin-top: 600px; margin-left: 505px;"}
+:::
+:::
 
-<br>
+::: {.div1 auto-animate-delay="1"}
+::: left
+<span style="color:#3fb61840;" >Programmation lettrée</span>
+:::
+::: right
+<span style="color:#f2a42340;">Notebook</span>
+:::
+:::
 
-<br>
+:::{.left2 auto-animate-delay="4.5"}
+<span style="color:#f2262340;" >Informations de session<br>et d'environnement</span>
+:::
+::: {.right2 auto-animate-delay="8.5"}
+<span style="color:#2336f240;">Archivage & partage</br>Conditions d'utilisation</span>
+:::
 
-<br>
+##  [PL + NB + ... ? = reproductibilité]{.smaller} {auto-animate=true auto-animate-easing="ease-in-out"}
 
-<br>
+::: {.r-hstack}
+::: {data-id="box1" style="background: #3fb61840; width: 300px; height: 250px; margin-top: 170px; margin-right: -50px;"}
+:::
+::: {data-id="box2"  style="background: #f2a42340;  width: 300px; height: 250px; margin-top: 170px; margin-left: -50px;"}
+:::
+::: {.absolute data-id="box3" auto-animate-delay="0" style="background: #f2262340;  width: 300px; height: 250px; margin-top: 0px; "}
+:::
+::: {.absolute data-id="box4" auto-animate-delay="0.1" style="background: #2336f240;  width: 300px; height: 250px; margin-top: 350px; "}
+:::
+::: {.absolute data-id="box5" auto-animate-delay="2.4" style="background: white;  width: 100px; height: 77px; margin-top:175px;"}
+:::
+:::
 
-<br>
+<!-- ##  Optimiser la reproductibilité -->
 
-<br>
+<!-- :::left3 -->
 
-<br>
+<!-- [[**Documenter**]{.bigter}]{.orange} -->
 
-## Programmation lettrée & Notebook
+<!-- [A. Quel **environnement** utilisé ?]{.moy2} -->
 
-<br>
+<!-- :::{.nonincremental style="font-size:50%;"} -->
+<!-- - Système exploitation ? -->
+<!-- - Version de Quarto ? -->
+<!-- - Version de R ? -->
+<!-- - Version de ojs ? -->
+<!-- - Version de Rstudio ? -->
+<!-- - Versions des packages utilisés ? -->
+<!-- - ... -->
+<!-- ::: -->
 
-<img src="img/LP1.png" style="margin-top:60px;" width="800"/>
+<!-- [B. **Documentation supplémentaire**]{.moy2} -->
 
-## LP, Notebook & Reproductibilité
+<!-- [C. **_Image_ docker de l'environnement**]{.moy2} -->
 
-<img src="img/LP2.png" style="margin-top:60px;" width="800"/>
+<!-- ::: -->
 
-#  {data-background="img/partie4.png" data-background-size="500px"}
 
-<br>
 
-<br>
+<!-- :::right3 -->
 
-<br>
+<!-- [[**Archiver**]{.bigter}]{.orange} -->
 
-<br>
+<!-- [A. **Mise en ligne du notebook**]{.moy2} -->
 
-<br>
+<!-- [B. **Partage du code source**]{.moy2} -->
 
-<br>
+<!-- [C. **Partage de documentation**]{.moy2} -->
 
-<br>
+<!-- [D. **Utilisation de licences (code et document)**]{.moy2} -->
 
-<br>
+<!-- :::{.fragment} -->
+<!-- ![](img/git.png){width="30%"} -->
+<!-- ![](img/gitlab.png){width="20%"} -->
+<!-- ![](img/github_blanc.png){width="30%"} -->
+<!-- ::: -->
 
-<br>
+<!-- ::: -->
 
-<br>
+
+## Archivage et partage ?
 
 ## Git, GitHub, GitLab
 
@@ -461,13 +517,13 @@ S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computationa
 
 <br>
 
-<br>
 
 <p class="smallpcenter&quot;" style="margin-top:40px;font-size:83%;">
 
 [**GitHub**](https://github.com/) et [**GitLab**](https://about.gitlab.com/) hébèrgent des dépots distants et des services pour gérer des projets (issue tracker, collaboration, hébergement web, CI/CD).
 
 </p>
+
 
 ## Notebook + Git
 
@@ -507,27 +563,58 @@ Certains peuvent être déployés sur le web
 
 </ul>
 
-## Exemple notebook Quarto
 
-<br>
 
-<br>
+# Exemple
 
-<br>
+## 
 
+:::logos
 <img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>
 
-<br>
+\
 
-<br>
+[Code source(GitHub) : [https://github.com/rCarto/Quarto](https://github.com/rCarto/Quarto)]{.big}  
+[Notebook compilé : [https://rcarto.github.io/Quarto/](https://rcarto.github.io/Quarto/)]{.big}
 
-<br>
+:::
 
-<p style="font-size:115%;">
 
-[Cliquez-ici !](https://rcarto.github.io/Quarto/)
+## {background-image="img/rstudio1.jpg"  }
 
-</p>
+## {background-image="img/rstudio3.jpg"  }
+
+## {background-image="img/rstudio4.jpg"  }
+
+## {background-image="img/rstudio5.jpg"  }
+
+
+## 
+
+:::logos
+<img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>
+
+\
+
+[Code source(GitHub) : [https://github.com/rCarto/Quarto](https://github.com/rCarto/Quarto)]{.big}  
+[Notebook compilé : [https://rcarto.github.io/Quarto/](https://rcarto.github.io/Quarto/)]{.big}
+
+:::
+
+
+## Nombreuses fonctionnalités
+
+## Nombreux format
+
+## Reproductibilité ?
+
+## Rzine
+
+
+
+
+
+
 
 <!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
 

@@ -28,9 +28,17 @@
 }
 
 .big{
-  font-size: 30px;
+  font-size: 65%;
 }
 
+.bigbis{
+  font-size: 120%;
+}
+
+.bigter{
+  font-size: 100%;
+  text-align: center;
+}
 .big1{
   font-size: 27px;
 }
@@ -66,6 +74,10 @@
   color: #f7a41f;
 }
 
+.orange{
+  color: #f7a41f;
+}
+
 .moy1{
   font-size: 28px;
   margin-top: 40px;
@@ -75,6 +87,10 @@
 
 .moy{
   font-size: 25px;
+}
+
+.moy2{
+  font-size: 60%;
 }
 
 .small{
@@ -92,4 +108,81 @@
 
 .div0{
 width:100%;
+}
+
+.div1{
+margin-top:20px;
+width:100%;
+font-size:120%; 
+font-weight:bold; 
+text-align:center;
+}
+
+.div2{
+margin-top:60px;
+width:100%;
+font-size:70%; 
+font-weight:bold; 
+text-align:center;
+}
+
+
+.right2{
+width:50%;  
+float:right;
+font-size:71%; 
+font-weight:bold; 
+text-align:center;
+margin-top:225px;
+}
+
+.left2{
+float: left;  
+width:50%; 
+font-size:71%; 
+font-weight:bold; 
+text-align:center;
+margin-top:225px;
+}
+
+
+.left{
+float: left;  
+width:50%; 
+font-weight:bold; 
+text-align:center;
+font-size:60%; 
+}
+
+.right{
+width:50%;  
+float:right;
+font-size:60%; 
+font-weight:bold; 
+text-align:center;
+}
+
+.left3{
+float: left;  
+width:50%; 
+}
+
+.right3{
+width:50%;  
+float:right;
+
+}
+.center2{
+width:100%;
+font-size:100%; 
+font-weight:bold; 
+text-align:center;
+}
+
+.logos{
+margin-top:150px;
+width:100%;
+font-size:100%; 
+font-weight:bold; 
+text-align:center;
 }
