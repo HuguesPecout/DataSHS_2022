@@ -1,0 +1,674 @@
+---
+title: |
+  [Ecrire son code dans un environnement de programmation lettrée]{.title}
+subtitle: |
+   [<img src="img/logo_notebook_orange.png" width="60%"/>]{.subtitle} 
+author:
+  - name: Hugues Pecout 
+    affiliations:
+      - name: UMR Géographie-Cités - CNRS
+footer: Semaine Data SHS -Décembre 2022 - Université Paris-Cité
+format:
+  revealjs:
+    incremental: true
+    theme: [black, styles.scss]
+    highlight-style: zenburn
+    css: style.css
+    logo: img/logo_hp.png
+editor: visual
+controls: true
+progress: true
+touch: true
+chalkboard: 
+  theme: chalkboard
+slide-number: true
+engine: knitr
+filters:
+  - markdown-examples.lua
+---
+
+## [Bonjour à tout·te·s]{.smaller}
+
+::: bigspace
+Ingénieur d'études CNRS en sciences de l'information géographique dans le domaine de la géographie quantitative (UMR Géographie-Cités).
+:::
+
+::: moy1
+Depuis 2016 :
+:::
+
+::: {#list .nonincremental style="font-size:25px;line-height:25px;"}
+-   Évite l'utilisation de logiciels clic-bouton (QGIS, EXCEL, Philcarto...)
+-   **Analyse de données réalisée exclusivement avec le langage R**
+-   Création quasi hebdomadaire de script R.
+-   Gain de productivité et de polyvalence important, mais...\
+:::
+
+::: moy1
+**→ Implique de nouvelles méthodes de travail :**
+:::
+
+::: {.nonincremental style="font-size:25px;line-height:25px;"}
+-   **Comment rendre mon travail intelligible pour mes collègues (et pour moi) ?**
+-   **Comment mettre à disposition du code ?**
+-   **Comment archiver et assurer une certaine reproductibilité de mes scripts ?**
+:::
+
+#  {data-background="img/Literate_Programming_book_cover.jpg" data-background-size="25%"}
+
+## [Literate programming]{.smaller}
+
+::: big
+La **programmation lettrée** est une approche de la programmation qui se veut différente du paradigme de programmation structurée.
+:::
+
+::: {style="font-size:20px;margin-top:30px;margin-bottom:30px;"}
+> « *Nous devons changer notre attitude traditionnelle envers la construction des programmes : au lieu de considérer que notre tâche principale est de dire à un ordinateur ce qu'il doit faire, appliquons-nous plutôt à expliquer à des êtres humains ce que nous voulons que l'ordinateur fasse.* (...)
+>
+> *Celui qui pratique la programmation lettrée peut être vu comme un essayiste, qui s'attache principalement à exposer son sujet dans un style visant à l'excellence. Tel un auteur, il choisit, avec soin, le dictionnaire à la main, les noms de ses variables et en explique la signification pour chacune d'elles. Il cherche donc à obtenir un programme compréhensible parce que ses concepts sont présentés dans le meilleur ordre possible. Pour cela, il utilise un mélange de méthodes formelles et informelles qui se complètent.* »
+>
+> **D. Knuth**, [« Literate Programming », The Computer Journal, British Computer Society, vol. 27, no 2,‎ 1984, p. 97--111](https://academic.oup.com/comjnl/article/27/2/97/343244?login=true)
+:::
+
+::: big
+Le paradigme de la programmation lettrée, pensé et mis en oeuvre par **Donald Knuth** (1977-78), s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place **autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.
+:::
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="50%" style="font-size:30px;text-align:center;"}
+Code optimisé :
+
+```{r}
+#| eval: TRUE
+#| include: TRUE
+#| echo : TRUE
+#| fig-height: 7
+#| code-line-numbers: FALSE
+
+
+
+
+library(ggplot2)
+ggplot(data = iris, 
+       aes(x = cut(Sepal.Length, breaks = c(min(Sepal.Length), 5, 6, 7, max(Sepal.Length)), 
+                   include.lowest = TRUE, labels = c("Bas","Bas+","Haut","Haut+")))) +
+  geom_bar() + xlab("") + ylab("") + ggtitle("Répartition par classe") +
+  theme(plot.title = element_text(size=27), axis.text=element_text(size=19))
+
+
+
+```
+:::
+
+::: {.column width="50%" style="font-size:30px;text-align:center;"}
+Programation lettrée :
+
+```{r}
+#| eval: FALSE
+#| include: TRUE
+#| echo : TRUE
+#| code-line-numbers: FALSE
+
+#-----------------------------------------------------------------
+#            Représentation graphique 
+#         de la répartition d'individus
+#          discrétisé en quatre classes 
+#
+#                  H. Pecout
+#               5 décembre 2022
+#-----------------------------------------------------------------
+
+## Discrétisation la variable Sepal.Length (données iris)
+
+# Choix des bornes de classes (amplitude égale)
+bornes_des_classes <- c(min(iris$Sepal.Length), 5, 6, 7, 
+                        max(iris$Sepal.Length))
+
+# Choix des noms de classes
+nom_des_classes <- c("Trés petites","petites","grandes","Très grandes")
+
+# Discrétisation de la variable 'Sepal.length'
+iris$classe  <- cut(iris$Sepal.Length,
+                    breaks = bornes_des_classes,
+                    labels = nom_des_classes,
+                    include.lowest = TRUE)
+
+#---------------------------------------------------------------------
+
+## Représentation des la distribution selon la discrétisation
+
+# Bibliothèque pour la représentation graphique
+library(ggplot2)
+
+# Représentation graphique de la distribution
+ggplot(data = iris, aes(x = classe)) +  # Choix des données et de la variable à représenter
+  geom_bar() +  # Choix du type de représentation
+  xlab("") +    # Suppression du nom de l'axe x
+  ylab("") +    # Suppression du nom de l'axe y
+  ggtitle("Répartition par classe") +  # Titre du graphique
+  theme(plot.title = element_text(size=27),  # Taille de la police titre 
+        axis.text=element_text(size=19))     # Taille des labels d'axe
+
+
+```
+:::
+:::
+
+## [Quel outil pour la PL ?]{.smaller}
+
+::: moy
+Il est possible de faire de la programmation lettrée dans n'importe quel type de document... Ce paradigme n'est pas lié à format ou à un outil. Mais il en existe tout de même un parfait pour mettre en oeuvre ce concept.
+:::
+
+::: columns
+::: {.column width="30%"}
+![](img/logo_gt_notebook_orange.png){width="79%"}
+:::
+
+::: {.column width="70%"}
+::: big
+**Le notebook permet de combiner du langage naturel et du langage de programmation**, et d'interpréter les deux :
+
+::: nonincremental
+-   Mise en forme du texte\
+-   Exécution et/ou affichage du code\
+
+\
+
+::: big
+**Les notebooks et la programmation lettrée ont été crées à la même période, en parallèle de l'emergence du concept de recherche reproductible.**
+:::
+:::
+:::
+:::
+:::
+
+## [Un peu d'histoire]{.smaller}
+
+::: columns
+::: {.column width="40%"}
+::: bigorange
+**Les premiers notebooks**
+:::
+
+::: {.nonincremental style="font-size:25px;line-height:25px;margin-top:20px;"}
+-   1970 : Scratchpad (Axiom)
+-   1987 : MathCad
+-   1988 : Mathematica
+-   1989 : Maple
+-   2011 : IPython
+:::
+
+![](img/Wolfram-Language-on-early-Mac.png){width="80%"}
+:::
+
+::: {.column width="60%"}
+::: bigorange
+**Émergence de la recherche reproductible**
+:::
+
+::: small
+[**Jon Claerbout**](https://en.wikipedia.org/wiki/Jon_Claerbout) est l'un des premiers chercheur a exprimer le fait que **les méthodes de calcul menacent la reproductibilité de la recherche** si l'on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.
+
+En 1976, il publie un ouvrage référence en traitement de signal :\
+« ***Fundamentals of Geophysical Data Processing*** »
+
+Cette 1ère version - non-reproductible - sera le début d'un long travail de recherche sur la reproductibilité... Via des notebooks !
+:::
+
+\
+
+::: bigorange
+**Émergence du Literate Programming**
+:::
+
+::: moy
+Le concept de **programmation lettrée** est pensé et conçu par **Donald Knuth** (1977-78). Le notebook se présente comme un outil idéal pour mettre en œuvre ce paradigme.
+:::
+:::
+:::
+
+#  {data-background="img/logo_notebook_orange.png" data-background-size="45%"}
+
+## [Définition]{.smaller}
+
+::: big
+**Interface de programmation qui permet de combiner des sections en langage naturel et des sections en langage informatique.**
+:::
+
+::: bigrey2
+De nombreuses dénominations existent :
+:::
+
+::: {.nonincremental style="color:grey;font-size:22px;text-align:center;"}
+-   *Article exécutable*
+-   *Document computationnel*
+-   *Document électronique interactif*
+-   *Cahiers de programmation*
+-   *Cahier électronique d'analyse*
+-   *Calepin électronique*
+-   *Carnet de code*
+-   *Manifeste algorithmique*
+-   **Notebook !**
+-   *...*
+:::
+
+## [Une logique... plusieurs pratiques !]{.smaller}
+
+::: div0
+![](img/notebook_1.png){width="100%"}
+:::
+
+::: bigrey
+La mise en forme du texte se fait à l'aide d'un langage de balisage (Markdown, html...)
+:::
+
+## [Anatomie d'un notebook]{.smaller}
+
+::: bigspacecenter
+Un simple fichier texte (.rmd, .qmd, .ipynb...)
+:::
+
+![](img/notebook_2.png){width="100%"}
+
+<!-- ## Notebook sans code ? -->
+
+<!-- <img src="img/notebook_3.png" style="margin-top:120px;" width="1000"/> -->
+
+<!-- ## Stylo d'Human-Num -->
+
+<!-- <p class="smallpcenter" style="margin-top:40px;"> -->
+
+<!-- Développé par le [CRC-EN](https://ecrituresnumeriques.ca/fr/) avec le support [Érudit](https://www.erudit.org/fr/) et de la [TGIR Huma-Num](https://www.huma-num.fr/) -->
+
+<!-- </p> -->
+
+<!-- <img src="img/stylo.png" style="margin-top:5px;" width="550"/> -->
+
+<!-- <p class="smallpcenter" style="margin-top:30px;"> -->
+
+<!-- Sinon, il existe beaucoup d'éditeurs libres ([CodiMD](https://hackmd.io/MVFMDJaVTkKM-s4IUz_q7A?both)...) -->
+
+<!-- </p> -->
+
+##  {.scrollable}
+
+::: columns
+::: {.column width="95%"}
+``` {.markdown .eval}
+\
+
+### Le Markdown
+
+Markdown est un **langage de balisage léger** créé en 2004 par 
+[John Gruber](https://fr.wikipedia.org/wiki/John_Gruber), 
+avec l'aide d'[Aaron Swartz](https://fr.wikipedia.org/wiki/Aaron_Swartz), 
+dans le but d'offrir une **syntaxe facile à lire et à écrire**. 
+
+![](https://upload.wikimedia.org/wikipedia/commons/6/64/John_Gruber%2C_2009_%28cropped%29.jpg)
+**John Gruber, 2004 : **
+
+> « *Un document balisé par Markdown peut être lu en l'état sans donner 
+l’impression d'avoir été balisé ou formaté par des instructions particulières.* »
+
+Un document balisé par Markdown peut être converti en :   
+
+>- HTML  
+>- PDF  
+>- plein d'autres formats[^1]   
+
+[^1]: Un markdown peut également être converti en format word, LaTeX, ePub, odt...
+
+\
+
+#### Insérer du code ?
+
+~~~R
+library(ggplot2)
+ggplot(data = iris, 
+       aes(x = cut(Sepal.Length, breaks = c(min(Sepal.Length), 5, 6, 7, max(Sepal.Length)), 
+                   include.lowest = TRUE, labels = c("Bas","Bas+","Haut","Haut+")))) +
+  geom_bar() + 
+  xlab("") + 
+  ylab("") + 
+  ggtitle("Répartition par classe") +
+  theme(plot.title = element_text(size=27), axis.text=element_text(size=19))
+~~~
+
+
+
+
+
+
+```
+:::
+
+::: {.column width="5%" style="font-size:30px;text-align:center;"}
+:::
+:::
+
+## [Multiplication des notebooks]{.smaller}
+
+::: center
+![](img/typonotebook.png){width="65%"}
+:::
+
+::: xsmallgrey
+S. Lau, I. Drosos, J. M. Markel and P. J. Guo, "The Design Space of Computational Notebooks: An Analysis of 60 Systems in Academia and Industry," 2020 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), 2020
+:::
+
+## [Les plus répandus en SHS]{.smaller}
+
+::: center
+![](img/nouveau_notebook.png){width="80%"}
+:::
+
+## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
+
+::: center
+![](img/quarto2.png){width="80%"}
+:::
+
+::: moycenter
+[**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...
+:::
+
+## Nombreuses fonctionnalités
+
+## Nombreux format
+
+## Reproductibilité ?
+
+## Rzine
+
+##  {data-background="img/markdown2.png" data-background-size="1400px"}
+
+##  {data-background="img/markdown3.png" data-background-size="1400px"}
+
+#  {data-background="img/history.jpeg" data-background-size="750px"}
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+## Programmation lettrée & Notebook
+
+<br>
+
+<img src="img/LP1.png" style="margin-top:60px;" width="800"/>
+
+## LP, Notebook & Reproductibilité
+
+<img src="img/LP2.png" style="margin-top:60px;" width="800"/>
+
+#  {data-background="img/partie4.png" data-background-size="500px"}
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+## Git, GitHub, GitLab
+
+<p class="smallpcenter&quot;" style="margin-top:80px;font-size:85%;">
+
+[**Git**](https://git-scm.com/) est un système de gestion de version distribué pour :
+
+</p>
+
+<ul class="pucsmall22" style="margin-top:10px;font-size:77%;">
+
+> -   tracker les changement dans les fichiers texte
+
+> -   gérer l'historique du code source
+
+> -   partager le code dans des dépots distants
+
+</ul>
+
+<br>
+
+<br>
+
+<p class="smallpcenter&quot;" style="margin-top:40px;font-size:83%;">
+
+[**GitHub**](https://github.com/) et [**GitLab**](https://about.gitlab.com/) hébèrgent des dépots distants et des services pour gérer des projets (issue tracker, collaboration, hébergement web, CI/CD).
+
+</p>
+
+## Notebook + Git
+
+<ul class="pucsmall22" style="margin-top:60px;font-size:85%;">
+
+<li>Les sources des notebooks sont des fichiers texte</li>
+
+<ul class="pucsmall22" style="margin-top:15px;font-size:95%;">
+
+➡️ Suivi des modifications (*commit*, branches, etc.)
+
+</ul>
+
+<li style="margin-top:70px;">
+
+Certains ont besoin d'être compilé
+
+</li>
+
+<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
+
+➡️ *Continuous Integration*
+
+</ul>
+
+<li style="margin-top:70px;">
+
+Certains peuvent être déployés sur le web
+
+</li>
+
+<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
+
+➡️ *Continuous Deployment*
+
+</ul>
+
+</ul>
+
+## Exemple notebook Quarto
+
+<br>
+
+<br>
+
+<br>
+
+<img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>
+
+<br>
+
+<br>
+
+<br>
+
+<p style="font-size:115%;">
+
+[Cliquez-ici !](https://rcarto.github.io/Quarto/)
+
+</p>
+
+<!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- <br> -->
+
+<!-- ## Conclusion -->
+
+<!-- <div id="leftt"> -->
+
+<!-- <p style="margin-top:70px;font-size:90%;">Un **format de publication**<br> scientifique légitime</p>  -->
+
+<!-- <ul class="pucsmall22" style="margin-top:60px;font-size:81%;"> -->
+
+<!-- > - [Rzine](rzine.fr), pour la pratique de R en SHS       -->
+
+<!-- > - [Computo](https://computo.sfds.asso.fr/) de la SFdS     -->
+
+<!-- > - [Programming Historian](https://programminghistorian.org)  -->
+
+<!-- > - ... -->
+
+<!-- </ul>   -->
+
+<!-- </div>   -->
+
+<!-- <div id="rightt">  -->
+
+<!-- <p style="margin-top:70px;font-size:90%;">Nombreux templates,<br>**multiples usages**</p>  -->
+
+<!-- <ul class="xpucsmall" style="margin-top:23px;font-size:62%;"> -->
+
+<!--       > - <span style="color:grey;">*Article*</span>   -->
+
+<!--       > - <span style="color:grey;">*Manuel*</span>     -->
+
+<!--       > - <span style="color:grey;">*Rapports*</span>    -->
+
+<!--       > - <span style="color:grey;">*Livre*</span>   -->
+
+<!--       > - <span style="color:grey;">*Tutoriel*</span> -->
+
+<!--       > - <span style="color:grey;">*Cours - Exercice*</span> -->
+
+<!--       > - <span style="color:grey;">*Blog - Site web*</span>    -->
+
+<!--       > - <span style="color:grey;">*curriculum vitae*</span>    -->
+
+<!--       > - <span style="color:grey;">*Diaporama*</span>  -->
+
+<!--       > - <span style="color:grey;">*...*</span>  -->
+
+<!-- </ul>   -->
+
+<!-- </div>  -->
+
+<!-- ## Ceci est un notebook... -->
+
+<!-- ```{r, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE} -->
+
+<!-- # Chargement des librairies -->
+
+<!-- library(sf) -->
+
+<!-- library(leaflet) -->
+
+<!-- # Création d'un point (localisation centre des colloques) -->
+
+<!-- ptsfg <- st_point(c(2.36652, 48.9071886)) -->
+
+<!-- ptsfc <- st_sfc(ptsfg, crs = (4326)) -->
+
+<!-- ptdf <- data.frame(id= 1, name = "Vous êtes ici !") -->
+
+<!-- Here <- st_sf(ptdf,geometry = ptsfc) -->
+
+<!-- # Affichage du point - carte interactive -->
+
+<!-- mamap <- leaflet(Here, width = 950, height = 550) %>% -->
+
+<!--   addTiles() %>% -->
+
+<!--   addMarkers(data = Here, popup = "❤️mate-shs❤️") -->
+
+<!-- ``` -->
+
+<!-- ## Vous êtes ici ! -->
+
+<!-- ```{r, echo=FALSE} -->
+
+<!-- mamap -->
+
+<!-- ``` -->
+
+<!-- ## Merci de votre attention -->
+
+<!-- <br> -->
+
+<!-- <p style="margin-top:0px;margin-bottom:0px;font-size:100%;">**Diapositives libres** (CC BY-SA 4.0)</p> -->
+
+<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:65%;">Slides : https://huguespecout.github.io/notebook_mateshs/#/</p> -->
+
+<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:65%;">Code source : https://github.com/HuguesPecout/notebook_mateshs</p> -->
+
+<!-- <br> -->
+
+<!-- <p style="margin-top:30px;margin-bottom:10px;font-size:100%;">**Contact**</p> -->
+
+<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:70%;">hugues.pecout@cnrs.fr</p> -->
+
+<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">timothee.giraud@cnrs.fr</p> -->
+
+<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">sebastien.rey-coyrehourcq@univ-rouen.fr (GT Notebook)</p> -->
+
+<!-- <br> -->
+
+<!-- [<img src="img/twitter.png" width="45"/ style="margin-top:15px;margin-bottom:-10px;margin-right:10px;">](https://gitlab.huma-num.fr/rzine/site)@rzine_shs -->
+
+<!-- ## Info session -->
+
+<!-- <br> -->
+
+<!-- ```{r, echo=FALSE, eval=TRUE} -->
+
+<!-- sessionInfo() -->
+
+<!-- ```   -->
