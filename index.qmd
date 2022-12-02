@@ -337,7 +337,6 @@ ggplot(data = iris,
   theme(plot.title = element_text(size=27), axis.text=element_text(size=19))
 ~~~
 
-
 ```
 :::
 
@@ -513,7 +512,7 @@ ggplot(data = iris,
 \
 
 ::: center2
-[[→ GitLab & GitHub (Git)]{.txt1}]{.orange}
+[→ GitLab & GitHub (Git)]{.txt1}
 :::
 
 ::: div3
@@ -555,13 +554,9 @@ ggplot(data = iris,
 ::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
 ➡️ *Continuous Deployment*
 :::
-
 :::
 
 ## [Exemple]{.smaller}
-
-
-
 
 # Exemple
 
@@ -595,13 +590,8 @@ ggplot(data = iris,
 [Notebook compilé : <https://rcarto.github.io/Quarto/>]{.big}
 :::
 
-## Nombreuses fonctionnalités
 
-## Nombreux format
 
-## Reproductibilité ?
-
-## Rzine
 
 <!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
 
@@ -625,55 +615,62 @@ ggplot(data = iris,
 
 <!-- <br> -->
 
-<!-- ## Conclusion -->
+## Nombreux usages & formats
 
-<!-- <div id="leftt"> -->
+::: right3
+Des fonctionnalités multiples
 
-<!-- <p style="margin-top:70px;font-size:90%;">Un **format de publication**<br> scientifique légitime</p>  -->
+::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
 
-<!-- <ul class="pucsmall22" style="margin-top:60px;font-size:81%;"> -->
+-   Ajout bibliographie (BibTeX)
 
-<!-- > - [Rzine](rzine.fr), pour la pratique de R en SHS       -->
+-   Ajout de CSS
 
-<!-- > - [Computo](https://computo.sfds.asso.fr/) de la SFdS     -->
+-   Gestion des table de matière, note de bas de pages...
+:::
 
-<!-- > - [Programming Historian](https://programminghistorian.org)  -->
+Un **format de publication**<br> scientifique légitime
+ 
+::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
 
-<!-- > - ... -->
+-   [Rzine](rzine.fr), pour la pratique de R en SHS
 
-<!-- </ul>   -->
+-   [Computo](https://computo.sfds.asso.fr/) de la SFdS
 
-<!-- </div>   -->
+-   [Programming Historian](https://programminghistorian.org)
+:::
 
-<!-- <div id="rightt">  -->
 
-<!-- <p style="margin-top:70px;font-size:90%;">Nombreux templates,<br>**multiples usages**</p>  -->
 
-<!-- <ul class="xpucsmall" style="margin-top:23px;font-size:62%;"> -->
+:::
 
-<!--       > - <span style="color:grey;">*Article*</span>   -->
+::: left3
+Nombreux templates,<br>**multiples usages**
 
-<!--       > - <span style="color:grey;">*Manuel*</span>     -->
+::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
 
-<!--       > - <span style="color:grey;">*Rapports*</span>    -->
+-   [*Article*]{style="color:grey;"}
 
-<!--       > - <span style="color:grey;">*Livre*</span>   -->
+-   [*Manuel*]{style="color:grey;"}
 
-<!--       > - <span style="color:grey;">*Tutoriel*</span> -->
+-   [*Rapports*]{style="color:grey;"}
 
-<!--       > - <span style="color:grey;">*Cours - Exercice*</span> -->
+-   [*Livre*]{style="color:grey;"}
 
-<!--       > - <span style="color:grey;">*Blog - Site web*</span>    -->
+-   [*Tutoriel*]{style="color:grey;"}
 
-<!--       > - <span style="color:grey;">*curriculum vitae*</span>    -->
+-   [*Cours - Exercice*]{style="color:grey;"}
 
-<!--       > - <span style="color:grey;">*Diaporama*</span>  -->
+-   [*Blog - Site web*]{style="color:grey;"}
 
-<!--       > - <span style="color:grey;">*...*</span>  -->
+-   [*curriculum vitae*]{style="color:grey;"}
 
-<!-- </ul>   -->
+-   [*Diaporama*]{style="color:grey;"}
 
-<!-- </div>  -->
+-   [*...*]{style="color:grey;"}
+:::
+
+:::
 
 <!-- ## Ceci est un notebook... -->
 
@@ -715,24 +712,20 @@ ggplot(data = iris,
 
 ## Merci de votre attention
 
-
 \
 
 [**Diapositives libres** (CC BY-SA 4.0)]{.txt1}
 
-[Diaporama :]{.txt2} [[https://hpecout.gitpages.huma-num.fr/m1_carte_et_pratique/](https://hpecout.gitpages.huma-num.fr/m1_carte_et_pratique/)]{.txt2}    
-[Code source :]{.txt2} [[https://gitlab.huma-num.fr/hpecout/m1_carte_et_pratique](https://gitlab.huma-num.fr/hpecout/m1_carte_et_pratique)]{.txt2}
+[Diaporama :]{.txt2} [<https://huguespecout.github.io/DataSHS_2022/>]{.txt2}\
+[Code source :]{.txt2} [<https://github.com/HuguesPecout/DataSHS_2022>]{.txt2}
 
 \
 
 [**Contact**]{.txt1}
 
-[[hugues.pecout\@cnrs.fr](mailto:hugues.pecout@cnrs.fr)]{.txt2}   
+[[hugues.pecout\@cnrs.fr](mailto:hugues.pecout@cnrs.fr)]{.txt2}
 
-
-
-[<img src="img/twitter.png" width="40"/ style="margin-top:15px;margin-bottom:-10px;margin-right:10px;">](https://gitlab.huma-num.fr/rzine/site)[@rzine_shs]{.txt2}
-
+[<img src="img/twitter.png" width="40" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"/>](https://gitlab.huma-num.fr/rzine/site)@rzine_shs
 
 ## Info session
 
