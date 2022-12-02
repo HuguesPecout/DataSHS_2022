@@ -27,9 +27,6 @@ filters:
   - markdown-examples.lua
 ---
 
-
-
-
 ## [Bonjour à tout·te·s]{.smaller}
 
 ::: bigspace
@@ -74,7 +71,7 @@ La [**programmation lettrée**]{.orange} est une approche de la programmation qu
 :::
 
 ::: big
-[Le paradigme de la programmation lettrée, [pensé et mis en oeuvre par **Donald Knuth** (1977-78)]{.orange}, s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place [**autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.]{.orange}
+Le paradigme de la programmation lettrée, [pensé et mis en oeuvre par **Donald Knuth** (1977-78)]{.orange}, s'éloigne dans son écriture de l'ordonnancement imposé par l'ordinateur, et à la place [**autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée**.]{.orange}
 :::
 
 ------------------------------------------------------------------------
@@ -188,7 +185,7 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 :::
 :::
 
-## [💻 Seventies show]{.smaller}
+## [💻 70's show]{.smaller}
 
 ::: columns
 ::: {.column width="40%"}
@@ -341,17 +338,12 @@ ggplot(data = iris,
 ~~~
 
 
-
-
-
-
 ```
 :::
 
 ::: {.column width="5%" style="font-size:30px;text-align:center;"}
 :::
 :::
-
 
 ## [Les notebooks en SHS]{.smaller}
 
@@ -371,79 +363,91 @@ ggplot(data = iris,
 
 # PL, NB et reproductibilité...
 
-## [Programmation lettrée + Notebook = 🔥]{.smaller}{ auto-animate=true auto-animate-easing="ease-in-out"}
+## [Programmation lettrée + Notebook = 🔥]{.smaller} {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: {.r-hstack}
+::: r-hstack
 ::: {data-id="box1" auto-animate-delay="0" style="background: #3fb61840; width: 200px; height: 150px; margin-top: 200px; margin-right: 150px;"}
 :::
+
 ::: {data-id="box2" auto-animate-delay="0.1" style="background: #f2a42340; width: 200px; height: 150px; margin-top: 200px; margin-left: 150px;"}
 :::
 :::
 
 ::: div1
-:::left
-<span style="color:#3fb61840;" >Programmation lettrée</span>
+::: left
+[Programmation lettrée]{style="color:#3fb61840;"}
 :::
-:::right
-<span style="color:#f2a42340;">Notebook</span>
+
+::: right
+[Notebook]{style="color:#f2a42340;"}
 :::
 :::
 
-## [Programmation lettrée + Notebook = 🔥]{.smaller} {auto-animate=true auto-animate-easing="ease-in-out"}
+## [Programmation lettrée + Notebook = 🔥]{.smaller} {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: {.r-hstack}
+::: r-hstack
 ::: {data-id="box1" style="background: #3fb61840; width: 400px; height: 250px; margin-top: 125px; margin-right: -80px;"}
 :::
-::: {data-id="box2"  style="background: #f2a42340;  width: 400px; height: 250px; margin-top: 125px; margin-left: -80px;"}
+
+::: {data-id="box2" style="background: #f2a42340;  width: 400px; height: 250px; margin-top: 125px; margin-left: -80px;"}
 :::
 :::
 
 \
 
 ::: {.center2 auto-animate-delay="2"}
-<span style="color:#555919;" >Reproductibilité ?</span>
-::: 
+[Reproductibilité ?]{style="color:#555919;"}
+:::
 
-## [PL + NB + ... ? = reproductibilité]{.smaller} {auto-animate=true auto-animate-easing="ease-in-out"}
+## [PL + NB + ... ? = reproductibilité]{.smaller} {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: {.r-hstack}
+::: r-hstack
 ::: {data-id="box1" auto-animate-delay="0" style="background: #3fb61840; width: 200px; height: 150px; margin-top: 30px; margin-right: 150px;"}
 :::
+
 ::: {data-id="box2" auto-animate-delay="0.2" style="background: #f2a42340; width: 200px; height: 150px; margin-top: 30px; margin-left: 150px;"}
 :::
+
 ::: {.absolute data-id="box3" auto-animate-delay="3" style="background: #f2262340; width: 200px; height: 150px; margin-top: 600px; margin-right: 505px;"}
 :::
+
 ::: {.absolute data-id="box4" auto-animate-delay="7" style="background: #2336f240; width: 200px; height: 150px; margin-top: 600px; margin-left: 505px;"}
 :::
 :::
 
 ::: {.div1 auto-animate-delay="1"}
 ::: left
-<span style="color:#3fb61840;" >Programmation lettrée</span>
+[Programmation lettrée]{style="color:#3fb61840;"}
 :::
+
 ::: right
-<span style="color:#f2a42340;">Notebook</span>
+[Notebook]{style="color:#f2a42340;"}
 :::
 :::
 
-:::{.left2 auto-animate-delay="4.5"}
-<span style="color:#f2262340;" >Informations de session<br>et d'environnement</span>
+::: {.left2 auto-animate-delay="4.5"}
+[Informations de session<br>et d'environnement]{style="color:#f2262340;"}
 :::
+
 ::: {.right2 auto-animate-delay="8.5"}
-<span style="color:#2336f240;">Archivage & partage</br>Conditions d'utilisation</span>
+[Archivage & partage</br>Conditions d'utilisation]{style="color:#2336f240;"}
 :::
 
-##  [PL + NB + ... ? = reproductibilité]{.smaller} {auto-animate=true auto-animate-easing="ease-in-out"}
+## [PL + NB + ... ? = reproductibilité]{.smaller} {auto-animate="true" auto-animate-easing="ease-in-out"}
 
-::: {.r-hstack}
+::: r-hstack
 ::: {data-id="box1" style="background: #3fb61840; width: 300px; height: 250px; margin-top: 170px; margin-right: -50px;"}
 :::
-::: {data-id="box2"  style="background: #f2a42340;  width: 300px; height: 250px; margin-top: 170px; margin-left: -50px;"}
+
+::: {data-id="box2" style="background: #f2a42340;  width: 300px; height: 250px; margin-top: 170px; margin-left: -50px;"}
 :::
+
 ::: {.absolute data-id="box3" auto-animate-delay="0" style="background: #f2262340;  width: 300px; height: 250px; margin-top: 0px; "}
 :::
+
 ::: {.absolute data-id="box4" auto-animate-delay="0.1" style="background: #2336f240;  width: 300px; height: 250px; margin-top: 350px; "}
 :::
+
 ::: {.absolute data-id="box5" auto-animate-delay="2.4" style="background: white;  width: 100px; height: 77px; margin-top:175px;"}
 :::
 :::
@@ -457,13 +461,21 @@ ggplot(data = iris,
 <!-- [A. Quel **environnement** utilisé ?]{.moy2} -->
 
 <!-- :::{.nonincremental style="font-size:50%;"} -->
+
 <!-- - Système exploitation ? -->
+
 <!-- - Version de Quarto ? -->
+
 <!-- - Version de R ? -->
+
 <!-- - Version de ojs ? -->
+
 <!-- - Version de Rstudio ? -->
+
 <!-- - Versions des packages utilisés ? -->
+
 <!-- - ... -->
+
 <!-- ::: -->
 
 <!-- [B. **Documentation supplémentaire**]{.moy2} -->
@@ -471,8 +483,6 @@ ggplot(data = iris,
 <!-- [C. **_Image_ docker de l'environnement**]{.moy2} -->
 
 <!-- ::: -->
-
-
 
 <!-- :::right3 -->
 
@@ -487,81 +497,69 @@ ggplot(data = iris,
 <!-- [D. **Utilisation de licences (code et document)**]{.moy2} -->
 
 <!-- :::{.fragment} -->
+
 <!-- ![](img/git.png){width="30%"} -->
+
 <!-- ![](img/gitlab.png){width="20%"} -->
+
 <!-- ![](img/github_blanc.png){width="30%"} -->
-<!-- ::: -->
 
 <!-- ::: -->
 
+<!-- ::: -->
 
-## Archivage et partage ?
+## [Quel outil pour l'archivage/partage ?]{.smaller}
 
-## Git, GitHub, GitLab
+\
 
-<p class="smallpcenter&quot;" style="margin-top:80px;font-size:85%;">
+::: center2
+[[→ GitLab & GitHub (Git)]{.txt1}]{.orange}
+:::
 
-[**Git**](https://git-scm.com/) est un système de gestion de version distribué pour :
+::: div3
+[[**Git**](https://git-scm.com/) **est un système de gestion de version** distribué pour :]{.txt2}
 
-</p>
+::: {.nonincremental style="margin-top:0px;font-size:72%;line-height:0.9em"}
+-   tracker les changements dans les fichiers texte
+-   gérer l'historique du code source
+-   partager le code dans des dépots distants
+:::
+:::
 
-<ul class="pucsmall22" style="margin-top:10px;font-size:77%;">
+::: div3
+[[**GitLab**](https://about.gitlab.com/) **et [GitHub](https://github.com/) sont des services web d'hébergement et de gestion de version** (issue tracker, collaboration, hébergement web, CI/CD), qui reposent sur le logiciel de version [**Git**](https://git-scm.com/)]{.txt2}
+:::
 
-> -   tracker les changement dans les fichiers texte
+## [Notebook + GitLab (ou GitHub)]{.smaller}
 
-> -   gérer l'historique du code source
+::: {.nonincremental style="font-size:80%;margin-top:40px;"}
+-   Les sources des **notebooks sont de simples fichiers texte**
 
-> -   partager le code dans des dépots distants
+::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
+➡️ Suivi des modifications (*commit*, branches, etc.) \
+➡️ [**Archivage et partage** (dépôt public ou privé)]{.orange}
+:::
 
-</ul>
+\
 
-<br>
+-   GitLab et GitHub permettent de [**compiler un notebook**]{.orange}
 
-
-<p class="smallpcenter&quot;" style="margin-top:40px;font-size:83%;">
-
-[**GitHub**](https://github.com/) et [**GitLab**](https://about.gitlab.com/) hébèrgent des dépots distants et des services pour gérer des projets (issue tracker, collaboration, hébergement web, CI/CD).
-
-</p>
-
-
-## Notebook + Git
-
-<ul class="pucsmall22" style="margin-top:60px;font-size:85%;">
-
-<li>Les sources des notebooks sont des fichiers texte</li>
-
-<ul class="pucsmall22" style="margin-top:15px;font-size:95%;">
-
-➡️ Suivi des modifications (*commit*, branches, etc.)
-
-</ul>
-
-<li style="margin-top:70px;">
-
-Certains ont besoin d'être compilé
-
-</li>
-
-<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
-
+::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
 ➡️ *Continuous Integration*
+:::
 
-</ul>
+\
 
-<li style="margin-top:70px;">
+-   Ils permettent de [**déployer un notebook compilé en HTML**]{.orange} [**sur le web**]{.orange}
 
-Certains peuvent être déployés sur le web
-
-</li>
-
-<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
-
+::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
 ➡️ *Continuous Deployment*
+:::
 
-</ul>
+:::
 
-</ul>
+## [Exemple]{.smaller}
+
 
 
 
@@ -569,38 +567,33 @@ Certains peuvent être déployés sur le web
 
 ## 
 
-:::logos
+::: logos
 <img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>
 
 \
 
-[Code source(GitHub) : [https://github.com/rCarto/Quarto](https://github.com/rCarto/Quarto)]{.big}  
-[Notebook compilé : [https://rcarto.github.io/Quarto/](https://rcarto.github.io/Quarto/)]{.big}
-
+[Code source(GitHub) : <https://github.com/rCarto/Quarto>]{.big}\
+[Notebook compilé : <https://rcarto.github.io/Quarto/>]{.big}
 :::
 
+##  {background-image="img/rstudio1.jpg"}
 
-## {background-image="img/rstudio1.jpg"  }
+##  {background-image="img/rstudio3.jpg"}
 
-## {background-image="img/rstudio3.jpg"  }
+##  {background-image="img/rstudio4.jpg"}
 
-## {background-image="img/rstudio4.jpg"  }
-
-## {background-image="img/rstudio5.jpg"  }
-
+##  {background-image="img/rstudio5.jpg"}
 
 ## 
 
-:::logos
+::: logos
 <img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>
 
 \
 
-[Code source(GitHub) : [https://github.com/rCarto/Quarto](https://github.com/rCarto/Quarto)]{.big}  
-[Notebook compilé : [https://rcarto.github.io/Quarto/](https://rcarto.github.io/Quarto/)]{.big}
-
+[Code source(GitHub) : <https://github.com/rCarto/Quarto>]{.big}\
+[Notebook compilé : <https://rcarto.github.io/Quarto/>]{.big}
 :::
-
 
 ## Nombreuses fonctionnalités
 
@@ -609,12 +602,6 @@ Certains peuvent être déployés sur le web
 ## Reproductibilité ?
 
 ## Rzine
-
-
-
-
-
-
 
 <!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
 
@@ -726,36 +713,33 @@ Certains peuvent être déployés sur le web
 
 <!-- ``` -->
 
-<!-- ## Merci de votre attention -->
+## Merci de votre attention
 
-<!-- <br> -->
 
-<!-- <p style="margin-top:0px;margin-bottom:0px;font-size:100%;">**Diapositives libres** (CC BY-SA 4.0)</p> -->
+\
 
-<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:65%;">Slides : https://huguespecout.github.io/notebook_mateshs/#/</p> -->
+[**Diapositives libres** (CC BY-SA 4.0)]{.txt1}
 
-<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:65%;">Code source : https://github.com/HuguesPecout/notebook_mateshs</p> -->
+[Diaporama :]{.txt2} [[https://hpecout.gitpages.huma-num.fr/m1_carte_et_pratique/](https://hpecout.gitpages.huma-num.fr/m1_carte_et_pratique/)]{.txt2}    
+[Code source :]{.txt2} [[https://gitlab.huma-num.fr/hpecout/m1_carte_et_pratique](https://gitlab.huma-num.fr/hpecout/m1_carte_et_pratique)]{.txt2}
 
-<!-- <br> -->
+\
 
-<!-- <p style="margin-top:30px;margin-bottom:10px;font-size:100%;">**Contact**</p> -->
+[**Contact**]{.txt1}
 
-<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:70%;">hugues.pecout@cnrs.fr</p> -->
+[[hugues.pecout\@cnrs.fr](mailto:hugues.pecout@cnrs.fr)]{.txt2}   
 
-<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">timothee.giraud@cnrs.fr</p> -->
 
-<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">sebastien.rey-coyrehourcq@univ-rouen.fr (GT Notebook)</p> -->
 
-<!-- <br> -->
+[<img src="img/twitter.png" width="40"/ style="margin-top:15px;margin-bottom:-10px;margin-right:10px;">](https://gitlab.huma-num.fr/rzine/site)[@rzine_shs]{.txt2}
 
-<!-- [<img src="img/twitter.png" width="45"/ style="margin-top:15px;margin-bottom:-10px;margin-right:10px;">](https://gitlab.huma-num.fr/rzine/site)@rzine_shs -->
 
-<!-- ## Info session -->
+## Info session
 
-<!-- <br> -->
+<br>
 
-<!-- ```{r, echo=FALSE, eval=TRUE} -->
+```{r, echo=FALSE, eval=TRUE}
 
-<!-- sessionInfo() -->
+sessionInfo()
 
-<!-- ```   -->
+```

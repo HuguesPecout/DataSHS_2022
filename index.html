@@ -450,7 +450,7 @@ Hugues Pecout
 </blockquote>
 </div>
 <div class="big">
-<p>[Le paradigme de la programmation lettrée, <span class="orange">pensé et mis en oeuvre par <strong>Donald Knuth</strong> (1977-78)</span>, s’éloigne dans son écriture de l’ordonnancement imposé par l’ordinateur, et à la place <span class="orange"><strong>autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée</strong>.</span></p>
+<p>Le paradigme de la programmation lettrée, <span class="orange">pensé et mis en oeuvre par <strong>Donald Knuth</strong> (1977-78)</span>, s’éloigne dans son écriture de l’ordonnancement imposé par l’ordinateur, et à la place <span class="orange"><strong>autorise les développeurs à utiliser un ordre imposé par la logique et le fil de leur pensée</strong>.</span></p>
 </div>
 </section>
 <section class="slide level2">
@@ -543,8 +543,8 @@ Hugues Pecout
 </div>
 </div>
 </section>
-<section id="seventies-show" class="slide level2">
-<h2><span class="smaller">💻 Seventies show</span></h2>
+<section id="s-show" class="slide level2">
+<h2><span class="smaller">💻 70’s show</span></h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <div class="bigorange">
@@ -677,11 +677,7 @@ Hugues Pecout
 <span id="cb3-36"><a href="#cb3-36"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span></span>
 <span id="cb3-37"><a href="#cb3-37"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>), <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))</span>
 <span id="cb3-38"><a href="#cb3-38"></a><span class="in">~~~</span></span>
-<span id="cb3-39"><a href="#cb3-39"></a></span>
-<span id="cb3-40"><a href="#cb3-40"></a></span>
-<span id="cb3-41"><a href="#cb3-41"></a></span>
-<span id="cb3-42"><a href="#cb3-42"></a></span>
-<span id="cb3-43"><a href="#cb3-43"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-39"><a href="#cb3-39"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
 <h3 id="le-markdown">Le Markdown</h3>
@@ -849,55 +845,60 @@ Hugues Pecout
 <!-- ::: -->
 <!-- ::: -->
 </section>
-<section id="archivage-et-partage" class="slide level2">
-<h2>Archivage et partage ?</h2>
-</section>
-<section id="git-github-gitlab" class="slide level2">
-<h2>Git, GitHub, GitLab</h2>
-<p class="smallpcenter&quot;" style="margin-top:80px;font-size:85%;">
-</p><p><a href="https://git-scm.com/"><strong>Git</strong></a> est un système de gestion de version distribué pour :</p>
-<p></p>
-<ul class="pucsmall22" style="margin-top:10px;font-size:77%;">
+<section id="quel-outil-pour-larchivagepartage" class="slide level2">
+<h2><span class="smaller">Quel outil pour l’archivage/partage ?</span></h2>
+<p><br>
+</p>
+<div class="center2">
+<p><span class="orange"><span class="txt1">→ GitLab &amp; GitHub (Git)</span></span></p>
+</div>
+<div class="div3">
+<p><span class="txt2"><a href="https://git-scm.com/"><strong>Git</strong></a> <strong>est un système de gestion de version</strong> distribué pour :</span></p>
+<div style="margin-top:0px;font-size:72%;line-height:0.9em">
 <ul>
-<li>tracker les changement dans les fichiers texte</li>
-</ul>
-<ul>
+<li>tracker les changements dans les fichiers texte</li>
 <li>gérer l’historique du code source</li>
-</ul>
-<ul>
 <li>partager le code dans des dépots distants</li>
 </ul>
-</ul>
-<p><br></p>
-<p class="smallpcenter&quot;" style="margin-top:40px;font-size:83%;">
-</p><p><a href="https://github.com/"><strong>GitHub</strong></a> et <a href="https://about.gitlab.com/"><strong>GitLab</strong></a> hébèrgent des dépots distants et des services pour gérer des projets (issue tracker, collaboration, hébergement web, CI/CD).</p>
-<p></p>
+</div>
+</div>
+<div class="div3">
+<p><span class="txt2"><a href="https://about.gitlab.com/"><strong>GitLab</strong></a> <strong>et <a href="https://github.com/">GitHub</a> sont des services web d’hébergement et de gestion de version</strong> (issue tracker, collaboration, hébergement web, CI/CD), qui reposent sur le logiciel de version <a href="https://git-scm.com/"><strong>Git</strong></a></span></p>
+</div>
 </section>
-<section id="notebook-git" class="slide level2">
-<h2>Notebook + Git</h2>
-<ul class="pucsmall22" style="margin-top:60px;font-size:85%;">
-<li>
-Les sources des notebooks sont des fichiers texte
-</li>
-<ul class="pucsmall22" style="margin-top:15px;font-size:95%;">
-<p>➡️ Suivi des modifications (<em>commit</em>, branches, etc.)</p>
+<section id="notebook-gitlab-ou-github" class="slide level2">
+<h2><span class="smaller">Notebook + GitLab (ou GitHub)</span></h2>
+<div style="font-size:80%;margin-top:40px;">
+<ul>
+<li>Les sources des <strong>notebooks sont de simples fichiers texte</strong></li>
 </ul>
-<li style="margin-top:70px;">
-<p>Certains ont besoin d’être compilé</p>
-</li>
-<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
+<div style="font-size:80%;margin-top:-20px;">
+<p>➡️ Suivi des modifications (<em>commit</em>, branches, etc.)&nbsp;<br>
+➡️ <span class="orange"><strong>Archivage et partage</strong> (dépôt public ou privé)</span></p>
+</div>
+<p><br>
+</p>
+<ul>
+<li>GitLab et GitHub permettent de <span class="orange"><strong>compiler un notebook</strong></span></li>
+</ul>
+<div style="font-size:80%;margin-top:-20px;">
 <p>➡️ <em>Continuous Integration</em></p>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Ils permettent de <span class="orange"><strong>déployer un notebook compilé en HTML</strong></span> <span class="orange"><strong>sur le web</strong></span></li>
 </ul>
-<li style="margin-top:70px;">
-<p>Certains peuvent être déployés sur le web</p>
-</li>
-<ul class="pucsmall22" style="font-size:95%;margin-top:15px;">
+<div style="font-size:80%;margin-top:-20px;">
 <p>➡️ <em>Continuous Deployment</em></p>
-</ul>
-</ul>
+</div>
+</div>
+</section>
+<section id="exemple" class="slide level2">
+<h2><span class="smaller">Exemple</span></h2>
 </section></section>
 <section>
-<section id="exemple" class="title-slide slide level1 center">
+<section id="exemple-1" class="title-slide slide level1 center">
 <h1>Exemple</h1>
 
 </section>
@@ -907,8 +908,8 @@ Les sources des notebooks sont des fichiers texte
 <p><img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"> <strong>+</strong> <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"> <strong>+</strong> <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"></p>
 <p><br>
 </p>
-<p><span class="big">Code source(GitHub) : <a href="https://github.com/rCarto/Quarto">https://github.com/rCarto/Quarto</a></span><br>
-<span class="big">Notebook compilé : <a href="https://rcarto.github.io/Quarto/">https://rcarto.github.io/Quarto/</a></span></p>
+<p><span class="big">Code source(GitHub) : <a href="https://github.com/rCarto/Quarto" class="uri">https://github.com/rCarto/Quarto</a></span><br>
+<span class="big">Notebook compilé : <a href="https://rcarto.github.io/Quarto/" class="uri">https://rcarto.github.io/Quarto/</a></span></p>
 </div>
 </section>
 <section id="section-4" class="slide level2" data-background-image="img/rstudio1.jpg">
@@ -929,8 +930,8 @@ Les sources des notebooks sont des fichiers texte
 <p><img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"> <strong>+</strong> <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"> <strong>+</strong> <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"></p>
 <p><br>
 </p>
-<p><span class="big">Code source(GitHub) : <a href="https://github.com/rCarto/Quarto">https://github.com/rCarto/Quarto</a></span><br>
-<span class="big">Notebook compilé : <a href="https://rcarto.github.io/Quarto/">https://rcarto.github.io/Quarto/</a></span></p>
+<p><span class="big">Code source(GitHub) : <a href="https://github.com/rCarto/Quarto" class="uri">https://github.com/rCarto/Quarto</a></span><br>
+<span class="big">Notebook compilé : <a href="https://rcarto.github.io/Quarto/" class="uri">https://rcarto.github.io/Quarto/</a></span></p>
 </div>
 </section>
 <section id="nombreuses-fonctionnalités" class="slide level2">
@@ -999,23 +1000,61 @@ Les sources des notebooks sont des fichiers texte
 <!-- ```{r, echo=FALSE} -->
 <!-- mamap -->
 <!-- ``` -->
-<!-- ## Merci de votre attention -->
-<!-- <br> -->
-<!-- <p style="margin-top:0px;margin-bottom:0px;font-size:100%;">**Diapositives libres** (CC BY-SA 4.0)</p> -->
-<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:65%;">Slides : https://huguespecout.github.io/notebook_mateshs/#/</p> -->
-<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:65%;">Code source : https://github.com/HuguesPecout/notebook_mateshs</p> -->
-<!-- <br> -->
-<!-- <p style="margin-top:30px;margin-bottom:10px;font-size:100%;">**Contact**</p> -->
-<!-- <p style="margin-top:10px;margin-bottom:0px;font-size:70%;">hugues.pecout@cnrs.fr</p> -->
-<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">timothee.giraud@cnrs.fr</p> -->
-<!-- <p style="margin-top:5px;margin-bottom:0px;font-size:70%;">sebastien.rey-coyrehourcq@univ-rouen.fr (GT Notebook)</p> -->
-<!-- <br> -->
-<!-- [<img src="img/twitter.png" width="45"/ style="margin-top:15px;margin-bottom:-10px;margin-right:10px;">](https://gitlab.huma-num.fr/rzine/site)@rzine_shs -->
-<!-- ## Info session -->
-<!-- <br> -->
-<!-- ```{r, echo=FALSE, eval=TRUE} -->
-<!-- sessionInfo() -->
-<!-- ```   -->
+</section>
+<section id="merci-de-votre-attention" class="slide level2">
+<h2>Merci de votre attention</h2>
+<p><br>
+</p>
+<p><span class="txt1"><strong>Diapositives libres</strong> (CC BY-SA 4.0)</span></p>
+<p><span class="txt2">Diaporama :</span> <span class="txt2"><a href="https://hpecout.gitpages.huma-num.fr/m1_carte_et_pratique/">https://hpecout.gitpages.huma-num.fr/m1_carte_et_pratique/</a></span><br>
+<span class="txt2">Code source :</span> <span class="txt2"><a href="https://gitlab.huma-num.fr/hpecout/m1_carte_et_pratique">https://gitlab.huma-num.fr/hpecout/m1_carte_et_pratique</a></span></p>
+<p><br>
+</p>
+<p><span class="txt1"><strong>Contact</strong></span></p>
+<p><span class="txt2"><a href="mailto:hugues.pecout@cnrs.fr">hugues.pecout@cnrs.fr</a></span></p>
+<p><a href="https://gitlab.huma-num.fr/rzine/site"><img src="img/twitter.png" width="40" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"></a><span class="txt2"><span class="citation" data-cites="rzine_shs">@rzine_shs</span></span></p>
+</section>
+<section id="info-session" class="slide level2">
+<h2>Info session</h2>
+<p><br></p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.2.2 Patched (2022-11-10 r83330)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 22.04.1 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+
+locale:
+ [1] LC_CTYPE=fr_FR.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=fr_FR.UTF-8        LC_COLLATE=fr_FR.UTF-8    
+ [5] LC_MONETARY=fr_FR.UTF-8    LC_MESSAGES=fr_FR.UTF-8   
+ [7] LC_PAPER=fr_FR.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=fr_FR.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] ggplot2_3.3.6
+
+loaded via a namespace (and not attached):
+ [1] pillar_1.7.0     compiler_4.2.2   tools_4.2.2      digest_0.6.29   
+ [5] jsonlite_1.8.0   evaluate_0.15    lifecycle_1.0.1  tibble_3.1.7    
+ [9] gtable_0.3.0     pkgconfig_2.0.3  rlang_1.0.3      DBI_1.1.3       
+[13] cli_3.3.0        rstudioapi_0.13  yaml_2.3.5       xfun_0.32       
+[17] fastmap_1.1.0    withr_2.5.0      stringr_1.4.0    dplyr_1.0.9     
+[21] knitr_1.39       generics_0.1.2   vctrs_0.4.1      grid_4.2.2      
+[25] tidyselect_1.1.2 glue_1.6.2       R6_2.5.1         fansi_1.0.3     
+[29] rmarkdown_2.14   farver_2.1.0     purrr_0.3.4      magrittr_2.0.3  
+[33] scales_1.2.0     ellipsis_0.3.2   htmltools_0.5.2  assertthat_0.2.1
+[37] colorspace_2.0-3 labeling_0.4.2   utf8_1.2.2       stringi_1.7.6   
+[41] munsell_0.5.0    crayon_1.5.1    </code></pre>
+</div>
+</div>
 
 <img src="img/logo_hp.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>

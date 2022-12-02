@@ -186,3 +186,15 @@ font-size:100%;
 font-weight:bold; 
 text-align:center;
 }
+
+.txt1{
+  font-size: 100%;
+}
+
+.txt2{
+  font-size: 80%;
+}
+
+.div3{
+margin-top: 40px;
+}
