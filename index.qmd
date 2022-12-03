@@ -663,7 +663,8 @@ mamap
 [Code source : Licence [MIT]()]{.txt2}\
 [Diaporama : [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/fr/)]{.txt2}
 
-## [Info session]{.maller}
+
+## [Info session]{.smaller}
 
 
 <br>
@@ -674,7 +675,7 @@ sessionInfo()
 
 ```
 
-## [Exemple divers]{.maller}
+## [Exemple divers]{.smaller}
 
 ::: left
 \
@@ -723,11 +724,17 @@ sessionInfo()
 
 
 
-## Merci de votre attention
+## 
 
 \
 
 \
+
+:::center2
+
+[**Merci de votre attention**]{.bigquat}
+
+:::
 
 \
 
