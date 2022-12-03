@@ -663,7 +663,8 @@ mamap
 [Code source : Licence [MIT]()]{.txt2}\
 [Diaporama : [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/fr/)]{.txt2}
 
-## Info session
+## [Info session]{.maller}
+
 
 <br>
 
@@ -719,6 +720,8 @@ sessionInfo()
 -   [Analyse des corrélations]()
 :::
 :::
+
+
 
 ## Merci de votre attention
 
