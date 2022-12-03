@@ -35,6 +35,12 @@
   font-size: 120%;
 }
 
+
+.bigquat{
+  font-size: 150%;
+}
+
+
 .bigter{
   font-size: 100%;
   text-align: center;
@@ -195,9 +201,17 @@ text-align:center;
   font-size: 80%;
 }
 
+.txt3{
+  font-size: 65%;
+  line-height: 1;
+}
+
 .div3{
 margin-top: 40px;
 }
 
 
+.div4{
+margin-top:-20px;
+margin-bottom: 100px;
 }

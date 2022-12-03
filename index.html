@@ -383,6 +383,15 @@
       margin-right: 0; 
     }
   </style>
+  <script src="index_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+  <script src="index_files/libs/jquery-1.12.4/jquery.min.js"></script>
+  <link href="index_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+  <script src="index_files/libs/leaflet-1.3.1/leaflet.js"></script>
+  <link href="index_files/libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+  <script src="index_files/libs/proj4-2.6.2/proj4.min.js"></script>
+  <script src="index_files/libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="index_files/libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+  <script src="index_files/libs/leaflet-binding-2.1.1/leaflet.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -457,7 +466,7 @@ Hugues Pecout
 
 <div class="columns">
 <div class="column" style="font-size:30px;text-align:center;">
-<p><span class="orange">Code « optimisé »</span></p>
+<p><span class="orange">Quelques lignes de code…</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, </span>
@@ -470,7 +479,7 @@ Hugues Pecout
 </div>
 </div>
 </div><div class="column" style="font-size:30px;text-align:center;">
-<p><span class="orange">Programmation lettrée</span></p>
+<p><span class="orange">…En programmation lettrée</span></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2" data-code-line-numbers="false"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------------------------------------------</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#            Représentation graphique </span></span>
@@ -483,34 +492,40 @@ Hugues Pecout
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Discrétisation la variable Sepal.Length (données iris)</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Choix des bornes de classes (amplitude égale)</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>bornes_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(iris<span class="sc">$</span>Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, </span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">max</span>(iris<span class="sc">$</span>Sepal.Length))</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Choix des noms de classes</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>nom_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Trés petites"</span>,<span class="st">"petites"</span>,<span class="st">"grandes"</span>,<span class="st">"Très grandes"</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Discrétisation de la variable 'Sepal.length'</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>iris<span class="sc">$</span>classe  <span class="ot">&lt;-</span> <span class="fu">cut</span>(iris<span class="sc">$</span>Sepal.Length,</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>                    <span class="at">breaks =</span> bornes_des_classes,</span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> nom_des_classes,</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>                    <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Statistiques sur la série statistique 'Sepal.Length'</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iris<span class="sc">$</span>Sepal.Length)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogramme de la distribution</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(iris<span class="sc">$</span>Sepal.Length)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Choix des bornes de classes (amplitude égale)</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>bornes_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">min</span>(iris<span class="sc">$</span>Sepal.Length), <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">max</span>(iris<span class="sc">$</span>Sepal.Length))</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Choix des noms de classes</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>nom_des_classes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Trés petites"</span>,<span class="st">"petites"</span>,<span class="st">"grandes"</span>,<span class="st">"Très grandes"</span>)</span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co">#---------------------------------------------------------------------</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="do">## Représentation des la distribution selon la discrétisation</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Bibliothèque pour la représentation graphique</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentation graphique de la distribution</span></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> classe)) <span class="sc">+</span>  <span class="co"># Choix des données et de la variable à représenter</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span>  <span class="co"># Choix du type de représentation</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span>    <span class="co"># Suppression du nom de l'axe x</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span>    <span class="co"># Suppression du nom de l'axe y</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span>  <span class="co"># Titre du graphique</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>),  <span class="co"># Taille de la police titre </span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))     <span class="co"># Taille des labels d'axe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Discrétisation de la variable 'Sepal.length'</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>iris<span class="sc">$</span>classe  <span class="ot">&lt;-</span> <span class="fu">cut</span>(iris<span class="sc">$</span>Sepal.Length,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                    <span class="at">breaks =</span> bornes_des_classes,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels =</span> nom_des_classes,</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                    <span class="at">include.lowest =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="co">#---------------------------------------------------------------------</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="do">## Représentation des la distribution selon la discrétisation</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Bibliothèque pour la représentation graphique</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Représentation graphique de la distribution</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="fu">aes</span>(<span class="at">x =</span> classe)) <span class="sc">+</span>  <span class="co"># Choix des données et de la variable à représenter</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span>  <span class="co"># Choix du type de représentation</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">""</span>) <span class="sc">+</span>    <span class="co"># Suppression du nom de l'axe x</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">""</span>) <span class="sc">+</span>    <span class="co"># Suppression du nom de l'axe y</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Répartition par classe"</span>) <span class="sc">+</span>  <span class="co"># Titre du graphique</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">27</span>),  <span class="co"># Taille de la police titre </span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">19</span>))     <span class="co"># Taille des labels d'axe</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -719,15 +734,54 @@ Hugues Pecout
 <section id="lannée" class="slide level2">
 <h2>2022, l’année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"></h2>
 <div class="center">
-<p><img data-src="img/quarto2.png" style="width:75.0%"></p>
+<p><img data-src="img/quarto2.png" style="width:90.0%"></p>
 </div>
-<div class="moycenter">
-<p><a href="https://quarto.org/"><strong>Quarto</strong></a> permet l’utilisation de <strong>R</strong>, <strong>Python</strong>, <strong>Julia</strong>, <strong>Javascript</strong> (<strong>OJS</strong>)…</p>
+<!-- ::: moycenter -->
+<!-- [**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)... -->
+<!-- ::: -->
+</section>
+<section id="nombreux-usages-formats" class="slide level2">
+<h2>Nombreux usages &amp; formats</h2>
+<div class="right3">
+<p><span class="txt2">Du LaTeX à l’<span class="orange"><strong>interactivité</strong></span> (<strong>HTML</strong>) :</span></p>
+<div style="font-size:60%;margin-top:0px;">
+<ul>
+<li>TOC, bibliographie, note de bas de page…</li>
+<li>Feuille de style CSS</li>
+<li>Et bien plus : cf.&nbsp;<a href="https://quarto.org/">Quarto</a> !</li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<p><span class="txt2">Un <span class="orange"><strong>format de publication</strong></span><br> scientifique légitime !</span></p>
+<div style="font-size:60%;margin-top:0px;">
+<ul>
+<li><p><a href="rzine.fr">Rzine</a>, pour la pratique de R en SHS</p></li>
+<li><p><a href="https://computo.sfds.asso.fr/">Computo</a> de la SFdS</p></li>
+<li><p><a href="https://programminghistorian.org">Programming Historian</a></p></li>
+</ul>
+</div>
+</div>
+<div class="left3">
+<p><span class="txt2">Nombreux templates,<br><span class="orange"><strong>multiples usages</strong></span> :</span></p>
+<div style="font-size:60%;margin-top:0px;">
+<ul>
+<li><p><span style="color:grey;"><em>Article</em></span></p></li>
+<li><p><span style="color:grey;"><em>Manuel</em></span></p></li>
+<li><p><span style="color:grey;"><em>Rapports</em></span></p></li>
+<li><p><span style="color:grey;"><em>Livre</em></span></p></li>
+<li><p><span style="color:grey;"><em>Tutoriel</em></span></p></li>
+<li><p><span style="color:grey;"><em>Cours - Exercice</em></span></p></li>
+<li><p><span style="color:grey;"><em>Blog - Site web</em></span></p></li>
+<li><p><span style="color:grey;"><em>curriculum vitae</em></span></p></li>
+<li><p><span style="color:grey;"><em>Diaporama</em></span></p></li>
+<li><p><span style="color:grey;"><em>…</em></span></p></li>
+</ul>
+</div>
 </div>
 </section></section>
 <section>
-<section id="pl-nb-et-reproductibilité" class="title-slide slide level1 center">
-<h1>PL, NB et reproductibilité…</h1>
+<section id="programmation-lettrée-notebook-et-reproductibilité" class="title-slide slide level1 center">
+<h1><span class="txt2">Programmation lettrée, notebook et <span class="orange">reproductibilité</span></span></h1>
 
 </section>
 <section id="programmation-lettrée-notebook" class="slide level2" data-auto-animate="true" data-auto-animate-easing="ease-in-out">
@@ -848,9 +902,7 @@ Hugues Pecout
 <h2><span class="smaller">Quel outil pour l’archivage/partage ?</span></h2>
 <p><br>
 </p>
-<div class="center2">
-<p><span class="txt1">→ GitLab &amp; GitHub (Git)</span></p>
-</div>
+<p><span class="orange"><span class="txt1">→ <strong>GitLab</strong> ou <strong>GitHub</strong> (<strong>Git</strong>)</span></span></p>
 <div class="div3">
 <p><span class="txt2"><a href="https://git-scm.com/"><strong>Git</strong></a> <strong>est un système de gestion de version</strong> distribué pour :</span></p>
 <div style="margin-top:0px;font-size:72%;line-height:0.9em">
@@ -892,171 +944,163 @@ Hugues Pecout
 <p>➡️ <em>Continuous Deployment</em></p>
 </div>
 </div>
-</section>
-<section id="exemple" class="slide level2">
-<h2><span class="smaller">Exemple</span></h2>
 </section></section>
 <section>
-<section id="exemple-1" class="title-slide slide level1 center">
+<section id="exemple" class="title-slide slide level1 center">
 <h1>Exemple</h1>
 
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
-<div class="logos">
-<p><img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"> <strong>+</strong> <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"> <strong>+</strong> <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"></p>
+<section id="ceci-est-un-notebook" class="slide level2">
+<h2><span class="smaller">Ceci est un notebook !</span></h2>
+<p><span class="txt3">Un peu de code :</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Chargement des librairies</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">library</span>(sf)</span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co"># Création d'une point (localisation de l'amphi Turing - Université de Paris)</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>ptsfg <span class="ot">&lt;-</span> <span class="fu">st_point</span>(<span class="fu">c</span>(<span class="fl">2.3807381923614552</span>, <span class="fl">48.827114532567876</span>))</span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co"># On précise le système géographique de référence utilisé (WGS84)</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a>ptsfc <span class="ot">&lt;-</span> <span class="fu">st_sfc</span>(ptsfg, <span class="at">crs =</span> (<span class="dv">4326</span>))</span>
+<span id="cb5-10"><a href="#cb5-10"></a></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co"># Création d'un tableau contenant deux attributs</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>ptdf <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">id=</span> <span class="dv">1</span>, <span class="at">text =</span> <span class="st">"Semaine Data-SHS 2022 ❤️"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13"></a></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="co"># Construction d'un objet géographique (point + attributs)</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a>Here <span class="ot">&lt;-</span> <span class="fu">st_sf</span>(ptdf,<span class="at">geometry =</span> ptsfc)</span>
+<span id="cb5-16"><a href="#cb5-16"></a></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="co"># Cartographie interactive (Leaflet] - affichage d'un marker (point créé)</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a>mamap <span class="ot">&lt;-</span> <span class="fu">leaflet</span>(Here, <span class="at">width =</span> <span class="dv">950</span>, <span class="at">height =</span> <span class="dv">550</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a>            <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a>            <span class="fu">addMarkers</span>(<span class="at">data =</span> Here, <span class="at">popup =</span> Here<span class="sc">$</span>text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="ceci-est-un-notebook-1" class="slide level2">
+<h2><span class="smaller">Ceci est un notebook !</span></h2>
+<p><span class="txt3">Affichage du résultat :</span></p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="htmlwidget-d7a39db453845a351fb3" style="width:950px;height:550px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d7a39db453845a351fb3">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[48.8271145325679,2.38073819236146,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Semaine Data-SHS 2022 ❤️",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[48.8271145325679,48.8271145325679],"lng":[2.38073819236146,2.38073819236146]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="ceci-est-un-notebook-2" class="slide level2">
+<h2><span class="smaller">Ceci est un notebook !</span></h2>
 <p><br>
 </p>
-<p><span class="big">Code source(GitHub) : <a href="https://github.com/rCarto/Quarto" class="uri">https://github.com/rCarto/Quarto</a></span><br>
-<span class="big">Notebook compilé : <a href="https://rcarto.github.io/Quarto/" class="uri">https://rcarto.github.io/Quarto/</a></span></p>
-</div>
-</section>
-<section id="section-4" class="slide level2" data-background-image="img/rstudio1.jpg">
-<h2></h2>
-</section>
-<section id="section-5" class="slide level2" data-background-image="img/rstudio3.jpg">
-<h2></h2>
-</section>
-<section id="section-6" class="slide level2" data-background-image="img/rstudio4.jpg">
-<h2></h2>
-</section>
-<section id="section-7" class="slide level2" data-background-image="img/rstudio5.jpg">
-<h2></h2>
-</section>
-<section id="section-8" class="slide level2">
-<h2></h2>
-<div class="logos">
-<p><img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"> <strong>+</strong> <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"> <strong>+</strong> <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"> <strong>+</strong> <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"></p>
+<p><span class="txt1"><strong>Document libre</strong> :</span></p>
+<p><span class="txt2">Code source (GitHub) : <a href="https://github.com/HuguesPecout/DataSHS_2022" class="uri">https://github.com/HuguesPecout/DataSHS_2022</a></span><br>
+<span class="txt2">Slides en ligne via Github : <a href="https://huguespecout.github.io/DataSHS_2022/" class="uri">https://huguespecout.github.io/DataSHS_2022/</a></span></p>
 <p><br>
 </p>
-<p><span class="big">Code source(GitHub) : <a href="https://github.com/rCarto/Quarto" class="uri">https://github.com/rCarto/Quarto</a></span><br>
-<span class="big">Notebook compilé : <a href="https://rcarto.github.io/Quarto/" class="uri">https://rcarto.github.io/Quarto/</a></span></p>
-</div>
-<!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-<!-- <br> -->
-</section>
-<section id="nombreux-usages-formats" class="slide level2">
-<h2>Nombreux usages &amp; formats</h2>
-<div class="right3">
-<p>Des fonctionnalités multiples</p>
-<div style="font-size:80%;margin-top:-20px;">
-<ul>
-<li><p>Ajout bibliographie (BibTeX)</p></li>
-<li><p>Ajout de CSS</p></li>
-<li><p>Gestion des table de matière, note de bas de pages…</p></li>
-</ul>
-</div>
-<p>Un <strong>format de publication</strong><br> scientifique légitime</p>
-<div style="font-size:80%;margin-top:-20px;">
-<ul>
-<li><p><a href="rzine.fr">Rzine</a>, pour la pratique de R en SHS</p></li>
-<li><p><a href="https://computo.sfds.asso.fr/">Computo</a> de la SFdS</p></li>
-<li><p><a href="https://programminghistorian.org">Programming Historian</a></p></li>
-</ul>
-</div>
-</div>
-<div class="left3">
-<p>Nombreux templates,<br><strong>multiples usages</strong></p>
-<div style="font-size:80%;margin-top:-20px;">
-<ul>
-<li><p><span style="color:grey;"><em>Article</em></span></p></li>
-<li><p><span style="color:grey;"><em>Manuel</em></span></p></li>
-<li><p><span style="color:grey;"><em>Rapports</em></span></p></li>
-<li><p><span style="color:grey;"><em>Livre</em></span></p></li>
-<li><p><span style="color:grey;"><em>Tutoriel</em></span></p></li>
-<li><p><span style="color:grey;"><em>Cours - Exercice</em></span></p></li>
-<li><p><span style="color:grey;"><em>Blog - Site web</em></span></p></li>
-<li><p><span style="color:grey;"><em>curriculum vitae</em></span></p></li>
-<li><p><span style="color:grey;"><em>Diaporama</em></span></p></li>
-<li><p><span style="color:grey;"><em>…</em></span></p></li>
-</ul>
-</div>
-</div>
-<!-- ## Ceci est un notebook... -->
-<!-- ```{r, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE} -->
-<!-- # Chargement des librairies -->
-<!-- library(sf) -->
-<!-- library(leaflet) -->
-<!-- # Création d'un point (localisation centre des colloques) -->
-<!-- ptsfg <- st_point(c(2.36652, 48.9071886)) -->
-<!-- ptsfc <- st_sfc(ptsfg, crs = (4326)) -->
-<!-- ptdf <- data.frame(id= 1, name = "Vous êtes ici !") -->
-<!-- Here <- st_sf(ptdf,geometry = ptsfc) -->
-<!-- # Affichage du point - carte interactive -->
-<!-- mamap <- leaflet(Here, width = 950, height = 550) %>% -->
-<!--   addTiles() %>% -->
-<!--   addMarkers(data = Here, popup = "❤️mate-shs❤️") -->
-<!-- ``` -->
-<!-- ## Vous êtes ici ! -->
-<!-- ```{r, echo=FALSE} -->
-<!-- mamap -->
-<!-- ``` -->
-</section>
-<section id="merci-de-votre-attention" class="slide level2">
-<h2>Merci de votre attention</h2>
-<p><br>
-</p>
-<p><span class="txt1"><strong>Diapositives libres</strong> (CC BY-SA 4.0)</span></p>
-<p><span class="txt2">Diaporama :</span> <span class="txt2"><a href="https://huguespecout.github.io/DataSHS_2022/" class="uri">https://huguespecout.github.io/DataSHS_2022/</a></span><br>
-<span class="txt2">Code source :</span> <span class="txt2"><a href="https://github.com/HuguesPecout/DataSHS_2022" class="uri">https://github.com/HuguesPecout/DataSHS_2022</a></span></p>
-<p><br>
-</p>
-<p><span class="txt1"><strong>Contact</strong></span></p>
-<p><span class="txt2"><a href="mailto:hugues.pecout@cnrs.fr">hugues.pecout@cnrs.fr</a></span></p>
-<p><a href="https://gitlab.huma-num.fr/rzine/site"><img src="img/twitter.png" width="40" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"></a><span class="citation" data-cites="rzine_shs">@rzine_shs</span></p>
+<p><span class="txt1"><strong>Conditions d’utilisation</strong> :</span></p>
+<p><span class="txt2">Code source : Licence <a href="">MIT</a></span><br>
+<span class="txt2">Diaporama : <a href="https://creativecommons.org/licenses/by-sa/3.0/fr/">CC BY-SA 3.0</a></span></p>
 </section>
 <section id="info-session" class="slide level2">
 <h2>Info session</h2>
 <p><br></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.2.2 Patched (2022-11-10 r83330)
-Platform: x86_64-pc-linux-gnu (64-bit)
-Running under: Ubuntu 22.04.1 LTS
+<pre><code>R version 4.2.1 (2022-06-23 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 22000)
 
 Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
-LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
 
 locale:
- [1] LC_CTYPE=fr_FR.UTF-8       LC_NUMERIC=C              
- [3] LC_TIME=fr_FR.UTF-8        LC_COLLATE=fr_FR.UTF-8    
- [5] LC_MONETARY=fr_FR.UTF-8    LC_MESSAGES=fr_FR.UTF-8   
- [7] LC_PAPER=fr_FR.UTF-8       LC_NAME=C                 
- [9] LC_ADDRESS=C               LC_TELEPHONE=C            
-[11] LC_MEASUREMENT=fr_FR.UTF-8 LC_IDENTIFICATION=C       
+[1] LC_COLLATE=French_France.utf8  LC_CTYPE=French_France.utf8   
+[3] LC_MONETARY=French_France.utf8 LC_NUMERIC=C                  
+[5] LC_TIME=French_France.utf8    
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ggplot2_3.3.6
+[1] leaflet_2.1.1 sf_1.0-7      ggplot2_3.3.6
 
 loaded via a namespace (and not attached):
- [1] pillar_1.7.0     compiler_4.2.2   tools_4.2.2      digest_0.6.29   
- [5] jsonlite_1.8.0   evaluate_0.15    lifecycle_1.0.1  tibble_3.1.7    
- [9] gtable_0.3.0     pkgconfig_2.0.3  rlang_1.0.3      DBI_1.1.3       
-[13] cli_3.3.0        rstudioapi_0.13  yaml_2.3.5       xfun_0.32       
-[17] fastmap_1.1.0    withr_2.5.0      stringr_1.4.0    dplyr_1.0.9     
-[21] knitr_1.39       generics_0.1.2   vctrs_0.4.1      grid_4.2.2      
-[25] tidyselect_1.1.2 glue_1.6.2       R6_2.5.1         fansi_1.0.3     
-[29] rmarkdown_2.14   farver_2.1.0     purrr_0.3.4      magrittr_2.0.3  
-[33] scales_1.2.0     ellipsis_0.3.2   htmltools_0.5.2  assertthat_0.2.1
-[37] colorspace_2.0-3 labeling_0.4.2   utf8_1.2.2       stringi_1.7.6   
-[41] munsell_0.5.0    crayon_1.5.1    </code></pre>
+ [1] Rcpp_1.0.9         pillar_1.7.0       compiler_4.2.1     class_7.3-20      
+ [5] tools_4.2.1        digest_0.6.29      jsonlite_1.8.0     evaluate_0.15     
+ [9] lifecycle_1.0.1    tibble_3.1.7       gtable_0.3.0       pkgconfig_2.0.3   
+[13] rlang_1.0.3        DBI_1.1.3          cli_3.3.0          rstudioapi_0.13   
+[17] crosstalk_1.2.0    yaml_2.3.5         xfun_0.31          fastmap_1.1.0     
+[21] e1071_1.7-11       withr_2.5.0        stringr_1.4.0      dplyr_1.0.9       
+[25] knitr_1.39         htmlwidgets_1.5.4  generics_0.1.3     vctrs_0.4.1       
+[29] classInt_0.4-7     grid_4.2.1         tidyselect_1.1.2   glue_1.6.2        
+[33] R6_2.5.1           fansi_1.0.3        rmarkdown_2.14     farver_2.1.1      
+[37] purrr_0.3.4        magrittr_2.0.3     units_0.8-0        scales_1.2.0      
+[41] ellipsis_0.3.2     htmltools_0.5.2    assertthat_0.2.1   colorspace_2.0-3  
+[45] labeling_0.4.2     KernSmooth_2.23-20 utf8_1.2.2         proxy_0.4-27      
+[49] stringi_1.7.8      munsell_0.5.0      crayon_1.5.1      </code></pre>
 </div>
 </div>
-
-<img src="img/logo_hp.png" class="slide-logo r-stretch"><div class="footer footer-default">
+</section>
+<section id="exemple-divers" class="slide level2">
+<h2><span class="maller">Exemple divers</span></h2>
+<div class="left">
+<p><br>
+</p>
+<p><span class="bigquat">Communication</span></p>
+<div style="font-size:110%;">
+<ul>
+<li><a href="">Data - SHS</a></li>
+<li><a href="">Présentation de R</a></li>
+<li><a href="">Introduction à R</a></li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<p><span class="bigquat">Site web statique</span></p>
+<div style="font-size:110%;">
+<ul>
+<li><a href="">Rzine.fr</a></li>
+<li><a href="">Groupe ElementR</a></li>
+<li><a href="">Ecole d’été CIST</a></li>
+</ul>
+</div>
+</div>
+<div class="right">
+<p><br>
+</p>
+<p><span class="bigquat">Livre - manuel</span></p>
+<div style="font-size:110%;">
+<ul>
+<li><a href="">Cartographie avec R</a></li>
+<li><a href="">Géomatique avec R</a></li>
+</ul>
+</div>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><span class="bigquat">Collection fiche Rzine</span></p>
+<div style="font-size:110%;">
+<ul>
+<li><a href="">Analyse mutliscalaire</a></li>
+<li><a href="">Cartographie en 2.5D</a></li>
+<li><a href="">Analyse des corrélations</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="merci-de-votre-attention" class="slide level2">
+<h2>Merci de votre attention</h2>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<div class="center2">
+<p><span class="txt2"><a href="mailto:hugues.pecout@cnrs.fr">hugues.pecout@cnrs.fr</a></span></p>
+<p><a href="https://gitlab.huma-num.fr/rzine/site"><img src="img/twitter.png" width="40" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"></a><span class="txt2"><span class="citation" data-cites="rzine_shs">@rzine_shs</span></span></p>
+</div>
+<p><img src="img/logo_hp.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>Semaine Data SHS -Décembre 2022 - Université Paris-Cité</p>
 </div>
 </section></section>

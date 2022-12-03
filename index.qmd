@@ -78,7 +78,7 @@ Le paradigme de la programmation lettrée, [pensé et mis en oeuvre par **Donald
 
 ::: columns
 ::: {.column width="50%" style="font-size:30px;text-align:center;"}
-[Code « optimisé »]{.orange}
+[Quelques lignes de code...]{.orange}
 
 ```{r}
 #| eval: TRUE
@@ -86,8 +86,6 @@ Le paradigme de la programmation lettrée, [pensé et mis en oeuvre par **Donald
 #| echo : TRUE
 #| fig-height: 7
 #| code-line-numbers: FALSE
-
-
 
 
 library(ggplot2)
@@ -103,7 +101,7 @@ ggplot(data = iris,
 :::
 
 ::: {.column width="50%" style="font-size:30px;text-align:center;"}
-[Programmation lettrée]{.orange}
+[...En programmation lettrée]{.orange}
 
 ```{r}
 #| eval: FALSE
@@ -121,6 +119,12 @@ ggplot(data = iris,
 #-----------------------------------------------------------------
 
 ## Discrétisation la variable Sepal.Length (données iris)
+
+# Statistiques sur la série statistique 'Sepal.Length'
+summary(iris$Sepal.Length)
+
+# Histogramme de la distribution
+hist(iris$Sepal.Length)
 
 # Choix des bornes de classes (amplitude égale)
 bornes_des_classes <- c(min(iris$Sepal.Length), 5, 6, 7, 
@@ -336,7 +340,6 @@ ggplot(data = iris,
   ggtitle("Répartition par classe") +
   theme(plot.title = element_text(size=27), axis.text=element_text(size=19))
 ~~~
-
 ```
 :::
 
@@ -353,14 +356,64 @@ ggplot(data = iris,
 ## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
 
 ::: center
-![](img/quarto2.png){width="75%"}
+![](img/quarto2.png){width="90%"}
 :::
 
-::: moycenter
-[**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)...
+<!-- ::: moycenter -->
+<!-- [**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)... -->
+<!-- ::: -->
+
+## Nombreux usages & formats
+
+::: right3
+[Du LaTeX à l’[**interactivité**]{.orange} (**HTML**) :]{.txt2}
+
+::: {.nonincremental style="font-size:60%;margin-top:0px;"}
+-   TOC, bibliographie, note de bas de page...
+-   Feuille de style CSS
+-   Et bien plus : cf. [Quarto](https://quarto.org/) !
 :::
 
-# PL, NB et reproductibilité...
+\ 
+
+[Un [**format de publication**]{.orange}<br> scientifique légitime !]{.txt2}
+
+::: {.nonincremental style="font-size:60%;margin-top:0px;"}
+-   [Rzine](rzine.fr), pour la pratique de R en SHS
+
+-   [Computo](https://computo.sfds.asso.fr/) de la SFdS
+
+-   [Programming Historian](https://programminghistorian.org)
+:::
+:::
+
+::: left3
+[Nombreux templates,<br>[**multiples usages**]{.orange} :]{.txt2}
+
+::: {.nonincremental style="font-size:60%;margin-top:0px;"}
+-   [*Article*]{style="color:grey;"}
+
+-   [*Manuel*]{style="color:grey;"}
+
+-   [*Rapports*]{style="color:grey;"}
+
+-   [*Livre*]{style="color:grey;"}
+
+-   [*Tutoriel*]{style="color:grey;"}
+
+-   [*Cours - Exercice*]{style="color:grey;"}
+
+-   [*Blog - Site web*]{style="color:grey;"}
+
+-   [*curriculum vitae*]{style="color:grey;"}
+
+-   [*Diaporama*]{style="color:grey;"}
+
+-   [*...*]{style="color:grey;"}
+:::
+:::
+
+# [Programmation lettrée, notebook et [reproductibilité]{.orange}]{.txt2}
 
 ## [Programmation lettrée + Notebook = 🔥]{.smaller} {auto-animate="true" auto-animate-easing="ease-in-out"}
 
@@ -511,9 +564,7 @@ ggplot(data = iris,
 
 \
 
-::: center2
-[→ GitLab & GitHub (Git)]{.txt1}
-:::
+[[→ **GitLab** ou **GitHub** (**Git**)]{.txt1}]{.orange}
 
 ::: div3
 [[**Git**](https://git-scm.com/) **est un système de gestion de version** distribué pour :]{.txt2}
@@ -556,176 +607,61 @@ ggplot(data = iris,
 :::
 :::
 
-## [Exemple]{.smaller}
-
 # Exemple
 
-## 
+## [Ceci est un notebook !]{.smaller}
 
-::: logos
-<img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>
+[Un peu de code :]{.txt3}
+
+```{r, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE}
+
+# Chargement des librairies
+library(sf)
+library(leaflet)
+
+# Création d'une point (localisation de l'amphi Turing - Université de Paris)
+ptsfg <- st_point(c(2.3807381923614552, 48.827114532567876))
+
+# On précise le système géographique de référence utilisé (WGS84)
+ptsfc <- st_sfc(ptsfg, crs = (4326))
+
+# Création d'un tableau contenant deux attributs
+ptdf <- data.frame(id= 1, text = "Semaine Data-SHS 2022 ❤️")
+
+# Construction d'un objet géographique (point + attributs)
+Here <- st_sf(ptdf,geometry = ptsfc)
+
+# Cartographie interactive (Leaflet] - affichage d'un marker (point créé)
+mamap <- leaflet(Here, width = 950, height = 550) %>%
+            addTiles() %>%
+            addMarkers(data = Here, popup = Here$text)
+```
+
+## [Ceci est un notebook !]{.smaller}
+
+[Affichage du résultat :]{.txt3}
+
+```{r, echo=FALSE}
+
+mamap
+
+```
+
+## [Ceci est un notebook !]{.smaller}
 
 \
 
-[Code source(GitHub) : <https://github.com/rCarto/Quarto>]{.big}\
-[Notebook compilé : <https://rcarto.github.io/Quarto/>]{.big}
-:::
+[**Document libre** :]{.txt1}
 
-##  {background-image="img/rstudio1.jpg"}
-
-##  {background-image="img/rstudio3.jpg"}
-
-##  {background-image="img/rstudio4.jpg"}
-
-##  {background-image="img/rstudio5.jpg"}
-
-## 
-
-::: logos
-<img src="img/quarto.png" width="240" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;"/> **+** <img src="img/R.png" width="80" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/javascript.png" width="50" style="margin-top:0px;margin-bottom:-10px;margin-right:20px;margin-left:20px;"/> **+** <img src="img/git.png" width="120" style="margin-top:0px;margin-bottom:-10px;margin-left:20px;margin-right:20px;"/> **+** <img src="img/github_blanc.png" width="170" style="margin-top:0px;margin-bottom:0px;margin-left:20px;"/>
+[Code source (GitHub) : <https://github.com/HuguesPecout/DataSHS_2022>]{.txt2}\
+[Slides en ligne via Github : <https://huguespecout.github.io/DataSHS_2022/>]{.txt2}
 
 \
 
-[Code source(GitHub) : <https://github.com/rCarto/Quarto>]{.big}\
-[Notebook compilé : <https://rcarto.github.io/Quarto/>]{.big}
-:::
+[**Conditions d'utilisation** :]{.txt1}
 
-
-
-
-<!-- # {data-background="img/ccl.png" data-background-size="1000px"} -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-<!-- <br> -->
-
-## Nombreux usages & formats
-
-::: right3
-Des fonctionnalités multiples
-
-::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
-
--   Ajout bibliographie (BibTeX)
-
--   Ajout de CSS
-
--   Gestion des table de matière, note de bas de pages...
-:::
-
-Un **format de publication**<br> scientifique légitime
- 
-::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
-
--   [Rzine](rzine.fr), pour la pratique de R en SHS
-
--   [Computo](https://computo.sfds.asso.fr/) de la SFdS
-
--   [Programming Historian](https://programminghistorian.org)
-:::
-
-
-
-:::
-
-::: left3
-Nombreux templates,<br>**multiples usages**
-
-::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
-
--   [*Article*]{style="color:grey;"}
-
--   [*Manuel*]{style="color:grey;"}
-
--   [*Rapports*]{style="color:grey;"}
-
--   [*Livre*]{style="color:grey;"}
-
--   [*Tutoriel*]{style="color:grey;"}
-
--   [*Cours - Exercice*]{style="color:grey;"}
-
--   [*Blog - Site web*]{style="color:grey;"}
-
--   [*curriculum vitae*]{style="color:grey;"}
-
--   [*Diaporama*]{style="color:grey;"}
-
--   [*...*]{style="color:grey;"}
-:::
-
-:::
-
-<!-- ## Ceci est un notebook... -->
-
-<!-- ```{r, echo=TRUE, eval=TRUE, warning=FALSE, message=FALSE} -->
-
-<!-- # Chargement des librairies -->
-
-<!-- library(sf) -->
-
-<!-- library(leaflet) -->
-
-<!-- # Création d'un point (localisation centre des colloques) -->
-
-<!-- ptsfg <- st_point(c(2.36652, 48.9071886)) -->
-
-<!-- ptsfc <- st_sfc(ptsfg, crs = (4326)) -->
-
-<!-- ptdf <- data.frame(id= 1, name = "Vous êtes ici !") -->
-
-<!-- Here <- st_sf(ptdf,geometry = ptsfc) -->
-
-<!-- # Affichage du point - carte interactive -->
-
-<!-- mamap <- leaflet(Here, width = 950, height = 550) %>% -->
-
-<!--   addTiles() %>% -->
-
-<!--   addMarkers(data = Here, popup = "❤️mate-shs❤️") -->
-
-<!-- ``` -->
-
-<!-- ## Vous êtes ici ! -->
-
-<!-- ```{r, echo=FALSE} -->
-
-<!-- mamap -->
-
-<!-- ``` -->
-
-## Merci de votre attention
-
-\
-
-[**Diapositives libres** (CC BY-SA 4.0)]{.txt1}
-
-[Diaporama :]{.txt2} [<https://huguespecout.github.io/DataSHS_2022/>]{.txt2}\
-[Code source :]{.txt2} [<https://github.com/HuguesPecout/DataSHS_2022>]{.txt2}
-
-\
-
-[**Contact**]{.txt1}
-
-[[hugues.pecout\@cnrs.fr](mailto:hugues.pecout@cnrs.fr)]{.txt2}
-
-[<img src="img/twitter.png" width="40" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"/>](https://gitlab.huma-num.fr/rzine/site)@rzine_shs
+[Code source : Licence [MIT]()]{.txt2}\
+[Diaporama : [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/fr/)]{.txt2}
 
 ## Info session
 
@@ -736,3 +672,68 @@ Nombreux templates,<br>**multiples usages**
 sessionInfo()
 
 ```
+
+## [Exemple divers]{.maller}
+
+::: left
+\
+
+[Communication]{.bigquat}
+
+::: {.nonincremental style="font-size:110%;"}
+-   [Data - SHS]()
+-   [Présentation de R]()
+-   [Introduction à R]()
+:::
+
+ 
+
+[Site web statique]{.bigquat}
+
+::: {.nonincremental style="font-size:110%;"}
+-   [Rzine.fr]()
+-   [Groupe ElementR]()
+-   [Ecole d'été CIST]()
+:::
+:::
+
+::: right
+\
+
+[Livre - manuel]{.bigquat}
+
+::: {.nonincremental style="font-size:110%;"}
+-   [Cartographie avec R]()
+-   [Géomatique avec R]()
+:::
+
+\
+
+\
+
+[Collection fiche Rzine]{.bigquat}
+
+::: {.nonincremental style="font-size:110%;"}
+-   [Analyse mutliscalaire]()
+-   [Cartographie en 2.5D]()
+-   [Analyse des corrélations]()
+:::
+:::
+
+## Merci de votre attention
+
+\
+
+\
+
+\
+
+\
+
+:::center2
+
+[[hugues.pecout\@cnrs.fr](mailto:hugues.pecout@cnrs.fr)]{.txt2}
+
+[<img src="img/twitter.png" width="40" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"/>](https://gitlab.huma-num.fr/rzine/site)[@rzine_shs]{.txt2}
+
+:::
