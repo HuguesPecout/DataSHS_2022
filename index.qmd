@@ -353,7 +353,7 @@ ggplot(data = iris,
 ![](img/nouveau_notebook.png){width="80%"}
 :::
 
-## 2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>
+## [2022, l'année <img src="img/quarto.png" width="230" style="margin-top:0px;margin-bottom:-10px;"/>]{.smaller}
 
 ::: center
 ![](img/quarto2.png){width="90%"}
@@ -363,15 +363,15 @@ ggplot(data = iris,
 <!-- [**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)... -->
 <!-- ::: -->
 
-## Nombreux usages & formats
+## [Nombreux usages & formats]{.smaller}
 
 ::: right3
-[Du LaTeX à l’[**interactivité**]{.orange} (**HTML**) :]{.txt2}
+[Equivalent LaTeX + [**interactivité**]{.orange} :]{.txt2}
 
 ::: {.nonincremental style="font-size:60%;margin-top:0px;"}
 -   TOC, bibliographie, note de bas de page...
 -   Feuille de style CSS
--   Et bien plus : cf. [Quarto](https://quarto.org/) !
+-   Et bien plus... voir [Quarto](https://quarto.org/)
 :::
 
 \ 
