@@ -182,7 +182,7 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 \
 
 ::: bigbis
-**Les notebooks et la programmation lettrée ont émergés à la même période, celle de l'émergence du concept de recherche reproductible...**
+**Les notebooks et la programmation lettrée sont apparus à la même période, celle de l'émergence du concept de recherche reproductible...**
 :::
 :::
 :::
@@ -360,23 +360,25 @@ ggplot(data = iris,
 :::
 
 <!-- ::: moycenter -->
+
 <!-- [**Quarto**](https://quarto.org/) permet l'utilisation de **R**, **Python**, **Julia**, **Javascript** (**OJS**)... -->
+
 <!-- ::: -->
 
 ## [Nombreux usages & formats]{.smaller}
 
 ::: right3
-[Equivalent LaTeX + [**interactivité**]{.orange} :]{.txt2}
+[Equivalent LaTeX + [**programmation**]{.orange}]{.txt2} :
 
 ::: {.nonincremental style="font-size:60%;margin-top:0px;"}
--   TOC, bibliographie, note de bas de page...
+-   Bibliographie, TOC, note de bas de page...
 -   Feuille de style CSS
--   Et bien plus... voir [Quarto](https://quarto.org/)
+-   Et bien plus... [Quarto](https://quarto.org/) !
 :::
 
-\ 
+ 
 
-[Un [**format de publication**]{.orange}<br> scientifique légitime !]{.txt2}
+[Un [**format de publication**]{.orange}<br>scientifique légitime !]{.txt2}
 
 ::: {.nonincremental style="font-size:60%;margin-top:0px;"}
 -   [Rzine](rzine.fr), pour la pratique de R en SHS
@@ -388,7 +390,7 @@ ggplot(data = iris,
 :::
 
 ::: left3
-[Nombreux templates,<br>[**multiples usages**]{.orange} :]{.txt2}
+[Nombreux templates,<br>[**multiples usages**]{.orange}]{.txt2} :
 
 ::: {.nonincremental style="font-size:60%;margin-top:0px;"}
 -   [*Article*]{style="color:grey;"}
@@ -477,11 +479,11 @@ ggplot(data = iris,
 :::
 :::
 
-::: {.left2 auto-animate-delay="4.5"}
+::: {.left2 auto-animate-delay="4"}
 [Informations de session<br>et d'environnement]{style="color:#f2262340;"}
 :::
 
-::: {.right2 auto-animate-delay="8.5"}
+::: {.right2 auto-animate-delay="8"}
 [Archivage & partage</br>Conditions d'utilisation]{style="color:#2336f240;"}
 :::
 
@@ -497,7 +499,7 @@ ggplot(data = iris,
 ::: {.absolute data-id="box3" auto-animate-delay="0" style="background: #f2262340;  width: 300px; height: 250px; margin-top: 0px; "}
 :::
 
-::: {.absolute data-id="box4" auto-animate-delay="0.1" style="background: #2336f240;  width: 300px; height: 250px; margin-top: 350px; "}
+::: {.absolute data-id="box4" auto-animate-delay="0" style="background: #2336f240;  width: 300px; height: 250px; margin-top: 350px; "}
 :::
 
 ::: {.absolute data-id="box5" auto-animate-delay="2.4" style="background: white;  width: 100px; height: 77px; margin-top:175px;"}
@@ -564,7 +566,7 @@ ggplot(data = iris,
 
 \
 
-[[→ **GitLab** ou **GitHub** (**Git**)]{.txt1}]{.orange}
+[→ [**GitLab** ou **GitHub** (**Git**)]{.orange}]{.txt1}
 
 ::: div3
 [[**Git**](https://git-scm.com/) **est un système de gestion de version** distribué pour :]{.txt2}
@@ -600,7 +602,7 @@ ggplot(data = iris,
 
 \
 
--   Ils permettent de [**déployer un notebook compilé en HTML**]{.orange} [**sur le web**]{.orange}
+-   Ils permettent de [**déployer sur le web un notebook compilé en HTML**]{.orange}
 
 ::: {.nonincremental style="font-size:80%;margin-top:-20px;"}
 ➡️ *Continuous Deployment*
@@ -647,7 +649,7 @@ mamap
 
 ```
 
-## [Ceci est un notebook !]{.smaller}
+## [Ceci est un notebook !]{.smaller} {.scrollable}
 
 \
 
@@ -663,11 +665,9 @@ mamap
 [Code source : Licence [MIT]()]{.txt2}\
 [Diaporama : [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/fr/)]{.txt2}
 
+\
 
-## [Info session]{.smaller}
-
-
-<br>
+[[**Informations session** :]{.txt1}]{.orange}
 
 ```{r, echo=FALSE, eval=TRUE}
 
@@ -683,19 +683,19 @@ sessionInfo()
 [Communication]{.bigquat}
 
 ::: {.nonincremental style="font-size:110%;"}
--   [Data - SHS]()
--   [Présentation de R]()
--   [Introduction à R]()
+-   [Le projet Rzine](https://rzine.gitpages.huma-num.fr/communications/projet_rzine/#/)
+-   [Analyse de données avec R](https://huguespecout.github.io/R_presentation_FR/#/)
+-   [Introduction à R](https://huguespecout.github.io/Intro_R_Rstudio_FR/#/)
 :::
 
- 
+\
 
 [Site web statique]{.bigquat}
 
 ::: {.nonincremental style="font-size:110%;"}
--   [Rzine.fr]()
--   [Groupe ElementR]()
--   [Ecole d'été CIST]()
+-   [Rzine.fr](https://rzine.fr/)
+-   [Groupe ElementR](https://elementr.gitpages.huma-num.fr/website/)
+-   [Ecole d'été CIST](https://ee2023.netlify.app/)
 :::
 :::
 
@@ -705,24 +705,22 @@ sessionInfo()
 [Livre - manuel]{.bigquat}
 
 ::: {.nonincremental style="font-size:110%;"}
--   [Cartographie avec R]()
--   [Géomatique avec R]()
+-   [Cartographie avec R](https://rcarto.github.io/cartographie_avec_r/)
+-   [Géomatique avec R](https://rcarto.github.io/geomatique_avec_r/)
+-   [Analyse de réseaux (R)](https://huguespecout.github.io/Analyse_r-seaux_GDR_ARSHS/)
 :::
 
 \
 
-\
 
-[Collection fiche Rzine]{.bigquat}
+[Collection Rzine]{.bigquat}
 
 ::: {.nonincremental style="font-size:110%;"}
--   [Analyse mutliscalaire]()
--   [Cartographie en 2.5D]()
--   [Analyse des corrélations]()
+-   [Analyse territoriale multiscalaire](https://rzine.fr/docs/20211101_ysebaert_grasland_MTA/index.html)
+-   [Le nouveau rideau de fer (carte 2.5D)](https://rzine.fr/docs/20191125_ironcurtain/index.html)
+-   [Exploration spatio-temporelle](https://rzine.fr/docs/20200601_mletexier86_explo_spatiotemporel/index.html)
 :::
 :::
-
-
 
 ## 
 
@@ -730,20 +728,16 @@ sessionInfo()
 
 \
 
-:::center2
-
+::: center2
 [**Merci de votre attention**]{.bigquat}
-
 :::
 
 \
 
 \
 
-:::center2
-
+::: center2
 [[hugues.pecout\@cnrs.fr](mailto:hugues.pecout@cnrs.fr)]{.txt2}
 
-[<img src="img/twitter.png" width="40" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"/>](https://gitlab.huma-num.fr/rzine/site)[@rzine_shs]{.txt2}
-
+[<img src="img/twitter.png" width="35" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"/>](https://gitlab.huma-num.fr/rzine/site)[@rzine_shs]{.big}
 :::
