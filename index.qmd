@@ -30,7 +30,7 @@ filters:
 ## [Bonjour à tout·te·s]{.smaller}
 
 ::: bigspace
-Ingénieur d'études CNRS en sciences de l'information géographique dans le domaine de la géographie quantitative (UMR Géographie-Cités).
+Ingénieur d'études CNRS en sciences de l'information géographique dans le domaine de la géographie humaine et quantitative (UMR Géographie-Cités).
 :::
 
 ::: moy1
