@@ -38,7 +38,7 @@ Depuis 2016 :
 :::
 
 ::: {#list .nonincremental style="font-size:25px;line-height:25px;"}
--   Évite l'utilisation de logiciels clic-bouton (QGIS, EXCEL, Philcarto...)
+-   Évite l'utilisation de logiciels « clic-bouton » (QGIS, EXCEL, Philcarto...)
 -   [**Analyse de données réalisée exclusivement avec le langage R**]{.orange}
 -   Création quasi hebdomadaire de script R.
 -   Gain de productivité et de polyvalence important, mais...\
@@ -112,7 +112,7 @@ ggplot(data = iris,
 #-----------------------------------------------------------------
 #            Représentation graphique 
 #         de la répartition d'individus
-#          discrétisé en quatre classes 
+#         discrétisés en quatre classes 
 #
 #                  H. Pecout
 #               5 décembre 2022
@@ -141,7 +141,7 @@ iris$classe  <- cut(iris$Sepal.Length,
 
 #---------------------------------------------------------------------
 
-## Représentation des la distribution selon la discrétisation
+## Représentation de la distribution selon la discrétisation
 
 # Bibliothèque pour la représentation graphique
 library(ggplot2)
@@ -214,7 +214,7 @@ Il est possible de faire de la programmation lettrée dans n'importe quel type d
 :::
 
 ::: small
-[**Jon Claerbout**](https://en.wikipedia.org/wiki/Jon_Claerbout) est l'un des premiers chercheur a exprimer le fait que **les méthodes de calcul menacent la reproductibilité de la recherche** si l'on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.
+[**Jon Claerbout**](https://en.wikipedia.org/wiki/Jon_Claerbout) est l'un des premiers chercheur à exprimer le fait que **les méthodes de calcul menacent la reproductibilité de la recherche** si l'on ne donne pas un accès libre aux données et aux logiciels qui sous-tendent.
 
 En 1976, il publie un ouvrage référence en traitement de signal :\
 « ***Fundamentals of Geophysical Data Processing*** »
@@ -381,7 +381,7 @@ ggplot(data = iris,
 [Un [**format de publication**]{.orange}<br>scientifique légitime !]{.txt2}
 
 ::: {.nonincremental style="font-size:60%;margin-top:0px;"}
--   [Rzine](rzine.fr), pour la pratique de R en SHS
+-   [Rzine](https://rzine.fr/publication_rzine/), pour la pratique de R en SHS
 
 -   [Computo](https://computo.sfds.asso.fr/) de la SFdS
 
