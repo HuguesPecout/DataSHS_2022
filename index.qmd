@@ -259,7 +259,7 @@ De nombreuses dénominations existent :
 -   *...*
 :::
 
-## [Un outils... des pratiques !]{.smaller}
+## [Un outil... des pratiques !]{.smaller}
 
 ::: div0
 ![](img/notebook_1.png){width="100%"}
