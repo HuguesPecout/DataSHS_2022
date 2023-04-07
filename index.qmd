@@ -415,7 +415,7 @@ ggplot(data = iris,
 :::
 :::
 
-# [Programmation lettrée, notebook et ]{.txt2} [reproductibilité]{.txt4}
+# [Programmation lettrée, notebook et]{.txt2} [reproductibilité]{.txt4}
 
 ## [Programmation lettrée + Notebook = 🔥]{.smaller} {auto-animate="true" auto-animate-easing="ease-in-out"}
 
@@ -738,5 +738,5 @@ sessionInfo()
 ::: center2
 [[hugues.pecout\@cnrs.fr](mailto:hugues.pecout@cnrs.fr)]{.txt2}
 
-[<img src="img/twitter.png" width="35" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"/>](https://gitlab.huma-num.fr/rzine/site)[@rzine_shs]{.txt3}
+[<img src="img/twitter.png" width="35" style="margin-top:15px;margin-bottom:-10px;margin-right:10px;"/>](https://gitlab.huma-num.fr/rzine/site)@rzine_shs
 :::
